@@ -1,3 +1,4 @@
+import { FaArrowRight } from "react-icons/fa";
 import "./not-found.css";
 
 const NotFound = () => {
@@ -11,7 +12,7 @@ const NotFound = () => {
           out other pages.
         </p>
         <a href="/" className="return-home">
-          Return to home <span className="arrow">→</span>
+          Return to home <FaArrowRight className="arrow" />
         </a>
       </div>
     </div>
