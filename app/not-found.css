@@ -70,7 +70,7 @@ body {
     45deg,
     rgb(33, 130, 196),
     rgb(21, 103, 235)
-  ); /* Smooth gradient from blue to deeper blue */
+  );
   box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
   transition: 300ms;
 }
@@ -87,7 +87,7 @@ body {
     45deg,
     rgb(29, 103, 152),
     rgb(11, 77, 184)
-  ); /* Gradient swap on hover */
+  );
   box-shadow: 0 0 15px rgba(130, 130, 130, 0.6);
   transform: scale(1.05);
 }
