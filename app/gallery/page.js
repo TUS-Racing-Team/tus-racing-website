@@ -1,12 +1,12 @@
 import Navbar from "../components/navbar/Navbar";
 import Footer from "../components/footer/Footer";
-import Application from "./Application";
+import Gallery from "./Gallery";
 
 export default function Home() {
   return (
     <>
       <Navbar />
-      <Application />
+      <Gallery />
       <Footer />
     </>
   );
