@@ -29,7 +29,7 @@ const Footer = () => {
       </div>
       <div className="contact">
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2934.406658510638!2d23.352694675602063!3d42.652737116561525!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40aa8426c28853ef%3A0x507b5ee6b85ffd1e!2z0KTQsNC60YPQu9GC0LXRgiDQv9C-INGC0YDQsNC90YHQv9C-0YDRgtCwICjQotCjLdCh0L7RhNC40Y8p!5e0!3m2!1sbg!2sbg!4v1731671809944!5m2!1sbg!2sbg"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11574.844856976933!2d23.344489764056558!3d42.65905770510949!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40aa8426c28853ef%3A0x507b5ee6b85ffd1e!2sBlock%209%20of%20the%20Technical%20University!5e0!3m2!1sen!2sbg!4v1731674014136!5m2!1sen!2sbg"
           height="300"
           allowFullScreen=""
           loading="lazy"
