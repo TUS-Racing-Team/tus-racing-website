@@ -71,3 +71,17 @@
   font-size: 12px;
   padding: 10px;
 }
+
+@media (max-width: 760px) {
+  .footer .content {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .footer .content .footer-logo {
+    width: 100%;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+}

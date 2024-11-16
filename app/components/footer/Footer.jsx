@@ -37,7 +37,7 @@ const Footer = () => {
         ></iframe>
       </div>
       <div className="privacy-policy">
-        <p>© 2024 TU Sofia Racing Team. All rights reserved.</p>
+        <p>© {new Date().getFullYear()} TU Sofia Racing Team. All rights reserved.</p>
         <p></p>
       </div>
     </footer>

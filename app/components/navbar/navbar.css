@@ -4,10 +4,11 @@
   align-items: center;
   background-color: var(--main-theme);
   padding: 25px 30px;
-  position: absolute;
+  position: fixed;
   top: 0;
   width: 100%;
-  z-index: 1000; 
+  box-shadow: 0 5px 5px #6f6f6fa5;
+  z-index: 1000;
 }
 
 .logo {
@@ -17,6 +18,8 @@
 
 .menu {
   display: flex;
+  justify-content: center;
+  align-items: center;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -97,16 +100,114 @@
   transform: scale(0.95);
 }
 
-@media (max-width: 480px) {
-  .menu li {
-    margin: 10px 0;
+.hamburger-menu {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.hamburger-menu .bar {
+  width: 30px;
+  height: 4px;
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+/* Add fade animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0; /* Start invisible */
+  }
+  to {
+    opacity: 1; /* Fade in */
+  }
+}
+
+/* Media Queries for screen width <= 1040px */
+@media (max-width: 1135px) {
+  .menu {
+    display: none; /* Hide menu by default */
+    position: absolute;
+    top: 70px; /* Position the menu below the navbar */
+    right: 30px;
+    background-color: var(--main-theme);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+    border-radius: 5px;
+    width: 250px;
+    opacity: 0; /* Start with 0 opacity */
+    transition: opacity 0.3s ease, top 0.3s ease; /* Smooth transition for opacity and position */
   }
 
-  .menu-toggle {
-    display: block;
+  .menu.open {
+    display: flex; /* Show menu when open */
+    opacity: 1; /* Ensure menu is visible */
+    top: 70px; /* Position menu below the navbar */
+    animation: fadeIn 0.3s ease forwards; /* Apply fade-in animation */
   }
 
-  .apply {
-    margin-left: auto;
+  .menu.open a {
+    width: 100%;
+    text-align: center;
+  }
+
+  .hamburger-menu {
+    display: flex; /* Show hamburger icon on mobile */
+  }
+
+  .nav-buttons {
+    display: none; /* Hide nav buttons on small screens */
+  }
+}
+
+@media (min-width: 1136px) {
+  .hamburger-menu {
+    display: none; /* Hide hamburger icon on large screens */
+  }
+
+  .menu {
+    display: flex; /* Show menu as a horizontal list */
+    position: static;
+    background-color: transparent;
+    flex-direction: row;
+    gap: 20px;
+    padding: 0;
+  }
+
+  .nav-buttons {
+    display: flex; /* Show nav buttons on large screens */
+  }
+}
+
+/* Media Queries for screen width <= 500px */
+@media (max-width: 500px) {
+  .menu.open {
+    padding: 0px;
+    width: 100vw; /* Full screen width */
+    height: 100vh; /* Full screen height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    left: 0px;
+    top: 70px; /* Position below navbar */
+    opacity: 1; /* Ensure menu is visible */
+    gap: 20px;
+    animation: fadeIn 0.3s ease forwards; /* Apply fade-in animation */
+  }
+
+  .menu.open ul li,
+  .menu.open a {
+    font-size: 18px;
+    font-weight: 700;
+  }
+}
+
+@media (max-width: 360px) {
+  .logo {
+    height: 30px;
   }
 }
