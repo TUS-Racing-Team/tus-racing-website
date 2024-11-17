@@ -1,7 +1,23 @@
+"use client";
 import "./home.css";
 import Image from "next/image";
 
+
+
 const HomePage = () => {
+  async function sendMessage() {
+    const response = await fetch('/api/sendToDiscord', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ content: 'Hello, Discord!' }),
+    });
+  
+    const data = await response.json();
+    console.log(data);
+  }
+
   return (
     <div>
       <div
@@ -78,7 +94,7 @@ const HomePage = () => {
               </ul>
             </div>
           </div>
-          <a href="/application">GO TO THE APPLICATION</a>
+          <a href="/application" onClick={(e) => { e.preventDefault(); sendMessage(); }}>GO TO THE APPLICATION</a>
         </div>
       </div>
       <div
