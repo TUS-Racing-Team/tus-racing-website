@@ -7,7 +7,6 @@ import "./navbar.css";
 const Navbar = () => {
   const [flag, setFlag] = useState("/images/BG-bg.png");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [windowWidth, setWindowWidth] = useState(null);
 
   // Toggle language flag
   const toggleFlag = () => {
@@ -21,29 +20,37 @@ const Navbar = () => {
     setIsMenuOpen((prevState) => !prevState);
   };
 
-  // Update window width on resize (client-side only)
-  const handleResize = () => {
-    setWindowWidth(window.innerWidth);
+  // Function to check and update the menu state based on window width
+  const updateMenuState = () => {
+    if (window.innerWidth > 1135 && isMenuOpen) {
+      setIsMenuOpen(false); // Close the menu if the width is > 1135px
+    }
   };
 
-  // Defer window width calculation to after component mount to avoid SSR issues
+  // Update menu state on resize
   useEffect(() => {
-    // Only run this code on the client-side
-    setWindowWidth(window.innerWidth);
+    updateMenuState(); // Check initially when the component mounts
 
-    window.addEventListener("resize", handleResize);
+    // Add event listener for window resize
+    window.addEventListener("resize", updateMenuState);
 
+    // Clean up event listener on component unmount
     return () => {
-      window.removeEventListener("resize", handleResize);
+      window.removeEventListener("resize", updateMenuState);
     };
-  }, []); // Empty dependency array ensures this runs only once after mount
+  }, [isMenuOpen]); // Only update state if isMenuOpen changes
 
-  // Effect to close the menu if windowWidth > 1135
+  // Persist the menu state using localStorage
   useEffect(() => {
-    if (windowWidth && windowWidth > 1135) {
-      setIsMenuOpen(false);
+    const storedMenuState = localStorage.getItem("isMenuOpen");
+    if (storedMenuState !== null) {
+      setIsMenuOpen(JSON.parse(storedMenuState));
     }
-  }, [windowWidth]);
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem("isMenuOpen", JSON.stringify(isMenuOpen));
+  }, [isMenuOpen]);
 
   // Prevent body overflow when menu is open
   useEffect(() => {
@@ -98,21 +105,19 @@ const Navbar = () => {
         )}
       </ul>
 
-      {/* Show Apply Now button and flag for larger screens */}
-      {windowWidth > 1135 && !isMenuOpen && (
-        <div className="nav-buttons">
-          <Image
-            src={flag}
-            alt="Flag"
-            width={30}
-            height={30}
-            onClick={toggleFlag}
-          />
-          <a href="/application" className="apply">
-            Apply Now
-          </a>
-        </div>
-      )}
+      {/* Always show Apply Now button and flag */}
+      <div className="nav-buttons">
+        <Image
+          src={flag}
+          alt="Flag"
+          width={30}
+          height={30}
+          onClick={toggleFlag}
+        />
+        <a href="/application" className="apply">
+          Apply Now
+        </a>
+      </div>
 
       {/* Hamburger menu button */}
       <div className="hamburger-menu" onClick={toggleMenu}>
