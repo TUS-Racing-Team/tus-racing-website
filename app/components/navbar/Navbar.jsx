@@ -5,13 +5,13 @@ import { FiMenu, FiX } from "react-icons/fi";
 import "./navbar.css";
 
 const Navbar = () => {
-  const [flag, setFlag] = useState("/images/BG-bg.png");
+  const [flag, setFlag] = useState("/images/icons/BG-bg.png");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   // Toggle language flag
   const toggleFlag = () => {
     setFlag((prevFlag) =>
-      prevFlag === "/images/BG-bg.png" ? "/images/UK-en.png" : "/images/BG-bg.png"
+      prevFlag === "/images/icons/BG-bg.png" ? "/images/icons/UK-en.png" : "/images/icons/BG-bg.png"
     );
   };
 

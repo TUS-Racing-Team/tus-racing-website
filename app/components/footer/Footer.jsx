@@ -26,6 +26,15 @@ const Footer = () => {
             </a>
           </div>
         </div>
+        <div className="social-media">
+          <h2>Socila medias</h2>
+          <div className="social-media-links">
+            <a href="">Instagram</a>
+            <a href="">Facebook</a>
+            <a href="">Discord</a>
+            <a href="">TikTok</a>
+          </div>
+        </div>
       </div>
       <div className="contact">
         <iframe
@@ -37,7 +46,10 @@ const Footer = () => {
         ></iframe>
       </div>
       <div className="privacy-policy">
-        <p>© {new Date().getFullYear()} TU Sofia Racing Team. All rights reserved.</p>
+        <p>
+          © {new Date().getFullYear()} TU Sofia Racing Team. All rights
+          reserved.
+        </p>
         <p></p>
       </div>
     </footer>

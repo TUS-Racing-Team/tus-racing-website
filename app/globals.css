@@ -1,12 +1,11 @@
 :root {
-    --main-theme: #1f1f1f;
+    --main-theme: #1d1d1d;
     --button-color: #166fd5;
     --button-hover-color: #0f2a5b;
     --underline-color: #1fcbee;
     --button-radius: 12px;
     --button-transition: 200ms;
     --transition: 300ms;
-    --p-color: #d3d3d3;
 }
 
 ::-webkit-scrollbar {
