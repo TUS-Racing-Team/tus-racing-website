@@ -2,7 +2,7 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 ## Getting Started
 
-First, run the development server:
+First, run the development server: https://tus-racing-website-na65qxngt-kristian-ys-projects.vercel.app/
 
 ```bash
 npm run dev
