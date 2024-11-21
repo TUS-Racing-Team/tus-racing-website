@@ -1,4 +1,5 @@
 import React from "react";
+import { FaFacebook, FaInstagram, FaDiscord } from "react-icons/fa";
 import "./footer.css";
 
 const Footer = () => {
@@ -27,12 +28,17 @@ const Footer = () => {
           </div>
         </div>
         <div className="social-media">
-          <h2>Socila medias</h2>
+          <h2>Social medias</h2>
           <div className="social-media-links">
-            <a href="">Instagram</a>
-            <a href="">Facebook</a>
-            <a href="">Discord</a>
-            <a href="">TikTok</a>
+            <a href="">
+              <FaDiscord className="discord" />
+            </a>
+            <a href="">
+              <FaFacebook className="facebook" />
+            </a>
+            <a href="">
+              <FaInstagram className="instagram" />
+            </a>
           </div>
         </div>
       </div>

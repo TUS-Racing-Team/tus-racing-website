@@ -67,11 +67,29 @@
 
 .footer .content .social-media .social-media-links {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
-  gap: 5px;
+  gap: 10px;
   font-size: 18px;
+}
+
+.footer .content .social-media .social-media-links a > * {
+  width: 30px;
+  height: auto;
+  transition: var(--transition);
+}
+
+.footer .content .social-media .social-media-links a .instagram:hover {
+  color: #fd1d1d;
+}
+
+.footer .content .social-media .social-media-links a .facebook:hover {
+  color: #1877F2;
+}
+
+.footer .content .social-media .social-media-links a .discord:hover {
+  color: #7289da;
 }
 
 .footer .content .social-media .social-media-links a {
