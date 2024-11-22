@@ -1,10 +1,16 @@
 "use client";
+import { useState, useEffect } from "react";
 import "./home.css";
+import "./responsive-home.css"
 import Image from "next/image";
 
 
 
 const HomePage = () => {
+  const [mobileVersion, setVersion] = useState(false)
+  const [openTeam, setTeam] = useState("None")
+
+  // send data to Discord
   async function sendMessage() {
     const response = await fetch('/api/sendToDiscord', {
       method: 'POST',
@@ -17,6 +23,34 @@ const HomePage = () => {
     const data = await response.json();
     console.log(data);
   }
+
+  const checkRes = () => {
+    if(window.innerWidth <= 425){
+      setVersion(true)
+    } else {
+      setVersion(false)
+    }
+  }
+
+  const openTeamInfo = (team) => {
+    if(openTeam == team) {
+      setTeam("None")
+    } else {
+      setTeam(team)
+    }
+  }
+
+  useEffect(() => {
+    checkRes(); 
+
+    // Add event listener for window resize
+    window.addEventListener("resize", checkRes);
+
+    // Clean up event listener on component unmount
+    return () => {
+      window.removeEventListener("resize", checkRes);
+    };
+  }, [mobileVersion]);
 
   return (
     <div>
@@ -31,13 +65,17 @@ const HomePage = () => {
         }}
       >
         <div className="main-ca">
-          <Image
-            src="/images/logo-tus-white.png"
-            alt="Description"
-            width={293}
-            height={70}
-            className="img-logo"
-          />
+          <div className="ca-info">
+            <Image
+              src="/images/logo-tus-white.png"
+              alt="Description"
+              width={293}
+              height={70}
+              className="img-logo"
+            />
+            <h1>Explore Our Engineering!</h1>
+            <a href="#">See Our Work</a>
+          </div>
         </div>
       </div>
       <div className="home-join-us">
@@ -56,42 +94,52 @@ const HomePage = () => {
         <div className="looking">
           <h1>We are searching for new talent in the following areas:</h1>
           <div className="sl"></div>
-          <div className="looking-teams">
-            <div className="team">
-              <h3>Mechanical</h3>
-              <ul>
+          
+          <div className={`looking-teams ${mobileVersion ? "teams-res" : ""}`}>
+            <div className={`team ${mobileVersion ? "team-res": ""}`}>
+              <h3 onClick={() => {openTeamInfo("Mechanical")}}>{mobileVersion ? "Mechanical >" : "Mechanical"}</h3>
+              {(!mobileVersion || (openTeam == "Mechanical")) && (
+                <ul>
                 <li>Suspension</li>
                 <li>Aerodynamics</li>
                 <li>Chassis</li>
                 <li>Ergonomics</li>
               </ul>
+              )}
+              
             </div>
-            <div className="team">
-              <h3>Electrical</h3>
-              <ul>
-                <li>LV-System</li>
-                <li>HV-System</li>
-                <li>Accumulator</li>
-                <li>Drivetrain</li>
-              </ul>
+            <div className={`team ${mobileVersion ? "team-res": ""}`}>
+              <h3 onClick={() => {openTeamInfo("Electrical")}}>{mobileVersion ? "Electrical >" : "Electrical"}</h3>
+              {(mobileVersion == false || (openTeam == "Electrical")) && (
+                <ul>
+                  <li>LV-System</li>
+                  <li>HV-System</li>
+                  <li>Accumulator</li>
+                  <li>Drivetrain</li>
+                </ul>
+              )}
             </div>
-            <div className="team">
-              <h3>Media</h3>
-              <ul>
-                <li>IT & Website</li>
-                <li>Social Media</li>
-                <li>Media Engineering</li>
-                <li>Media Production</li>
-              </ul>
+            <div className={`team ${mobileVersion ? "team-res": ""}`}>
+              <h3 onClick={() => {openTeamInfo("Media")}}>{mobileVersion ? "Media >" : "Media"}</h3>
+              {(!mobileVersion || (openTeam == "Media")) && (
+                <ul>
+                  <li>IT & Website</li>
+                  <li>Social Media</li>
+                  <li>Media Engineering</li>
+                  <li>Media Production</li>
+                </ul>
+              )}
             </div>
-            <div className="team">
-              <h3>Business</h3>
-              <ul>
-                <li>Marketing</li>
-                <li>Accounting</li>
-                <li>Sponsoring</li>
-                <li>Test</li>
-              </ul>
+            <div className={`team ${mobileVersion ? "team-res": ""}`}>
+              <h3 onClick={() => {openTeamInfo("Business")}}>{mobileVersion ? "Business >" : "Business"}</h3>
+              {(!mobileVersion || (openTeam == "Business")) && (
+                <ul>
+                  <li>Marketing</li>
+                  <li>Accounting</li>
+                  <li>Sponsoring</li>
+                  <li>Test</li>
+                </ul>
+              )}
             </div>
           </div>
           <a href="/application" onClick={(e) => { e.preventDefault(); sendMessage(); }}>GO TO THE APPLICATION</a>

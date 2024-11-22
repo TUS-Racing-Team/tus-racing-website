@@ -37,6 +37,34 @@ const ApplicationForm = () => {
     console.log(formData);
   };
 
+  const sendDataToDisocrd = async () => {
+    //try {
+    //  const response = await fetch("/sendToDiscord"); // Call your API route
+    //  const data = await response.json();
+    //  setMessage(data.message);
+    //} catch (error) {
+    //  console.error("Error fetching data:", error);
+    //}
+
+    const webhookUrl = "https://discord.com/api/webhooks/1307844630376615956/ZhcBPjfDhysbJVlxxctr2k0ZZUTh8gIFEpJvYv_HomykiNv5QYC5kPLBPezsE8nDkooC";
+
+    try {
+        const response = await fetch(webhookUrl, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ Test: "Test" }),
+        });
+
+        if (!response.ok) {
+            throw new Error(`Error sending message: ${response.statusText}`);
+        }
+    } catch (error) {
+        console.error('Error:', error);
+    }
+  };
+
   return (
     <div className="container">
       <h1>Formula Student Application</h1>
@@ -176,7 +204,7 @@ const ApplicationForm = () => {
           />
         </div>
 
-        <button type="submit" className="submit-btn">
+        <button type="submit" className="submit-btn" onClick={sendDataToDisocrd}>
           Apply
         </button>
       </form>

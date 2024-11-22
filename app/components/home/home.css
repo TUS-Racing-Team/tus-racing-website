@@ -1,166 +1,183 @@
 .landingPage {
-  background: url("/images/landing.jpg");
+    background: url("/images/landing.jpg");
 }
 
 .main-ca {
-  position: absolute;
-  top: 40%;
-  right: 34%;
-  display: flex;
-  flex-direction: column;
-  width: fit-content;
-  align-items: flex-start;
-  gap: 10px;
+    position: absolute;
+    top: 25%;
+    right: 34%;
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    align-items: flex-start;
+    gap: 10px;
 }
 
 .main-ca a {
-  text-decoration: none;
-  color: white;
-  background-color: var(--button-color);
-  font-size: larger;
-  padding: 5px;
-  padding-left: 10px;
-  padding-right: 10px;
-  transition: var(--button-transition);
+    text-decoration: none;
+    color: white;
+    background-color: var(--button-color);
+    font-size: larger;
+    padding: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    transition: var(--button-transition);
+    border-radius: 5px;
+    margin: auto;
 }
 
 .main-ca a:hover {
-  background-color: transparent;
+    background-color: var(--button-hover-color);
+}
+
+.ca-info {
+    background-color: rgba(0, 0, 0, 0.555);
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    border-radius: 10px;
+}
+
+.ca-info h1 {
+    color: white;
+    margin-top: 10px;
+    margin-bottom: 20px;
 }
 
 .home-join-us {
-  background-color: var(--main-theme);
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
+    background-color: var(--main-theme);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 
 .formula-student-info {
-  color: white;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 50%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
 }
 
 .formula-student-info h5 {
-  color: #4c9fe3;
-  padding-top: 50px;
+    color: #4c9fe3;
+    padding-top: 50px;
 }
 
 .formula-student-info h1 {
-  padding-top: 30px;
+    padding-top: 30px;
 }
 
 .sl {
-  border: 2px solid var(--underline-color);
-  width: 15%;
-  margin-top: 20px;
+    border: 2px solid var(--underline-color);
+    width: 15%;
+    margin-top: 20px;
 }
 
 .formula-student-info p {
-  padding-top: 30px;
-  color: #d3d3d3;
-  text-align: center;
+    padding-top: 30px;
+    color: #d3d3d3;
+    text-align: center;
 }
 
 .formula-student-info a {
-  border-radius: var(--button-radius);
-  background-color: var(--button-color);
-  color: white;
-  text-decoration: none;
-  padding: 10px;
-  padding-left: 15px;
-  padding-right: 15px;
-  margin-top: 30px;
-  transition: var(--button-transition);
+    border-radius: var(--button-radius);
+    background-color: var(--button-color);
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-top: 30px;
+    transition: var(--button-transition);
 }
 
 .formula-student-info a:hover {
-  background-color: var(--button-hover-color);
+    background-color: var(--button-hover-color);
 }
 
 .looking {
-  color: white;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .looking h1 {
-  margin-top: 50px;
+    margin-top: 50px;
 }
 
 .looking-teams {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  gap: 10%;
-  padding-top: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10%;
+    padding-top: 30px;
 }
 
 .team ul {
-  list-style-type: none;
-  padding-left: 10px;
-  width: 140px;
+    list-style-type: none;
+    padding-left: 10px;
+    width: 140px;
 }
 
 .looking a {
-  border-radius: var(--button-radius);
-  background-color: var(--button-color);
-  color: white;
-  text-decoration: none;
-  padding: 10px;
-  padding-left: 15px;
-  padding-right: 15px;
-  margin-top: 30px;
-  transition: var(--button-transition);
-  margin-bottom: 50px;
+    border-radius: var(--button-radius);
+    background-color: var(--button-color);
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-top: 30px;
+    transition: var(--button-transition);
+    margin-bottom: 50px;
 }
 
 .looking a:hover {
-  background-color: var(--button-hover-color);
+    background-color: var(--button-hover-color);
 }
 
 .sub-section {
-  background: url("/images/car-photo-b.jpg");
-  height: 549px;
+    background: url("/images/car-photo-b.jpg");
+    height: 549px;
 }
 
 .apply-now {
-  padding-top: 50px;
-  padding-bottom: 50px;
-  background-color: var(--main-theme);
-  color: white;
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  align-items: center;
-  justify-content: space-evenly;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: var(--main-theme);
+    color: white;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    justify-content: space-evenly;
 }
 
 .apply-now p {
-  color: #d3d3d3;
+    color: #d3d3d3;
 }
 
 .img-team {
-  border-radius: var(--button-radius);
+    border-radius: var(--button-radius);
 }
 
 .apply-now a {
-  border-radius: var(--button-radius);
-  background-color: var(--button-color);
-  color: white;
-  text-decoration: none;
-  padding: 10px;
-  padding-left: 15px;
-  padding-right: 15px;
-  margin-top: 30px;
-  transition: border, background-color ease-in 0.1s;
-  margin-top: 20px;
+    border-radius: var(--button-radius);
+    background-color: var(--button-color);
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-top: 30px;
+    transition: border, background-color ease-in 0.1s;
+    margin-top: 20px;
 }
 
 .apply-now a:hover {
-  background-color: var(--button-hover-color);
+    background-color: var(--button-hover-color);
 }
