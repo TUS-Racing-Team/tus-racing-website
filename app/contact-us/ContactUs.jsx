@@ -4,7 +4,6 @@ import "./contact-us.css";
 const ContactUs = () => {
   return (
     <div className="contact-us-container">
-
       <ContactForm />
     </div>
   )
