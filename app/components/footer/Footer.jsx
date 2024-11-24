@@ -30,6 +30,14 @@ const Footer = () => {
         <div className="social-media">
           <h2>Social medias</h2>
           <div className="social-media-links">
+            <a
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=formulastudentbg@gmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              title="E-mail Us - formulastudentbg@gmail.com"
+            >
+              <FaEnvelope className="gmail" />
+            </a>
             <a href="" title="Discord">
               <FaDiscord className="discord" />
             </a>
@@ -38,15 +46,6 @@ const Footer = () => {
             </a>
             <a href="" title="Instagram">
               <FaInstagram className="instagram" />
-            </a>
-            <a
-              href={`https://mail.google.com/mail/?view=cm&fs=1&to=formulastudentbg+web@gmail.com`}
-              target="_blank"
-              rel="noopener noreferrer"
-              title="E-mail Us"
-            >
-              <FaEnvelope className="gmail" />{" "}
-              {/* formulastudentbg@gmail.com */}
             </a>
           </div>
         </div>
