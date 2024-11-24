@@ -84,15 +84,46 @@
 }
 
 .footer .content .social-media .social-media-links a .facebook:hover {
-  color: #1877F2;
+  color: #1877f2;
 }
 
 .footer .content .social-media .social-media-links a .discord:hover {
   color: #7289da;
 }
 
-.footer .content .social-media .social-media-links a .gmail:hover{
+.footer .content .social-media .social-media-links a .gmail:hover {
   color: #3e65cf;
+}
+
+.email-tooltip-container {
+  position: relative;
+  display: inline-block;
+}
+
+.email-tooltip {
+  visibility: hidden; 
+  font-size: 14px;
+  width: 200px; 
+  background-color: rgba(0, 0, 0, 0.75);
+  color: #fff;
+  text-align: center;
+  border-radius: 5px;
+  padding: 8px;
+  position: absolute;
+  z-index: 1;
+  bottom: -85%; 
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  pointer-events: none; 
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+.email-tooltip-container:hover .email-tooltip {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto; 
 }
 
 .footer .content .social-media .social-media-links a {

@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import { FaFacebook, FaInstagram, FaDiscord, FaEnvelope } from "react-icons/fa";
 import "./footer.css";
@@ -30,14 +32,31 @@ const Footer = () => {
         <div className="social-media">
           <h2>Social medias</h2>
           <div className="social-media-links">
-            <a
-              href="https://mail.google.com/mail/?view=cm&fs=1&to=formulastudentbg@gmail.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              title="E-mail Us - formulastudentbg@gmail.com"
-            >
-              <FaEnvelope className="gmail" />
-            </a>
+            <div className="email-tooltip-container">
+              <a
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=formulastudentbg@gmail.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaEnvelope className="gmail" />
+              </a>
+              <span
+                className="email-tooltip"
+                onClick={() =>
+                  navigator.clipboard
+                    .writeText("formulastudentbg@gmail.com")
+                    .then(() => {
+                      alert("Email copied to clipboard!");
+                    })
+                    .catch((err) => {
+                      alert("Failed to copy text: " + err);
+                    })
+                }
+              >
+                formulastudentbg@gmail.com
+              </span>
+            </div>
+
             <a href="" title="Discord">
               <FaDiscord className="discord" />
             </a>
