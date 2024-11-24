@@ -1,10 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import "./home.css";
-import "./responsive-home.css"
 import Image from "next/image";
-
-
 
 const HomePage = () => {
   const [mobileVersion, setVersion] = useState(false)
@@ -151,7 +148,6 @@ const HomePage = () => {
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundAttachment: "fixed",
-          //height: '100vh', // Ensures it takes the full viewport height
           width: "100%",
         }}
       ></div>
@@ -175,7 +171,7 @@ const HomePage = () => {
           <a href="/apply">GO TO THE APPLICATION</a>
         </div>
         <Image
-          src="/images/team-photo.jpg"
+          src="/images/team-photos/team-photo.jpg"
           alt="Description"
           width={700}
           height={500}

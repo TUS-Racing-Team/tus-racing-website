@@ -1,8 +1,12 @@
-import "./formula-student.module.css";
+import "./formula-student.css";
 
 const FormulaStudent = () => {
   return (
-    <div>FormulaStudent</div>
+    <div className="formula-student-container">
+      <div>
+        <h1>FormulaStudent</h1>
+      </div>
+    </div>
   )
 }
 

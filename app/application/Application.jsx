@@ -1,12 +1,12 @@
 import "./application.css";
-import ApplicationForm from "./ApplicationForm"
-
+import ApplicationForm from "./ApplicationForm";
+import Head from "next/head";
 const Application = () => {
   return (
-    <div className="contact-us-container">
-      <ApplicationForm />
-    </div>
-  )
-}
+      <div className="application-container">
+        <ApplicationForm />
+      </div>
+  );
+};
 
-export default Application
+export default Application;

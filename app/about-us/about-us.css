@@ -1,3 +1,8 @@
+body {
+  background: var(--main-theme);
+  color: white;
+}
+
 .main-about {
   padding-top: 110px;
   background-color: var(--main-theme);
@@ -104,19 +109,19 @@
 
 /* Individual backgrounds for each option */
 .options a:nth-child(1) .option {
-  background-image: url("/images/about-us/car2.jpg");
+  background-image: url("/images/about-us/car-on-track.jpg");
 }
-
+ 
 .options a:nth-child(2) .option {
   background-image: url("/images/about-us/car-team.jpg");
 }
 
 .options a:nth-child(3) .option {
-  background-image: url("/images/about-us/car.jpg");
+  background-image: url("/images/about-us/car-testing.jpg");
 }
 
 .options a:nth-child(4) .option {
-  background-image: url("/images/about-us/car2.jpg");
+  background-image: url("/images/about-us/join-team.jpg");
 }
 
 @media (max-width: 1135px) {

@@ -1,0 +1,8 @@
+body {
+  background: var(--main-theme);
+  color: white;
+}
+
+.contact-container {
+  margin-top: 90px;
+}

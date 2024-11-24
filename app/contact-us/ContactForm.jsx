@@ -44,6 +44,7 @@ const ContactForm = () => {
                     type="radio"
                     name="feedbackType"
                     value="comments"
+                    title="Feedback Options"
                     required
                     checked={formData.feedbackType === "comments"}
                     onChange={handleChange}
@@ -55,6 +56,7 @@ const ContactForm = () => {
                     type="radio"
                     name="feedbackType"
                     value="suggestions"
+                    title="Feedback Options"
                     required
                     checked={formData.feedbackType === "suggestions"}
                     onChange={handleChange}
@@ -66,6 +68,7 @@ const ContactForm = () => {
                     type="radio"
                     name="feedbackType"
                     value="questions"
+                    title="Feedback Options"
                     required
                     checked={formData.feedbackType === "questions"}
                     onChange={handleChange}
@@ -83,6 +86,7 @@ const ContactForm = () => {
               <textarea
                 name="description"
                 placeholder="Your opinion, suggestions and questions..."
+                title="Description"
                 value={formData.description}
                 required
                 onChange={handleChange}
@@ -99,6 +103,7 @@ const ContactForm = () => {
                   type="text"
                   name="firstName"
                   placeholder="John"
+                  title="First Name"
                   value={formData.firstName}
                   required
                   onChange={handleChange}
@@ -110,6 +115,7 @@ const ContactForm = () => {
                   type="text"
                   name="lastName"
                   placeholder="Doe"
+                  title="Last Name"
                   value={formData.lastName}
                   required
                   onChange={handleChange}
@@ -126,12 +132,12 @@ const ContactForm = () => {
               <input
                 type="email"
                 name="email"
-                placeholder="ex: myname@example.com"
+                placeholder="example@example.com"
+                title="E-mail"
                 value={formData.email}
                 required
                 onChange={handleChange}
               />
-              <small className="small-text">example@example.com</small>
             </div>
 
             <button type="submit" className="submit-btn">
