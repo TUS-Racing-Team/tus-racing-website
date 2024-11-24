@@ -1,5 +1,5 @@
 import React from "react";
-import { FaFacebook, FaInstagram, FaDiscord } from "react-icons/fa";
+import { FaFacebook, FaInstagram, FaDiscord, FaEnvelope } from "react-icons/fa";
 import "./footer.css";
 
 const Footer = () => {
@@ -30,14 +30,23 @@ const Footer = () => {
         <div className="social-media">
           <h2>Social medias</h2>
           <div className="social-media-links">
-            <a href="">
+            <a href="" title="Discord">
               <FaDiscord className="discord" />
             </a>
-            <a href="">
+            <a href="" title="Facebook">
               <FaFacebook className="facebook" />
             </a>
-            <a href="">
+            <a href="" title="Instagram">
               <FaInstagram className="instagram" />
+            </a>
+            <a
+              href={`https://mail.google.com/mail/?view=cm&fs=1&to=formulastudentbg+web@gmail.com`}
+              target="_blank"
+              rel="noopener noreferrer"
+              title="E-mail Us"
+            >
+              <FaEnvelope className="gmail" />{" "}
+              {/* formulastudentbg@gmail.com */}
             </a>
           </div>
         </div>

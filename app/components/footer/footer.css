@@ -60,7 +60,6 @@
 .footer .content .social-media {
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
   align-items: center;
   gap: 10px;
 }
@@ -90,6 +89,10 @@
 
 .footer .content .social-media .social-media-links a .discord:hover {
   color: #7289da;
+}
+
+.footer .content .social-media .social-media-links a .gmail:hover{
+  color: #3e65cf;
 }
 
 .footer .content .social-media .social-media-links a {
