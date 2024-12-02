@@ -8,18 +8,20 @@ const HomePage = () => {
   const [openTeam, setTeam] = useState("None")
 
   // send data to Discord
-  async function sendMessage() {
-    const response = await fetch('/api/sendToDiscord', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ content: 'Hello, Discord!' }),
-    });
+  //async function sendMessage() {
+  //  const response = await fetch('/api/sendToDiscord', {
+  //    method: 'POST',
+  //    headers: {
+  //      'Content-Type': 'application/json',
+  //    },
+  //    body: JSON.stringify({ content: 'Hello, Discord!' }),
+  //  });
+  //
+  //  const data = await response.json();
+  //  console.log(data);
+  //}
+
   
-    const data = await response.json();
-    console.log(data);
-  }
 
   const checkRes = () => {
     if(window.innerWidth <= 425){

@@ -16,6 +16,65 @@ const ApplicationForm = () => {
     resume: null,
   });
 
+  const sendDataToDisocrd = async () => {
+    const response = await fetch("/api/sendToDiscord", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        "content": "this `supports` __a__ **subset** *of* ~~markdown~~ 😃 ```js\nfunction foo(bar) {\n  console.log(bar);\n}\n\nfoo(1);```",
+        "embed": {
+          "title": "title ~~(did you know you can have markdown here too?)~~",
+          "description": "this supports [named links](https://discordapp.com) on top of the previously shown subset of markdown. ```\nyes, even code blocks```",
+          "url": "https://discordapp.com",
+          "color": 9094190,
+          "timestamp": "2024-11-24T18:30:00.520Z",
+          "footer": {
+            "icon_url": "https://cdn.discordapp.com/embed/avatars/0.png",
+            "text": "footer text"
+          },
+          "thumbnail": {
+            "url": "https://cdn.discordapp.com/embed/avatars/0.png"
+          },
+          "image": {
+            "url": "https://cdn.discordapp.com/embed/avatars/0.png"
+          },
+          "author": {
+            "name": "author name",
+            "url": "https://discordapp.com",
+            "icon_url": "https://cdn.discordapp.com/embed/avatars/0.png"
+          },
+          "fields": [
+            {
+              "name": "🤔",
+              "value": "some of these properties have certain limits..."
+            },
+            {
+              "name": "😱",
+              "value": "try exceeding some of them!"
+            },
+            {
+              "name": "🙄",
+              "value": "an informative error should show up, and this view will remain as-is until all issues are fixed"
+            },
+            {
+              "name": "<:thonkang:219069250692841473>",
+              "value": "these last two",
+              "inline": true
+            },
+            {
+              "name": "<:thonkang:219069250692841473>",
+              "value": "are inline fields",
+              "inline": true
+            }
+          ]
+        }
+      }),
+    });
+  
+    const result = await response.json();
+    console.log(result);
+  };
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prevState) => ({
@@ -37,34 +96,6 @@ const ApplicationForm = () => {
     console.log(formData);
   };
 
-  const sendDataToDisocrd = async () => {
-    //try {
-    //  const response = await fetch("/sendToDiscord"); // Call your API route
-    //  const data = await response.json();
-    //  setMessage(data.message);
-    //} catch (error) {
-    //  console.error("Error fetching data:", error);
-    //}
-
-    const webhookUrl =
-      "https://discord.com/api/webhooks/1307844630376615956/ZhcBPjfDhysbJVlxxctr2k0ZZUTh8gIFEpJvYv_HomykiNv5QYC5kPLBPezsE8nDkooC";
-
-    try {
-      const response = await fetch(webhookUrl, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ Test: "Test" }),
-      });
-
-      if (!response.ok) {
-        throw new Error(`Error sending message: ${response.statusText}`);
-      }
-    } catch (error) {
-      console.error("Error:", error);
-    }
-  };
 
   return (
     <div className="box">
