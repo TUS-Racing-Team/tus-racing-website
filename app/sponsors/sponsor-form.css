@@ -16,8 +16,39 @@ body {
   width: 100%;
   height: 100%;
   padding: 1px 0;
-  background-color: rgba(0, 0, 0, 0.2);
-  backdrop-filter: blur(8px);
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px);
+}
+
+.sponsor-box-h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.sponsor-form-h1 {
+  font-size: 60px;
+  letter-spacing: 5px;
+  font-weight: 900;
+  background: linear-gradient(45deg, #ff9a02, #e1e406);
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: colorShift 6s infinite;
+}
+
+/* Gradient animation */
+@keyframes colorShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .form {
@@ -36,7 +67,7 @@ body {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-.form h1 {
+.form h2 {
   font-size: 24px;
   color: #ffffff;
   margin: 10px 0;
@@ -54,7 +85,7 @@ body {
 
 .form-group label {
   display: block;
-  font-weight: bold;
+  font-weight: 600;
   margin-bottom: 10px;
 }
 

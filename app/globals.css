@@ -1,3 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lunasima:wght@400;700&display=swap");
+
 :root {
   --main-theme: #1d1d1d;
   --button-color: #166fd5;
@@ -6,6 +9,51 @@
   --button-radius: 12px;
   --button-transition: 200ms;
   --transition: 300ms;
+  --header: "Raleway";
+  --text: "Lunasima";
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--header) !important;
+  font-weight: 500;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 900;
+}
+
+a,
+p,
+div,
+sub,
+sup,
+ul,
+li,
+footer,
+header,
+nav,
+article,
+aside,
+span,
+strong,
+em,
+small,
+b,
+i,
+blockquote,
+code,
+pre,
+mark,
+del,
+ins {
+  font-family: var(--text) !important;
 }
 
 ::-webkit-scrollbar {

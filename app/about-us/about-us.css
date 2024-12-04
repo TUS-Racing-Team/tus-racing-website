@@ -39,7 +39,7 @@ body {
 
 .option {
   position: relative;
-  height: 400px;
+  height: 420px;
   border-radius: 10px;
   background-color: rgba(0, 0, 0, 0.66);
   box-shadow: 0 0 15px rgb(59, 59, 59);
@@ -78,6 +78,12 @@ body {
 .option p {
   color: white;
   z-index: 2;
+}
+
+.option-info p {
+  font-size: 14px;
+  overflow-x: auto;
+  line-height: 20px;
 }
 
 .option-info {

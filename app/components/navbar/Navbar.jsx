@@ -22,8 +22,8 @@ const Navbar = () => {
 
   // Function to check and update the menu state based on window width
   const updateMenuState = () => {
-    if (window.innerWidth > 1135 && isMenuOpen) {
-      setIsMenuOpen(false); // Close the menu if the width is > 1135px
+    if (window.innerWidth > 1159 && isMenuOpen) {
+      setIsMenuOpen(false); // Close the menu if the width is > 1159px
     }
   };
 

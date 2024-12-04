@@ -101,7 +101,7 @@ const ApplicationForm = () => {
     <div className="box">
       <div className="container">
         <div className="form">
-          <h1>Formula Student Application</h1>
+          <h2>Formula Student Application</h2>
           <p>
             Thank you for your interest in applying to join our Formula Student
             team! Please fill out the application form below.

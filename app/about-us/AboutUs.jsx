@@ -46,8 +46,8 @@ const AboutUs = () => {
               <div className="option-info">
                 <div className="option-title">
                   <img
-                    src="/images/icons/group-chat.png"
-                    alt="group-chat"
+                    src="/images/icons/team.png"
+                    alt="team"
                     loading="lazy"
                   />
                 </div>
@@ -92,8 +92,8 @@ const AboutUs = () => {
               <div className="option-info">
                 <div className="option-title">
                   <img
-                    src="/images/icons/resume.png"
-                    alt="resume"
+                    src="/images/icons/application.png"
+                    alt="application"
                     loading="lazy"
                   />
                 </div>

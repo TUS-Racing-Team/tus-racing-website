@@ -1,3 +1,64 @@
 .sponsor-container {
   margin-top: 90px;
 }
+
+.sponsor-h1 {
+  font-size: 3.5rem;
+  font-weight: 900;
+}
+
+.carousel {
+  margin: 0 auto;
+  padding: 20px 0;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+}
+
+.carousel {
+  > * {
+    flex: 0 0 100%;
+  }
+  &:hover .group {
+    animation-play-state: paused;
+  }
+}
+
+.group {
+  display: flex;
+  gap: 70px;
+  padding-right: 20px;
+  will-change: transform;
+  animation: scrolling 10s linear infinite;
+}
+
+.group .card:last-child {
+  margin-right: 70px;
+}
+
+@keyframes scrolling {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto; /* Set width to auto for each image */
+  height: 100px; /* Fixed height */
+  color: white;
+  border-radius: 24px;
+  box-shadow: rgba(0, 0, 0, 10%) 5px 5px 20px 0;
+  font-size: xx-large;
+}
+
+.card img {
+  height: 100%; /* Ensure images take the full height */
+  width: auto; /* Keep width auto to preserve the aspect ratio */
+}
+

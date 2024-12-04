@@ -27,8 +27,11 @@ const SponsorForm = () => {
   return (
     <div className="box">
       <div className="container">
+        <div className="sponsor-box-h1">
+          <h1 className="sponsor-form-h1">Be one of our sponsors</h1>
+        </div>
         <div className="form">
-          <h1>Sponsorship Form</h1>
+          <h2>Sponsorship Form</h2>
           <p>
             Thank you for your interest in sponsoring our event. Please fill out
             the form below to get started!

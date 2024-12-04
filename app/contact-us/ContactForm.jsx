@@ -27,8 +27,11 @@ const ContactForm = () => {
   return (
     <div className="box">
       <div className="container">
+        <div className="box-h1">
+          <h1 className="contact-h1">Contact Us</h1>
+        </div>
         <div className="form">
-          <h1>Feedback Form</h1>
+          <h2>Feedback Form</h2>
           <p>
             We would love to hear your thoughts, suggestions, concerns, or
             problems with anything so we can improve!
