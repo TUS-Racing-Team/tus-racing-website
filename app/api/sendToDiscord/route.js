@@ -10,7 +10,7 @@ export async function POST(req) {
             );
         }
 
-        const webhookUrl = "https://discord.com/api/webhooks/1307844630376615956/ZhcBPjfDhysbJVlxxctr2k0ZZUTh8gIFEpJvYv_HomykiNv5QYC5kPLBPezsE8nDkooC";
+        const webhookUrl = "https://discord.com/api/webhooks/1314159821427179530/3t0ZvLzD8hWPJ4bTbdte4NVZaja2FwAcXx9nig9pq-dMS787CjjQ8AY4GsvMzHgiU2jG";
 
         // Send the payload to Discord
         const response = await fetch(webhookUrl, {

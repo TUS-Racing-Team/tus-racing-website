@@ -16,58 +16,17 @@ const ApplicationForm = () => {
     resume: null,
   });
 
-  const sendDataToDisocrd = async () => {
+  
+  
+  const sendDataToDiscord = async () => {
     const response = await fetch("/api/sendToDiscord", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
-        "content": "this `supports` __a__ **subset** *of* ~~markdown~~ 😃 ```js\nfunction foo(bar) {\n  console.log(bar);\n}\n\nfoo(1);```",
-        "embed": {
-          "title": "title ~~(did you know you can have markdown here too?)~~",
-          "description": "this supports [named links](https://discordapp.com) on top of the previously shown subset of markdown. ```\nyes, even code blocks```",
-          "url": "https://discordapp.com",
-          "color": 9094190,
-          "timestamp": "2024-11-24T18:30:00.520Z",
-          "footer": {
-            "icon_url": "https://cdn.discordapp.com/embed/avatars/0.png",
-            "text": "footer text"
-          },
-          "thumbnail": {
-            "url": "https://cdn.discordapp.com/embed/avatars/0.png"
-          },
-          "image": {
-            "url": "https://cdn.discordapp.com/embed/avatars/0.png"
-          },
-          "author": {
-            "name": "author name",
-            "url": "https://discordapp.com",
-            "icon_url": "https://cdn.discordapp.com/embed/avatars/0.png"
-          },
-          "fields": [
-            {
-              "name": "🤔",
-              "value": "some of these properties have certain limits..."
-            },
-            {
-              "name": "😱",
-              "value": "try exceeding some of them!"
-            },
-            {
-              "name": "🙄",
-              "value": "an informative error should show up, and this view will remain as-is until all issues are fixed"
-            },
-            {
-              "name": "<:thonkang:219069250692841473>",
-              "value": "these last two",
-              "inline": true
-            },
-            {
-              "name": "<:thonkang:219069250692841473>",
-              "value": "are inline fields",
-              "inline": true
-            }
-          ]
-        }
+        "content": `
+          First Name: ${formData.firstName}\nLast Name: ${formData.lastName}\nEmail: ${formData.email}\nUniversity: ${formData.university}\nCourse: ${formData.course}\nYear of Study: ${formData.yearOfStudy}\nSkills: ${formData.skills}\nMotivation: ${formData.motivation}\nPortfolio Link: ${formData.portfolioLink}
+        `,
+        
       }),
     });
   
@@ -94,6 +53,7 @@ const ApplicationForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(formData);
+    sendDataToDiscord()
   };
 
 
@@ -251,7 +211,6 @@ const ApplicationForm = () => {
             <button
               type="submit"
               className="submit-btn"
-              onClick={sendDataToDisocrd}
             >
               Apply
             </button>
