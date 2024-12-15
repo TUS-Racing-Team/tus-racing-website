@@ -80,7 +80,7 @@ const HomePage = () => {
           <div className="sl"></div>
 
           <div className={`looking-teams ${mobileVersion ? "teams-res" : ""}`}>
-            <div className={`team ${mobileVersion ? "team-res" : ""}`}>
+            <div className={`team-desc ${mobileVersion ? "team-res" : ""}`}>
               <h3
                 onClick={() => {
                   openTeamInfo("Mechanical");
@@ -97,7 +97,7 @@ const HomePage = () => {
                 </ul>
               )}
             </div>
-            <div className={`team ${mobileVersion ? "team-res" : ""}`}>
+            <div className={`team-desc ${mobileVersion ? "team-res" : ""}`}>
               <h3
                 onClick={() => {
                   openTeamInfo("Electrical");
@@ -114,7 +114,7 @@ const HomePage = () => {
                 </ul>
               )}
             </div>
-            <div className={`team ${mobileVersion ? "team-res" : ""}`}>
+            <div className={`team-desc ${mobileVersion ? "team-res" : ""}`}>
               <h3
                 onClick={() => {
                   openTeamInfo("Media");
@@ -131,7 +131,7 @@ const HomePage = () => {
                 </ul>
               )}
             </div>
-            <div className={`team ${mobileVersion ? "team-res" : ""}`}>
+            <div className={`team-desc ${mobileVersion ? "team-res" : ""}`}>
               <h3
                 onClick={() => {
                   openTeamInfo("Business");
@@ -170,8 +170,8 @@ const HomePage = () => {
         }}
       ></div>
 
-      <div className="apply-now">
-        <div className="apply-info">
+      <div className="team-organization">
+        <div className="team-information">
           <h1>Apply now!</h1>
           <div className="sl"></div>
           <br />
