@@ -11,13 +11,22 @@ const Navbar = () => {
   // Toggle language flag
   const toggleFlag = () => {
     setFlag((prevFlag) =>
-      prevFlag === "/images/icons/BG-bg.png" ? "/images/icons/UK-en.png" : "/images/icons/BG-bg.png"
+      prevFlag === "/images/icons/BG-bg.png"
+        ? "/images/icons/UK-en.png"
+        : "/images/icons/BG-bg.png"
     );
   };
 
   // Toggle menu visibility
   const toggleMenu = () => {
     setIsMenuOpen((prevState) => !prevState);
+  };
+
+  // Close the menu if a menu link is clicked
+  const closeMenuOnLinkClick = () => {
+    if (window.innerWidth < 1159) {
+      setIsMenuOpen(false); // Close hamburger menu on small screens
+    }
   };
 
   // Function to check and update the menu state based on window width
@@ -38,18 +47,6 @@ const Navbar = () => {
     return () => {
       window.removeEventListener("resize", updateMenuState);
     };
-  }, [isMenuOpen]); // Only update state if isMenuOpen changes
-
-  // Persist the menu state using localStorage
-  useEffect(() => {
-    const storedMenuState = localStorage.getItem("isMenuOpen");
-    if (storedMenuState !== null) {
-      setIsMenuOpen(JSON.parse(storedMenuState));
-    }
-  }, []);
-
-  useEffect(() => {
-    localStorage.setItem("isMenuOpen", JSON.stringify(isMenuOpen));
   }, [isMenuOpen]);
 
   // Prevent body overflow when menu is open
@@ -67,29 +64,47 @@ const Navbar = () => {
 
   return (
     <div className="navbar">
-      <img src="/images/logo-tus-blue-true.png" alt="Logo" className="logo" />
+      <a href="/">
+        <img src="/images/logo-tus-blue-true.png" alt="Logo" className="logo" />
+      </a>
       <ul className={`menu ${isMenuOpen ? "open" : ""}`}>
         <li>
-          <a href="/">Home</a>
+          <a href="/" onClick={closeMenuOnLinkClick}>
+            Home
+          </a>
         </li>
         <li>
-          <a href="/about-us">About</a>
+          <a href="/about-us" onClick={closeMenuOnLinkClick}>
+            About
+          </a>
         </li>
         <li>
-          <a href="/formula-student">Formula Student</a>
+          <a href="/formula-student" onClick={closeMenuOnLinkClick}>
+            Formula Student
+          </a>
         </li>
         <li>
-          <a href="/gallery">Gallery</a>
+          <a href="/gallery" onClick={closeMenuOnLinkClick}>
+            Gallery
+          </a>
         </li>
         <li>
-          <a href="/contact-us">Contacts</a>
+          <a href="/contact-us" onClick={closeMenuOnLinkClick}>
+            Contacts
+          </a>
         </li>
         <li>
-          <a href="/sponsors">Sponsors</a>
+          <a href="/sponsors" onClick={closeMenuOnLinkClick}>
+            Sponsors
+          </a>
         </li>
         {isMenuOpen && (
           <>
-            <a href="/application" className="apply">
+            <a
+              className="apply"
+              href="/application"
+              onClick={closeMenuOnLinkClick}
+            >
               Apply Now
             </a>
             <li>
@@ -98,7 +113,10 @@ const Navbar = () => {
                 alt="Flag"
                 width={30}
                 height={30}
-                onClick={toggleFlag}
+                onClick={() => {
+                  toggleFlag();
+                  if (window.innerWidth < 1159) setIsMenuOpen(false);
+                }}
               />
             </li>
           </>
@@ -120,13 +138,18 @@ const Navbar = () => {
       </div>
 
       {/* Hamburger menu button */}
-      <div className="hamburger-menu" onClick={toggleMenu}>
+      <a
+        className="hamburger-menu"
+        onClick={toggleMenu}
+        aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+        style={{backgroundColor: "transparent",}}
+      >
         {isMenuOpen ? (
           <FiX size={30} color="#fff" />
         ) : (
           <FiMenu size={30} color="#fff" />
         )}
-      </div>
+      </a>
     </div>
   );
 };

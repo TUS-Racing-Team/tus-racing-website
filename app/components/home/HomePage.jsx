@@ -4,43 +4,27 @@ import "./home.css";
 import Image from "next/image";
 
 const HomePage = () => {
-  const [mobileVersion, setVersion] = useState(false)
-  const [openTeam, setTeam] = useState("None")
-
-  // send data to Discord
-  //async function sendMessage() {
-  //  const response = await fetch('/api/sendToDiscord', {
-  //    method: 'POST',
-  //    headers: {
-  //      'Content-Type': 'application/json',
-  //    },
-  //    body: JSON.stringify({ content: 'Hello, Discord!' }),
-  //  });
-  //
-  //  const data = await response.json();
-  //  console.log(data);
-  //}
-
-  
+  const [mobileVersion, setVersion] = useState(false);
+  const [openTeam, setTeam] = useState("None");
 
   const checkRes = () => {
-    if(window.innerWidth <= 425){
-      setVersion(true)
+    if (window.innerWidth <= 425) {
+      setVersion(true);
     } else {
-      setVersion(false)
+      setVersion(false);
     }
-  }
+  };
 
   const openTeamInfo = (team) => {
-    if(openTeam == team) {
-      setTeam("None")
+    if (openTeam == team) {
+      setTeam("None");
     } else {
-      setTeam(team)
+      setTeam(team);
     }
-  }
+  };
 
   useEffect(() => {
-    checkRes(); 
+    checkRes();
 
     // Add event listener for window resize
     window.addEventListener("resize", checkRes);
@@ -59,8 +43,9 @@ const HomePage = () => {
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundAttachment: "fixed",
-          height: "100vh", 
+          height: "100vh",
           width: "100%",
+          top: "82px",
         }}
       >
         <div className="main-ca">
@@ -93,23 +78,34 @@ const HomePage = () => {
         <div className="looking">
           <h1>We are searching for new talent in the following areas:</h1>
           <div className="sl"></div>
-          
+
           <div className={`looking-teams ${mobileVersion ? "teams-res" : ""}`}>
-            <div className={`team ${mobileVersion ? "team-res": ""}`}>
-              <h3 onClick={() => {openTeamInfo("Mechanical")}}>{mobileVersion ? "Mechanical >" : "Mechanical"}</h3>
-              {(!mobileVersion || (openTeam == "Mechanical")) && (
+            <div className={`team ${mobileVersion ? "team-res" : ""}`}>
+              <h3
+                onClick={() => {
+                  openTeamInfo("Mechanical");
+                }}
+              >
+                {mobileVersion ? "Mechanical >" : "Mechanical"}
+              </h3>
+              {(!mobileVersion || openTeam == "Mechanical") && (
                 <ul>
-                <li>Suspension</li>
-                <li>Aerodynamics</li>
-                <li>Chassis</li>
-                <li>Ergonomics</li>
-              </ul>
+                  <li>Suspension</li>
+                  <li>Aerodynamics</li>
+                  <li>Chassis</li>
+                  <li>Ergonomics</li>
+                </ul>
               )}
-              
             </div>
-            <div className={`team ${mobileVersion ? "team-res": ""}`}>
-              <h3 onClick={() => {openTeamInfo("Electrical")}}>{mobileVersion ? "Electrical >" : "Electrical"}</h3>
-              {(mobileVersion == false || (openTeam == "Electrical")) && (
+            <div className={`team ${mobileVersion ? "team-res" : ""}`}>
+              <h3
+                onClick={() => {
+                  openTeamInfo("Electrical");
+                }}
+              >
+                {mobileVersion ? "Electrical >" : "Electrical"}
+              </h3>
+              {(mobileVersion == false || openTeam == "Electrical") && (
                 <ul>
                   <li>LV-System</li>
                   <li>HV-System</li>
@@ -118,9 +114,15 @@ const HomePage = () => {
                 </ul>
               )}
             </div>
-            <div className={`team ${mobileVersion ? "team-res": ""}`}>
-              <h3 onClick={() => {openTeamInfo("Media")}}>{mobileVersion ? "Media >" : "Media"}</h3>
-              {(!mobileVersion || (openTeam == "Media")) && (
+            <div className={`team ${mobileVersion ? "team-res" : ""}`}>
+              <h3
+                onClick={() => {
+                  openTeamInfo("Media");
+                }}
+              >
+                {mobileVersion ? "Media >" : "Media"}
+              </h3>
+              {(!mobileVersion || openTeam == "Media") && (
                 <ul>
                   <li>IT & Website</li>
                   <li>Social Media</li>
@@ -129,9 +131,15 @@ const HomePage = () => {
                 </ul>
               )}
             </div>
-            <div className={`team ${mobileVersion ? "team-res": ""}`}>
-              <h3 onClick={() => {openTeamInfo("Business")}}>{mobileVersion ? "Business >" : "Business"}</h3>
-              {(!mobileVersion || (openTeam == "Business")) && (
+            <div className={`team ${mobileVersion ? "team-res" : ""}`}>
+              <h3
+                onClick={() => {
+                  openTeamInfo("Business");
+                }}
+              >
+                {mobileVersion ? "Business >" : "Business"}
+              </h3>
+              {(!mobileVersion || openTeam == "Business") && (
                 <ul>
                   <li>Marketing</li>
                   <li>Accounting</li>
@@ -141,7 +149,15 @@ const HomePage = () => {
               )}
             </div>
           </div>
-          <a href="/application" onClick={(e) => { e.preventDefault(); sendMessage(); }}>GO TO THE APPLICATION</a>
+          <a
+            href="/application"
+            onClick={(e) => {
+              e.preventDefault();
+              sendMessage();
+            }}
+          >
+            GO TO THE APPLICATION
+          </a>
         </div>
       </div>
       <div
@@ -158,12 +174,12 @@ const HomePage = () => {
         <div className="apply-info">
           <h1>Apply now!</h1>
           <div className="sl"></div>
+          <br />
           <p>
             Do you fancy motorsport and tinkering? <br />
             Do you have team spirit and want to get to know your fellow
             students? <br />
             Want to think outside the box and acquire new skills?
-            <br />
             <br />
             <br />
             Become part of a motivated team and get involved with E-Traxx.{" "}
