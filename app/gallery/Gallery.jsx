@@ -8,6 +8,9 @@ const Gallery = () => {
     "https://picsum.photos/400/300?random=4",
     "https://picsum.photos/400/300?random=5",
     "https://picsum.photos/400/300?random=6",
+    "https://picsum.photos/400/300?random=7",
+    "https://picsum.photos/400/300?random=8",
+    "https://picsum.photos/400/300?random=9",
   ];
 
   return (
