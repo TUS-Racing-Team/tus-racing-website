@@ -1,4 +1,9 @@
+"use client";
 import "./gallery.css";
+import GoUpButton from "../components/go-up/goUp";
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css"; // Import AOS styles
 
 const Gallery = () => {
   const images = [
@@ -13,16 +18,35 @@ const Gallery = () => {
     "https://picsum.photos/400/300?random=9",
   ];
 
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // Duration of animation in ms
+      easing: "ease-out-back", // Smooth animation easing
+      once: true,
+    });
+  }, []);
+
   return (
     <div className="gallery-container">
-      <h1>Gallery</h1>
+      <h1 data-aos="fade-up" data-aos-duration="1000" className="gallery-title">
+        Gallery
+      </h1>
+
+      {/* Gallery Grid with animated images */}
       <div className="gallery-grid">
         {images.map((image, index) => (
-          <div className="gallery-item" key={index}>
+          <div
+            className="gallery-item"
+            key={index}
+            data-aos={index % 2 === 0 ? "zoom-in" : "fade-up"}
+            data-aos-delay={150 + index * 100} // Adding delay for each item
+          >
             <img src={image} alt={`Gallery image ${index + 1}`} />
           </div>
         ))}
       </div>
+
+      <GoUpButton />
     </div>
   );
 };

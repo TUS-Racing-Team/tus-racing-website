@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import "./home.css";
 import Image from "next/image";
 import AOS from "aos";
+import GoUpButton from "../go-up/goUp";
 import "aos/dist/aos.css";
 
 const HomePage = () => {
@@ -27,8 +28,12 @@ const HomePage = () => {
 
   useEffect(() => {
     checkRes();
-    AOS.init(); // Initialize AOS animations
-
+    AOS.init({
+      duration: 450, // Duration of animation in ms
+      easing: "ease-out", // Animation easing
+      once: false,
+      mirror: true,
+    });
     // Add event listener for window resize
     window.addEventListener("resize", checkRes);
 
@@ -53,20 +58,19 @@ const HomePage = () => {
         }}
       >
         <div className="main-ca">
-          <div className="ca-info" data-aos="fade-up" data-aos-delay="0">
+          <div className="ca-info" data-aos="fade-up">
             <Image
               src="/images/logo-tus-white.png"
               alt="Description"
               width={293}
               height={70}
               className="img-logo"
-              data-aos="fade-up"
-              data-aos-delay="200"
+              data-aos="fade-down"
             />
-            <h1 data-aos="fade-up" data-aos-delay="500">
+            <h1 data-aos="fade-up" data-aos-delay="400">
               Explore Our Engineering!
             </h1>
-            <a href="#" data-aos="fade-up" data-aos-delay="700">
+            <a href="#" data-aos="fade-up" data-aos-delay="500">
               See Our Work
             </a>
           </div>
@@ -79,24 +83,26 @@ const HomePage = () => {
           <h5 data-aos="fade-up" data-aos-delay="200">
             WELCOME TO TUS RACING TEAM
           </h5>
-          <h1 data-aos="fade-up" data-aos-delay="250">
+          <h1 data-aos="fade-up" data-aos-delay="300">
             Formula Student in Sofia
           </h1>
-          <div className="sl" data-aos="fade-up" data-aos-delay="250"></div>
-          <p data-aos="fade-up" data-aos-delay="300">
+          <div className="sl" data-aos="fade-up" data-aos-delay="300"></div>
+          <p data-aos="fade-up" data-aos-delay="400">
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rem ut
             commodi delectus aspernatur, doloribus quam veritatis repellendus.
             Similique sed, non eligendi reiciendis necessitatibus, et animi,
             blanditiis at debitis pariatur temporibus.
           </p>
-          <a href="/formula-student" data-aos="fade-up" data-aos-delay="300">
+          <a href="/formula-student" data-aos="fade-up" data-aos-delay="450">
             More about formula student
           </a>
         </div>
 
-        <div className="looking" data-aos="fade-up" data-aos-delay="350">
-          <h1>We are searching for new talent in the following areas:</h1>
-          <div className="sl"></div>
+        <div className="looking" data-aos="fade-up" data-aos-delay="300">
+          <h1 data-aos="fade-up" data-aos-delay="350">
+            We are searching for new talent in the following areas:
+          </h1>
+          <div className="sl" data-aos="fade-up" data-aos-delay="400"></div>
 
           <div
             className={`looking-teams ${mobileVersion ? "teams-res" : ""}`}
@@ -215,8 +221,14 @@ const HomePage = () => {
 
       {/* Team Organization Section */}
       <div className="team-organization">
-        <div className="team-information" data-aos="fade-up" data-aos-delay="200">
-          <h1 data-aos="fade-right" data-aos-delay="400">Apply now!</h1>
+        <div
+          className="team-information"
+          data-aos="fade-up"
+          data-aos-delay="200"
+        >
+          <h1 data-aos="fade-right" data-aos-delay="400">
+            Apply now!
+          </h1>
           <div className="sl" data-aos="fade-down" data-aos-delay="500"></div>
           <br />
           <p data-aos="fade-left" data-aos-delay="700">
@@ -246,6 +258,7 @@ const HomePage = () => {
           data-aos-delay="900"
         />
       </div>
+      <GoUpButton />
     </div>
   );
 };

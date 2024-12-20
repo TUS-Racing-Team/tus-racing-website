@@ -66,7 +66,7 @@ h1 {
   align-items: center;
 }
 
-div.home-join-us{
+div.home-join-us {
   padding: 50px 20px 0px 20px;
 }
 
@@ -134,7 +134,10 @@ div.home-join-us{
 /* Container for team descriptions */
 .looking-teams {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Minimum width is 280px, maxes out at 1fr */
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(280px, 1fr)
+  ); /* Minimum width is 280px, maxes out at 1fr */
   gap: 16px; /* Space between items */
   grid-auto-rows: auto; /* Ensure rows auto-adjust based on content */
 }
@@ -148,7 +151,8 @@ div.home-join-us{
   border: 1px solid #ddd;
   border-radius: 16px;
   background: #202020;
-  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease, background-color 0.3s ease,
+    box-shadow 0.3s ease;
   overflow: hidden; /* Hide any overflow from scaling */
 }
 
@@ -175,7 +179,7 @@ div.home-join-us{
 
 .team-desc li {
   padding: 4px 0;
-  cursor: pointer; 
+  cursor: pointer;
   text-align: center;
 }
 
@@ -184,7 +188,10 @@ div.home-join-us{
 /* On screens with a width less than 768px, show 2 items per row */
 @media (max-width: 768px) {
   .looking-teams {
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Minimum width 300px */
+    grid-template-columns: repeat(
+      auto-fill,
+      minmax(300px, 1fr)
+    ); /* Minimum width 300px */
   }
 
   .team-desc {
@@ -253,13 +260,15 @@ div.home-join-us{
   width: 100%;
 }
 
-.team-information h1, .team-information a {
+.team-information h1,
+.team-information a {
   text-align: center;
 }
 
 .team-organization p {
   color: #d3d3d3;
   font-size: 1rem;
+  text-align: center;
 }
 
 .img-team {
@@ -290,7 +299,7 @@ div.home-join-us{
   transform: translateY(-5px);
 }
 
-@media (max-width: 700px){
+@media (max-width: 700px) {
   .team-organization {
     flex-direction: column;
     padding-top: 20px;
