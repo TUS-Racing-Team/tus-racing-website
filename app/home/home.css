@@ -31,16 +31,21 @@ h1 {
   background-color: var(--button-color);
   font-size: 1.2rem;
   padding: 12px 25px;
-  transition: all 0.3s ease-in-out;
   border-radius: 25px;
   margin-top: 20px;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease !important;
 }
 
 .main-ca a:hover {
-  background-color: var(--button-hover-color);
-  transform: translateY(-5px); /* Smooth hover effect */
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  background-color: #0056b3;
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+  transform: scale(1.03) !important;
+}
+
+.main-ca a:active {
+  background-color: #004494;
+  transform: scale(0.95) !important;
 }
 
 .ca-info {
@@ -59,10 +64,11 @@ h1 {
 }
 
 .home-join-us {
+  width: 100%;
   background-color: var(--main-theme);
   display: flex;
-  justify-content: center;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
 
@@ -89,7 +95,7 @@ div.home-join-us {
 
 .sl {
   border: 2px solid var(--underline-color);
-  width: 15%;
+  width: 15% !important;
   margin-top: 20px;
 }
 
@@ -100,25 +106,38 @@ div.home-join-us {
   font-size: 1rem;
 }
 
-.formula-student-info a {
+div.formula-student-info .more-about {
   border-radius: 25px;
   background-color: var(--button-color);
   color: white;
   text-decoration: none;
   margin-top: 30px;
-  transition: all 0.3s ease-in-out;
   font-size: 1rem;
 }
 
-.formula-student-info a:hover {
-  background-color: var(--button-hover-color);
-  transform: translateY(-5px);
+div.formula-student-info .more-about {
+  transition: all 0.3s ease;
+  transition-duration: 0.3s !important;
+  transition-delay: 0ms !important;
+}
+
+div.formula-student-info .more-about:hover {
+  background-color: #0056b3;
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+  transform: scale(1.03);
+}
+
+div.formula-student-info .more-about:active {
+  background-color: #004494;
+  transform: scale(0.95);
 }
 
 .looking {
+  width: 100%;
   color: white;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
 
@@ -129,6 +148,18 @@ div.home-join-us {
 
 .looking .go-to-application {
   margin: 30px 0px;
+  transition: 0.3s ease !important;
+}
+
+div.looking .go-to-application:hover {
+  background-color: #0056b3;
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+  transform: scale(1.03);
+}
+
+div.looking .go-to-application:active {
+  background-color: #004494;
+  transform: scale(0.95);
 }
 
 /* Container for team descriptions */
@@ -136,7 +167,7 @@ div.home-join-us {
   display: grid;
   grid-template-columns: repeat(
     auto-fill,
-    minmax(280px, 1fr)
+    minmax(300px, 1fr)
   ); /* Minimum width is 280px, maxes out at 1fr */
   gap: 16px; /* Space between items */
   grid-auto-rows: auto; /* Ensure rows auto-adjust based on content */
@@ -145,7 +176,7 @@ div.home-join-us {
 /* Styling for the individual team description cards */
 .team-desc {
   display: grid;
-  grid-template-rows: auto 1fr; /* Title row and content row */
+  grid-template-rows: auto 1fr !important; /* Title row and content row */
   gap: 12px; /* Space between title and content */
   padding: 15px;
   border: 1px solid #ddd;
@@ -282,7 +313,7 @@ div.home-join-us {
   display: block; /* Remove any unwanted inline-block spacing */
 }
 
-.team-organization a {
+.team-organization .apply-team {
   max-width: 400px;
   min-width: 80px;
   border-radius: 25px;
@@ -291,12 +322,17 @@ div.home-join-us {
   text-decoration: none;
   padding: 12px 25px;
   margin-top: 30px;
-  transition: all 0.3s ease-in-out;
+  transition: 0.3s 0s ease !important;
 }
 
-.team-organization a:hover {
+.team-organization .apply-team:hover {
   background-color: var(--button-hover-color);
-  transform: translateY(-5px);
+  transform: scale(1.05) !important;
+}
+
+.team-organization .apply-team:active {
+  background-color: var(--button-hover-color);
+  transform: scale(0.95) !important;
 }
 
 @media (max-width: 700px) {

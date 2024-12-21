@@ -1,5 +1,8 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import GoUpButton from "../components/go-up/goUp";
+import AOS from "aos";
+import "aos/dist/aos.css"; // Import AOS styles
 import "./contact-form.css";
 
 const ContactForm = () => {
@@ -11,6 +14,14 @@ const ContactForm = () => {
     description: "",
   });
 
+  useEffect(() => {
+    AOS.init({
+      duration: 700, // Set duration to 700ms for faster animation
+      easing: "ease-out-back",
+      once: true,
+    });
+  }, []);
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prevState) => ({
@@ -21,23 +32,51 @@ const ContactForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(formData);
+    console.log(formData); // You can handle form submission logic here
+
+    // Reset the form fields after submission
+    setFormData({
+      feedbackType: "",
+      firstName: "",
+      lastName: "",
+      email: "",
+      description: "",
+    });
   };
 
   return (
     <div className="box">
       <div className="container">
-        <div className="box-h1">
+        {/* Animate the entire form container */}
+        <div
+          className="box-h1"
+          data-aos="fade-down"
+          data-aos-duration="700"
+          data-aos-delay="100"
+        >
           <h1 className="contact-h1">Contact Us</h1>
         </div>
-        <div className="form">
-          <h2>Feedback Form</h2>
-          <p>
+
+        <div
+          className="form"
+          data-aos="fade-up" // Animating the form itself
+          data-aos-duration="800" // Slightly slower animation for the form container
+          data-aos-delay="200" // Delay the form animation to start after the heading
+        >
+          <h2 data-aos="zoom-in" data-aos-delay="250" data-aos-duration="700">
+            Feedback Form
+          </h2>
+          <p data-aos="fade-up" data-aos-delay="300" data-aos-duration="700">
             We would love to hear your thoughts, suggestions, concerns, or
             problems with anything so we can improve!
           </p>
           <form onSubmit={handleSubmit}>
-            <div className="form-group">
+            <div
+              className="form-group"
+              data-aos="fade-up"
+              data-aos-delay="350"
+              data-aos-duration="700"
+            >
               <label>
                 Feedback Type <span className="required">*</span>
               </label>
@@ -82,7 +121,12 @@ const ContactForm = () => {
             </div>
 
             {/* Feedback Description */}
-            <div className="form-group">
+            <div
+              className="form-group"
+              data-aos="fade-up"
+              data-aos-delay="400"
+              data-aos-duration="700"
+            >
               <label>
                 Describe Your Feedback: <span className="required">*</span>
               </label>
@@ -97,7 +141,12 @@ const ContactForm = () => {
             </div>
 
             {/* Name */}
-            <div className="form-group">
+            <div
+              className="form-group"
+              data-aos="fade-up"
+              data-aos-delay="450"
+              data-aos-duration="700"
+            >
               <label>
                 Name <span className="required">*</span>
               </label>
@@ -128,7 +177,12 @@ const ContactForm = () => {
             </div>
 
             {/* Email */}
-            <div className="form-group">
+            <div
+              className="form-group"
+              data-aos="fade-up"
+              data-aos-delay="500"
+              data-aos-duration="700"
+            >
               <label>
                 E-mail <span className="required">*</span>
               </label>
@@ -143,12 +197,19 @@ const ContactForm = () => {
               />
             </div>
 
-            <button type="submit" className="submit-btn">
+            <button
+              type="submit"
+              className="submit-btn"
+              data-aos="zoom-in"
+              data-aos-delay="600"
+              data-aos-duration="700"
+            >
               Submit Feedback
             </button>
           </form>
         </div>
       </div>
+      <GoUpButton />
     </div>
   );
 };

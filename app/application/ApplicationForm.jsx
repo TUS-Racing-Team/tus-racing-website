@@ -1,6 +1,9 @@
 "use client";
-import React, { useState } from "react";
-import "./application-form.css"; // Make sure to update or create CSS for this
+import React, { useState, useEffect } from "react";
+import GoUpButton from "../components/go-up/goUp";
+import AOS from "aos";
+import "aos/dist/aos.css"; // Import AOS styles
+import "./application-form.css"; // Ensure the original CSS remains unchanged
 
 const ApplicationForm = () => {
   const [formData, setFormData] = useState({
@@ -16,20 +19,26 @@ const ApplicationForm = () => {
     resume: null,
   });
 
-  
-  
+  // Initialize AOS
+  useEffect(() => {
+    AOS.init({
+      duration: 700, // Duration for animations
+      easing: "ease-out-back",
+      once: true, // Trigger animations only once
+    });
+  }, []);
+
   const sendDataToDiscord = async () => {
     const response = await fetch("/api/sendToDiscord", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
-        "content": `
+        content: `
           First Name: ${formData.firstName}\nLast Name: ${formData.lastName}\nEmail: ${formData.email}\nUniversity: ${formData.university}\nCourse: ${formData.course}\nYear of Study: ${formData.yearOfStudy}\nSkills: ${formData.skills}\nMotivation: ${formData.motivation}\nPortfolio Link: ${formData.portfolioLink}
         `,
-        
       }),
     });
-  
+
     const result = await response.json();
     console.log(result);
   };
@@ -53,22 +62,54 @@ const ApplicationForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(formData);
-    sendDataToDiscord()
+    sendDataToDiscord();
+    setFormData({
+      firstName: "",
+      lastName: "",
+      email: "",
+      university: "",
+      course: "",
+      yearOfStudy: "",
+      skills: "",
+      motivation: "",
+      portfolioLink: "",
+      resume: null,
+    });
   };
-
 
   return (
     <div className="box">
       <div className="container">
-        <div className="form">
-          <h2>Formula Student Application</h2>
-          <p>
+        <div
+          className="form"
+          data-aos="fade-up" // Apply fade-up animation to the whole form
+          data-aos-duration="700"
+          data-aos-delay="100"
+        >
+          <h2
+            data-aos="zoom-in" // Apply zoom-in animation to the title
+            data-aos-delay="150"
+            data-aos-duration="700"
+          >
+            Formula Student Application
+          </h2>
+          <p
+            data-aos="fade-up" // Apply fade-up animation to the paragraph
+            data-aos-delay="200"
+            data-aos-duration="700"
+          >
             Thank you for your interest in applying to join our Formula Student
             team! Please fill out the application form below.
           </p>
+
           <form onSubmit={handleSubmit}>
             {/* Name */}
-            <div className="form-group">
+            <div
+              className="form-group"
+              data-aos="fade-up" // Apply fade-up animation to name field
+              data-aos-delay="250"
+              data-aos-duration="700"
+            >
               <label>
                 Name <span className="required">*</span>
               </label>
@@ -99,7 +140,12 @@ const ApplicationForm = () => {
             </div>
 
             {/* Email */}
-            <div className="form-group">
+            <div
+              className="form-group"
+              data-aos="fade-up" // Apply fade-up animation to email field
+              data-aos-delay="300"
+              data-aos-duration="700"
+            >
               <label>
                 E-mail <span className="required">*</span>
               </label>
@@ -115,7 +161,12 @@ const ApplicationForm = () => {
             </div>
 
             {/* University & Course */}
-            <div className="form-group">
+            <div
+              className="form-group"
+              data-aos="fade-up" // Apply fade-up animation to university field
+              data-aos-delay="350"
+              data-aos-duration="700"
+            >
               <label>
                 University <span className="required">*</span>
               </label>
@@ -130,7 +181,12 @@ const ApplicationForm = () => {
               />
             </div>
 
-            <div className="form-group">
+            <div
+              className="form-group"
+              data-aos="fade-up" // Apply fade-up animation to course field
+              data-aos-delay="400"
+              data-aos-duration="700"
+            >
               <label>
                 Course of Study <span className="required">*</span>
               </label>
@@ -146,7 +202,12 @@ const ApplicationForm = () => {
             </div>
 
             {/* Year of Study */}
-            <div className="form-group">
+            <div
+              className="form-group"
+              data-aos="fade-up" // Apply fade-up animation to year of study field
+              data-aos-delay="450"
+              data-aos-duration="700"
+            >
               <label>
                 Year of Study <span className="required">*</span>
               </label>
@@ -164,7 +225,12 @@ const ApplicationForm = () => {
             </div>
 
             {/* Skills and Experience */}
-            <div className="form-group">
+            <div
+              className="form-group"
+              data-aos="fade-up" // Apply fade-up animation to skills field
+              data-aos-delay="500"
+              data-aos-duration="700"
+            >
               <label>
                 Relevant Skills and Experience{" "}
                 <span className="required">*</span>
@@ -180,7 +246,12 @@ const ApplicationForm = () => {
             </div>
 
             {/* Motivation */}
-            <div className="form-group">
+            <div
+              className="form-group"
+              data-aos="fade-up" // Apply fade-up animation to motivation field
+              data-aos-delay="550"
+              data-aos-duration="700"
+            >
               <label>
                 Why do you want to join the Formula Student team?{" "}
                 <span className="required">*</span>
@@ -196,7 +267,12 @@ const ApplicationForm = () => {
             </div>
 
             {/* Portfolio or GitHub Link */}
-            <div className="form-group">
+            <div
+              className="form-group"
+              data-aos="fade-up" // Apply fade-up animation to portfolio link field
+              data-aos-delay="600"
+              data-aos-duration="700"
+            >
               <label>Portfolio or GitHub Link (Optional)</label>
               <input
                 type="url"
@@ -211,12 +287,16 @@ const ApplicationForm = () => {
             <button
               type="submit"
               className="submit-btn"
+              data-aos="zoom-in" // Apply zoom-in animation to the submit button
+              data-aos-delay="650"
+              data-aos-duration="700"
             >
               Apply
             </button>
           </form>
         </div>
       </div>
+      <GoUpButton />
     </div>
   );
 };

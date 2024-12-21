@@ -1,8 +1,8 @@
 "use client";
-import "./gallery.css";
-import GoUpButton from "../components/go-up/goUp";
 import React, { useEffect } from "react";
+import GoUpButton from "../components/go-up/goUp";
 import AOS from "aos";
+import "./gallery.css";
 import "aos/dist/aos.css"; // Import AOS styles
 
 const Gallery = () => {
@@ -39,7 +39,7 @@ const Gallery = () => {
             className="gallery-item"
             key={index}
             data-aos={index % 2 === 0 ? "zoom-in" : "fade-up"}
-            data-aos-delay={150 + index * 100} // Adding delay for each item
+            data-aos-delay={200 + index * 100} // Adding delay for each item
           >
             <img src={image} alt={`Gallery image ${index + 1}`} />
           </div>

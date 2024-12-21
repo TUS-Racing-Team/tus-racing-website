@@ -63,7 +63,7 @@ body {
   background-color: rgba(0, 0, 0, 0.405);
   box-shadow: 0 0 15px rgba(85, 85, 85, 0.5);
   color: white;
-  transition: 1s ease;
+  transition: 1s ease-out !important;
 }
 
 .form:hover {
@@ -174,16 +174,16 @@ body {
   border-radius: 50px;
   font-size: 16px;
   cursor: pointer;
-  transition: 0.3s;
+  transition: 0.3s !important;
 }
 
-.submit-btn:hover {
+.form form .submit-btn:hover {
   background-color: #0056b3;
   box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
   transform: scale(1.03);
 }
 
-.submit-btn:active {
+.form form .submit-btn:active {
   background-color: #004494;
   transform: scale(0.95);
 }

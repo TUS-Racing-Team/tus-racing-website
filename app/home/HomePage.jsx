@@ -1,9 +1,9 @@
 "use client";
 import { useState, useEffect } from "react";
-import "./home.css";
 import Image from "next/image";
+import GoUpButton from "../components/go-up/goUp";
 import AOS from "aos";
-import GoUpButton from "../go-up/goUp";
+import "./home.css";
 import "aos/dist/aos.css";
 
 const HomePage = () => {
@@ -45,7 +45,6 @@ const HomePage = () => {
 
   return (
     <div>
-      {/* Parallax background (no AOS animation) */}
       <div
         className="landingPage"
         style={{
@@ -70,7 +69,7 @@ const HomePage = () => {
             <h1 data-aos="fade-up" data-aos-delay="400">
               Explore Our Engineering!
             </h1>
-            <a href="#" data-aos="fade-up" data-aos-delay="500">
+            <a href="#" data-aos="fade-up" data-aos-delay="700">
               See Our Work
             </a>
           </div>
@@ -93,7 +92,7 @@ const HomePage = () => {
             Similique sed, non eligendi reiciendis necessitatibus, et animi,
             blanditiis at debitis pariatur temporibus.
           </p>
-          <a href="/formula-student" data-aos="fade-up" data-aos-delay="450">
+          <a href="/formula-student" className="more-about" data-aos="fade-up" data-aos-delay="550">
             More about formula student
           </a>
         </div>
@@ -154,21 +153,21 @@ const HomePage = () => {
             <div
               className={`team-desc ${mobileVersion ? "team-res" : ""}`}
               data-aos="fade-up"
-              data-aos-delay="750"
+              data-aos-delay="850"
             >
               <h3
                 onClick={() => {
                   openTeamInfo("Media");
                 }}
               >
-                {(!mobileVersion || openTeam == "Media") && "Media"}
+                {mobileVersion ? "Media >" : "Media"}
               </h3>
               {(!mobileVersion || openTeam == "Media") && (
                 <ul>
-                  <li>IT & Website</li>
-                  <li>Social Media</li>
-                  <li>Media Engineering</li>
-                  <li>Media Production</li>
+                  <li>IT</li>
+                  <li>Programming</li>
+                  <li>TV</li>
+                  <li>Journalist</li>
                 </ul>
               )}
             </div>
@@ -196,10 +195,6 @@ const HomePage = () => {
           </div>
           <a
             href="/application"
-            onClick={(e) => {
-              e.preventDefault();
-              sendMessage();
-            }}
             data-aos="zoom-in"
             data-aos-delay="550"
             className="go-to-application"
@@ -242,7 +237,7 @@ const HomePage = () => {
             <br />
             Simply apply here!
           </p>
-          <a href="/apply" data-aos="fade-up" data-aos-delay="500">
+          <a href="/application" className="apply-team" data-aos="fade-up" data-aos-delay="500">
             GO TO THE APPLICATION
           </a>
         </div>

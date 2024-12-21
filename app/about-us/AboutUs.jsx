@@ -1,9 +1,9 @@
 "use client";
-import "./about-us.css";
-import GoUpButton from "../components/go-up/goUp";
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
+import GoUpButton from "../components/go-up/goUp";
 import AOS from "aos";
+import "./about-us.css";
 import "aos/dist/aos.css"; // Import AOS styles
 
 const AboutUs = () => {
