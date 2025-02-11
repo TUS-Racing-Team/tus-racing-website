@@ -233,8 +233,6 @@ const HomePage = () => {
             Want to think outside the box and acquire new skills?
             <br />
             <br />
-            Become part of a motivated team and get involved with E-Traxx.{" "}
-            <br />
             Simply apply here!
           </p>
           <a href="/application" className="apply-team" data-aos="fade-up" data-aos-delay="500">
