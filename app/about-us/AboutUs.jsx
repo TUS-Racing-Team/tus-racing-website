@@ -108,13 +108,7 @@ const AboutUs = () => {
                   />
                 </div>
                 <h2>Your Application</h2>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos
-                  possimus aliquid perspiciatis corrupti repellendus,
-                  repudiandae quaerat temporibus velit. Atque aliquam magnam
-                  cumque beatae nihil? Omnis commodi vitae quod repudiandae
-                  voluptatem?
-                </p>
+              
               </div>
             </div>
           </a>

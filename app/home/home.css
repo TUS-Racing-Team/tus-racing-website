@@ -1,410 +1,431 @@
 h1 {
-  text-align: center !important;
+    text-align: center !important;
 }
 
 .landingPage {
-  background: url("/images/car-photos/car-italy.jpg");
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  position: relative;
-  height: 100vh; /* Ensure it's full screen */
-  margin-bottom: 60px;
+    background: url("/images/car-photos/car-italy.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+    height: 100vh;
+    /* Ensure it's full screen */
+    margin-bottom: 60px;
 }
 
 .main-ca {
-  position: absolute;
-  top: 25%;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  flex-direction: column;
-  width: fit-content;
-  align-items: center;
-  gap: 10px;
-  transition: 0.5s;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    align-items: center;
+    gap: 10px;
+    transition: 0.5s;
 }
 
 .main-ca a {
-  text-decoration: none;
-  color: white;
-  background-color: var(--button-color);
-  font-size: 1.2rem;
-  padding: 12px 25px;
-  border-radius: 25px;
-  margin-top: 20px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease !important;
+    text-decoration: none;
+    color: white;
+    background-color: var(--button-color);
+    font-size: 1.2rem;
+    padding: 12px 25px;
+    border-radius: 25px;
+    margin-top: 20px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease !important;
 }
 
 .main-ca a:hover {
-  background-color: #0056b3;
-  box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
-  transform: scale(1.03) !important;
+    background-color: #0056b3;
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+    transform: scale(1.03) !important;
 }
 
 .main-ca a:active {
-  background-color: #004494;
-  transform: scale(0.95) !important;
+    background-color: #004494;
+    transform: scale(0.95) !important;
 }
 
 .ca-info {
-  background-color: rgba(0, 0, 0, 0.55);
-  padding: 30px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center !important;
-  align-items: center !important;
-  border-radius: 15px;
-  text-align: center;
+    background-color: rgba(0, 0, 0, 0.55);
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center !important;
+    align-items: center !important;
+    border-radius: 15px;
+    text-align: center;
 }
 
 .ca-info h1 {
-  color: white;
+    color: white;
 }
 
 .home-join-us {
-  width: 100%;
-  background-color: var(--main-theme);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+    width: 100%;
+    background-color: var(--main-theme);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 div.home-join-us {
-  padding: 50px 20px 0px 20px;
+    padding: 50px 20px 0px 20px;
 }
 
 .formula-student-info {
-  color: white;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 60%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60%;
 }
 
 .formula-student-info h5 {
-  color: #4c9fe3;
-  padding-top: 50px;
+    color: #4c9fe3;
+    padding-top: 50px;
 }
 
 .formula-student-info h1 {
-  padding-top: 30px;
+    padding-top: 30px;
 }
 
 .sl {
-  border: 2px solid var(--underline-color);
-  width: 15% !important;
-  margin-top: 20px;
+    border: 2px solid var(--underline-color);
+    width: 15% !important;
+    margin-top: 20px;
 }
 
 .formula-student-info p {
-  padding-top: 30px;
-  color: #d3d3d3;
-  text-align: center;
-  font-size: 1rem;
+    padding-top: 30px;
+    color: #d3d3d3;
+    text-align: center;
+    font-size: 1rem;
 }
 
 div.formula-student-info .more-about {
-  border-radius: 25px;
-  background-color: var(--button-color);
-  color: white;
-  text-decoration: none;
-  margin-top: 30px;
-  font-size: 1rem;
+    border-radius: 25px;
+    background-color: var(--button-color);
+    color: white;
+    text-decoration: none;
+    margin-top: 30px;
+    font-size: 1rem;
 }
 
 div.formula-student-info .more-about {
-  transition: all 0.3s ease;
-  transition-duration: 0.3s !important;
-  transition-delay: 0ms !important;
+    transition: all 0.3s ease;
+    transition-duration: 0.3s !important;
+    transition-delay: 0ms !important;
 }
 
 div.formula-student-info .more-about:hover {
-  background-color: #0056b3;
-  box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
-  transform: scale(1.03);
+    background-color: #0056b3;
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+    transform: scale(1.03);
 }
 
 div.formula-student-info .more-about:active {
-  background-color: #004494;
-  transform: scale(0.95);
+    background-color: #004494;
+    transform: scale(0.95);
 }
 
 .looking {
-  width: 100%;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+    width: 100%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .looking h1 {
-  margin-top: 50px;
-  font-size: 1.6rem;
+    margin-top: 50px;
+    font-size: 1.6rem;
 }
 
 .looking .go-to-application {
-  margin: 30px 0px;
-  transition: 0.3s ease !important;
+    margin: 30px 0px;
+    transition: 0.3s ease !important;
 }
 
 div.looking .go-to-application:hover {
-  background-color: #0056b3;
-  box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
-  transform: scale(1.03);
+    background-color: #0056b3;
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+    transform: scale(1.03);
 }
 
 div.looking .go-to-application:active {
-  background-color: #004494;
-  transform: scale(0.95);
+    background-color: #004494;
+    transform: scale(0.95);
 }
+
 
 /* Container for team descriptions */
+
 .looking-teams {
-  display: grid;
-  grid-template-columns: repeat(
-    auto-fill,
-    minmax(300px, 1fr)
-  ); /* Minimum width is 280px, maxes out at 1fr */
-  gap: 16px; /* Space between items */
-  grid-auto-rows: auto; /* Ensure rows auto-adjust based on content */
+    display: grid;
+    grid-template-columns: repeat( auto-fill, minmax(300px, 1fr));
+    /* Minimum width is 280px, maxes out at 1fr */
+    gap: 16px;
+    /* Space between items */
+    grid-auto-rows: auto;
+    /* Ensure rows auto-adjust based on content */
+    justify-content: center;
 }
+
 
 /* Styling for the individual team description cards */
+
 .team-desc {
-  display: grid;
-  grid-template-rows: auto 1fr !important; /* Title row and content row */
-  gap: 12px; /* Space between title and content */
-  padding: 15px;
-  border: 1px solid #ddd;
-  border-radius: 16px;
-  background: #202020;
-  transition: transform 0.3s ease, background-color 0.3s ease,
-    box-shadow 0.3s ease;
-  overflow: hidden; /* Hide any overflow from scaling */
+    display: grid;
+    grid-template-rows: auto 1fr !important;
+    /* Title row and content row */
+    gap: 12px;
+    /* Space between title and content */
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 16px;
+    background: #202020;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    /* Hide any overflow from scaling */
 }
+
 
 /* Hover effect for scaling and shadow on team cards */
+
 .team-desc:hover {
-  background-color: #2e2e2e; /* Slight gray background on hover */
-  transform: scale(1.02); /* Slightly zoom in for hover effect */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add shadow to create a lifted effect */
+    background-color: #2e2e2e;
+    /* Slight gray background on hover */
+    transform: scale(1.02);
+    /* Slightly zoom in for hover effect */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    /* Add shadow to create a lifted effect */
 }
+
 
 /* Title (h3) inside each card */
+
 .team-desc h3 {
-  text-align: center; /* Center the title */
-  cursor: pointer; /* Change cursor to pointer when hovering over the headings */
-  transition: color 0.3s ease;
+    text-align: center;
+    /* Center the title */
+    cursor: pointer;
+    /* Change cursor to pointer when hovering over the headings */
+    transition: color 0.3s ease;
 }
 
+
 /* List inside each card (team descriptions) */
+
 .team-desc ul {
-  list-style-type: none; /* Remove bullet points */
-  padding-left: 0; /* Remove left padding */
-  margin-top: 10px; /* Add margin to separate from the title */
+    list-style-type: none;
+    /* Remove bullet points */
+    padding-left: 0;
+    /* Remove left padding */
+    margin-top: 10px;
+    /* Add margin to separate from the title */
 }
 
 .team-desc li {
-  padding: 4px 0;
-  cursor: pointer;
-  text-align: center;
+    padding: 4px 0;
+    cursor: pointer;
+    text-align: center;
 }
+
 
 /* Responsive design for different screen sizes */
 
+
 /* On screens with a width less than 768px, show 2 items per row */
+
 @media (max-width: 768px) {
-  .looking-teams {
-    grid-template-columns: repeat(
-      auto-fill,
-      minmax(300px, 1fr)
-    ); /* Minimum width 300px */
-  }
-
-  .team-desc {
-    padding: 12px; /* Reduce padding for smaller screens */
-  }
-
-  .team-desc h3 {
-    font-size: 1.2rem; /* Smaller font size for titles */
-  }
-
-  .team-desc li {
-    font-size: 0.9rem; /* Smaller font size for list items */
-  }
+    .looking-teams {
+        grid-template-columns: repeat( auto-fill, minmax(300px, 1fr));
+        /* Minimum width 300px */
+    }
+    .team-desc {
+        padding: 12px;
+        /* Reduce padding for smaller screens */
+    }
+    .team-desc h3 {
+        font-size: 1.2rem;
+        /* Smaller font size for titles */
+    }
+    .team-desc li {
+        font-size: 0.9rem;
+        /* Smaller font size for list items */
+    }
 }
 
+
 /* On screens with a width less than 425px, show 1 item per row */
+
 @media (max-width: 425px) {
-  .looking-teams {
-    grid-template-columns: 1fr; /* Single column for very small screens */
-  }
-
-  .team-desc {
-    padding: 10px; /* Further reduce padding for smaller screens */
-  }
-
-  .team-desc h3 {
-    font-size: 1.1rem; /* Further reduce font size */
-  }
-
-  .team-desc li {
-    font-size: 0.85rem; /* Even smaller font size for list items */
-  }
+    .looking-teams {
+        grid-template-columns: 1fr;
+        /* Single column for very small screens */
+    }
+    .team-desc {
+        padding: 10px;
+        /* Further reduce padding for smaller screens */
+    }
+    .team-desc h3 {
+        font-size: 1.1rem;
+        /* Further reduce font size */
+    }
+    .team-desc li {
+        font-size: 0.85rem;
+        /* Even smaller font size for list items */
+    }
 }
 
 .sub-section {
-  background: url("/images/car-photos/car-photo-b.jpg");
-  background-size: cover;
-  background-position: center;
-  height: 500px;
-  position: relative;
+    background: url("/images/car-photos/car-photo-b.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+    position: relative;
 }
 
 .team-organization {
-  padding: 50px 10px 50px 10px;
-  background-color: var(--main-theme);
-  color: white;
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  height: auto;
-  align-items: center;
-  justify-content: space-between;
-  gap: 10px;
+    padding: 50px 10px 50px 10px;
+    background-color: var(--main-theme);
+    color: white;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
 }
 
 .team-information {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 50%;
 }
 
-.team-information > * {
-  width: 100%;
+.team-information>* {
+    width: 100%;
 }
 
 .team-information h1,
 .team-information a {
-  text-align: center;
+    text-align: center;
 }
 
 .team-organization p {
-  color: #d3d3d3;
-  font-size: 1rem;
-  text-align: center;
+    color: #d3d3d3;
+    font-size: 1rem;
+    text-align: center;
 }
 
 .img-team {
-  border-radius: 25px;
-  width: 50%; /* Ensure the image fills the container */
-  max-width: 650px !important; /* Maximum width the image can take */
-  min-width: 350px !important; /* Minimum width the image can take */
-  height: auto; /* Maintain the aspect ratio */
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-  object-fit: cover; /* Ensure the image fits within the given dimensions */
-  display: block; /* Remove any unwanted inline-block spacing */
+    border-radius: 25px;
+    width: 50%;
+    /* Ensure the image fills the container */
+    max-width: 650px !important;
+    /* Maximum width the image can take */
+    min-width: 350px !important;
+    /* Minimum width the image can take */
+    height: auto;
+    /* Maintain the aspect ratio */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    object-fit: cover;
+    /* Ensure the image fits within the given dimensions */
+    display: block;
+    /* Remove any unwanted inline-block spacing */
 }
 
 .team-organization .apply-team {
-  max-width: 400px;
-  min-width: 80px;
-  border-radius: 25px;
-  background-color: var(--button-color);
-  color: white;
-  text-decoration: none;
-  padding: 12px 25px;
-  margin-top: 30px;
-  transition: 0.3s 0s ease !important;
+    max-width: 400px;
+    min-width: 80px;
+    border-radius: 25px;
+    background-color: var(--button-color);
+    color: white;
+    text-decoration: none;
+    padding: 12px 25px;
+    margin-top: 30px;
+    transition: 0.3s 0s ease !important;
 }
 
 .team-organization .apply-team:hover {
-  background-color: var(--button-hover-color);
-  transform: scale(1.05) !important;
+    background-color: var(--button-hover-color);
+    transform: scale(1.05) !important;
 }
 
 .team-organization .apply-team:active {
-  background-color: var(--button-hover-color);
-  transform: scale(0.95) !important;
+    background-color: var(--button-hover-color);
+    transform: scale(0.95) !important;
 }
 
 @media (max-width: 700px) {
-  .team-organization {
-    flex-direction: column;
-    padding-top: 20px;
-  }
-
-  .team-information {
-    padding-top: 30px;
-    text-align: center;
-    width: 100%;
-  }
-
-  .team-information p {
-    font-size: 1rem;
-  }
-
-  .team-organization h1 {
-    font-size: 1.5rem;
-  }
-
-  .team-organization a {
-    font-size: 1rem;
-    padding: 10px 20px;
-  }
-
-  .img-team {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.3);
-  }
+    .team-organization {
+        flex-direction: column;
+        padding-top: 20px;
+    }
+    .team-information {
+        padding-top: 30px;
+        text-align: center;
+        width: 100%;
+    }
+    .team-information p {
+        font-size: 1rem;
+    }
+    .team-organization h1 {
+        font-size: 1.5rem;
+    }
+    .team-organization a {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+    .img-team {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+        box-shadow: 0 6px 25px rgba(0, 0, 0, 0.3);
+    }
 }
 
 @media screen and (max-width: 600px) {
-  .landingPage {
-    background: url("/images/car-photos/car-italy.jpg");
-  }
-
-  .main-ca {
-    top: 0% !important;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100% !important;
-    height: 100%;
-    text-align: center;
-  }
-
-  .main-ca a {
-    padding: 12px 20px;
-    font-size: 1rem;
-  }
-
-  .ca-info {
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 30px;
-    border-radius: 0px !important;
-    width: 100%;
-    height: 100%;
-  }
-
-  .home-join-us {
-    padding: 20px 10px;
-  }
-
-  .formula-student-info {
-    width: 100%;
-    padding: 10px;
-  }
-
-  .sub-section {
-    height: 400px;
-  }
+    .landingPage {
+        background: url("/images/car-photos/car-italy.jpg");
+    }
+    .main-ca {
+        top: 0% !important;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100% !important;
+        height: 100%;
+        text-align: center;
+    }
+    .main-ca a {
+        padding: 12px 20px;
+        font-size: 1rem;
+    }
+    .ca-info {
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 30px;
+        border-radius: 0px !important;
+        width: 100%;
+        height: 100%;
+    }
+    .home-join-us {
+        padding: 20px 10px;
+    }
+    .formula-student-info {
+        width: 100%;
+        padding: 10px;
+    }
+    .sub-section {
+        height: 400px;
+    }
 }
