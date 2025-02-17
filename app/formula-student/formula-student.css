@@ -1,9 +1,89 @@
-body {
-  background: var(--main-theme);
-  color: white;
-  overflow-x: hidden !important;
+/* General styles */
+.formula-student-container {
+  font-family: Arial, sans-serif;
+  background-color: #121212;
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
+  margin-top: 90px;
 }
 
-.formula-student-container {
-  margin-top: 90px;
+/* Header */
+.formula-header {
+  background-color: #1f1f1f;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+/* Content Sections */
+.formula-content {
+  padding: 2rem;
+}
+
+.about-section, .history-section, .importance-section, .gallery-section {
+  margin-bottom: 3rem;
+}
+
+.about-section, .history-section, .importance-section {
+  background-color: #1f1f1f;
+  padding: 1.5rem;
+  border-radius: 8px;
+}
+
+.about-section, .history-section, .importance-section {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: space-around;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.info {
+  max-width: 700px;
+}
+
+.info h2 {
+  text-align: center;
+}
+
+.about-section img {
+  border-radius: 16px;
+}
+
+.history-section img {
+  border-radius: 16px;
+}
+
+.importance-section img {
+  width: 600px;
+  border-radius: 16px;
+
+}
+
+p, li {
+  line-height: 1.6;
+  color: #e0e0e0;
+}
+
+/* Gallery */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.gallery-grid img {
+  width: 100%;
+  border-radius: 8px;
+  border: 2px solid #bb86fc;
+}
+
+/* Footer */
+.formula-footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #181818;
+  border-top: 1px solid #333;
+  color: #bbb;
 }

@@ -1,7 +1,23 @@
 import "./sponsors.css"; // Import the CSS for styling
 import SponsorForm from "./SponsorForm"; // Import the SponsorForm component
 
-// Array of sponsor images to be displayed in the carousel
+// Arrays of sponsor images categorized by tiers
+const goldSponsors = [
+  "https://upload.wikimedia.org/wikipedia/commons/6/6e/Samsung_Logo.svg",
+  "https://upload.wikimedia.org/wikipedia/en/f/ff/RedBull_logo.svg",
+];
+
+const platinumSponsors = [
+  "https://upload.wikimedia.org/wikipedia/commons/3/35/Bosch-logo.svg",
+  "https://upload.wikimedia.org/wikipedia/commons/c/c9/Intel-logo.svg",
+];
+
+const silverSponsors = [
+  "https://upload.wikimedia.org/wikipedia/commons/a/a0/Ford_Motor_Company_Logo.svg",
+  "https://upload.wikimedia.org/wikipedia/commons/7/7e/Honda_logo.svg",
+  "https://upload.wikimedia.org/wikipedia/commons/3/34/Nike_logo.svg",
+];
+
 const images = [
   "/images/sponsors/samsung-logo.png",
   "/images/sponsors/red-bull-logo.png",
@@ -15,11 +31,39 @@ const Sponsors = () => {
       <SponsorForm />
 
       <div>
-        {/* Heading for the sponsors section */}
-        <h2 className="sponsor-h1">Our Sponsors:</h2>
+        {/* Gold Tier Sponsors */}
+        <h2 className="sponsor-tier-title gold">Gold Sponsors</h2>
+        <div className="sponsor-grid">
+          {goldSponsors.map((image, index) => (
+            <div className="sponsor-card" key={index}>
+              <img src={image} alt={`Gold Sponsor ${index + 1}`} />
+            </div>
+          ))}
+        </div>
 
-        {/* Carousel container to display the sponsor logos */}
-        <div className="carousel">
+        {/* Platinum Tier Sponsors */}
+        <h2 className="sponsor-tier-title platinum">Platinum Sponsors</h2>
+        <div className="sponsor-grid">
+          {platinumSponsors.map((image, index) => (
+            <div className="sponsor-card" key={index}>
+              <img src={image} alt={`Platinum Sponsor ${index + 1}`} />
+            </div>
+          ))}
+        </div>
+
+        {/* Silver Tier Sponsors */}
+        <h2 className="sponsor-tier-title silver">Silver Sponsors</h2>
+        <div className="sponsor-grid">
+          {silverSponsors.map((image, index) => (
+            <div className="sponsor-card" key={index}>
+              <img src={image} alt={`Silver Sponsor ${index + 1}`} />
+            </div>
+          ))}
+        </div>
+      </div>
+
+       {/* Carousel container to display the sponsor logos */}
+       <div className="carousel">
           {/* First group of images for smooth looping */}
           <div className="group">
             {/* Loop through the images array and create a card for each image */}
@@ -42,7 +86,6 @@ const Sponsors = () => {
             ))}
           </div>
         </div>
-      </div>
     </div>
   );
 };

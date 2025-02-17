@@ -76,3 +76,45 @@
   height: 100%; /* Image height fills the card */
   width: auto; /* Keeps the image's width proportional to its height (preserves aspect ratio) */
 }
+
+.sponsor-container {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.sponsor-tier-title {
+  margin-top: 30px;
+  font-size: 24px;
+  text-align: center;
+}
+
+.sponsor-tier-title.gold {
+  color: gold;
+}
+
+.sponsor-tier-title.platinum {
+  color: #e5e4e2; /* Platinum color */
+}
+
+.sponsor-tier-title.silver {
+  color: silver;
+}
+
+.sponsor-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+  margin: 20px auto;
+  max-width: 800px;
+}
+
+.sponsor-card {
+  text-align: center;
+}
+
+.sponsor-card img {
+  max-width: 100px;
+  height: auto;
+  object-fit: contain;
+}
+
