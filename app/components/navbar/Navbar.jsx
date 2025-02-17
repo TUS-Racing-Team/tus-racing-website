@@ -1,14 +1,15 @@
-"use client";
-import React, { useState, useEffect } from "react";
-import Image from "next/image";
-import { FiMenu, FiX } from "react-icons/fi";
-import "./navbar.css";
+"use client"; // Ensures the code is run client-side in Next.js
+
+import React, { useState, useEffect } from "react"; // Importing necessary hooks from React
+import Image from "next/image"; // Image component for optimized images in Next.js
+import { FiMenu, FiX } from "react-icons/fi"; // Importing menu icons for the hamburger menu
+import "./navbar.css"; // Importing the CSS file for styling the navbar
 
 const Navbar = () => {
-  const [flag, setFlag] = useState("/images/icons/BG-bg.png");
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [flag, setFlag] = useState("/images/icons/BG-bg.png"); // Default flag is Bulgaria's flag
+  const [isMenuOpen, setIsMenuOpen] = useState(false); // State for managing menu visibility
 
-  // Toggle language flag
+  // Function to toggle the language flag between Bulgaria (BG) and the UK (EN)
   const toggleFlag = () => {
     setFlag((prevFlag) =>
       prevFlag === "/images/icons/BG-bg.png"
@@ -17,46 +18,47 @@ const Navbar = () => {
     );
   };
 
-  // Toggle menu visibility
+  // Function to toggle the visibility of the menu (hamburger menu)
   const toggleMenu = () => {
     setIsMenuOpen((prevState) => !prevState);
   };
 
-  // Close the menu if a menu link is clicked
+  // Function to close the menu when a menu link is clicked (only on small screens)
   const closeMenuOnLinkClick = () => {
     if (window.innerWidth < 1159) {
-      setIsMenuOpen(false); // Close hamburger menu on small screens
+      setIsMenuOpen(false); // Close the menu on small screens
     }
   };
 
-  // Function to check and update the menu state based on window width
+  // Function to update the menu state when the window is resized
   const updateMenuState = () => {
     if (window.innerWidth > 1159 && isMenuOpen) {
-      setIsMenuOpen(false); // Close the menu if the width is > 1159px
+      setIsMenuOpen(false); // Close menu when the window is resized to larger than 1159px
     }
   };
 
-  // Update menu state on resize
+  // Effect hook to listen for window resize and update the menu state
   useEffect(() => {
     updateMenuState(); // Check initially when the component mounts
 
-    // Add event listener for window resize
+    // Add event listener to resize the window
     window.addEventListener("resize", updateMenuState);
 
-    // Clean up event listener on component unmount
+    // Cleanup function to remove the event listener when component unmounts
     return () => {
       window.removeEventListener("resize", updateMenuState);
     };
   }, [isMenuOpen]);
 
-  // Prevent body overflow when menu is open
+  // Effect hook to control body overflow behavior when the menu is open
   useEffect(() => {
     if (isMenuOpen) {
-      document.body.style.overflow = "hidden";
+      document.body.style.overflow = "hidden"; // Prevent scrolling when menu is open
     } else {
-      document.body.style.overflow = "auto";
+      document.body.style.overflow = "auto"; // Restore scrolling when menu is closed
     }
 
+    // Cleanup to reset the overflow when the component unmounts
     return () => {
       document.body.style.overflow = "auto";
     };
@@ -64,9 +66,12 @@ const Navbar = () => {
 
   return (
     <div className="navbar">
+      {/* Logo */}
       <a href="/">
         <img src="/images/logo-tus-blue-true.png" alt="Logo" className="logo" />
       </a>
+
+      {/* Navigation menu */}
       <ul className={`menu ${isMenuOpen ? "open" : ""}`}>
         <li>
           <a href="/" onClick={closeMenuOnLinkClick}>
@@ -98,6 +103,8 @@ const Navbar = () => {
             Sponsors
           </a>
         </li>
+
+        {/* Show Apply Now and Flag only when menu is open */}
         {isMenuOpen && (
           <>
             <a
@@ -114,8 +121,8 @@ const Navbar = () => {
                 width={30}
                 height={30}
                 onClick={() => {
-                  toggleFlag();
-                  if (window.innerWidth < 1159) setIsMenuOpen(false);
+                  toggleFlag(); // Toggle flag on click
+                  if (window.innerWidth < 1159) setIsMenuOpen(false); // Close menu on small screens
                 }}
               />
             </li>
@@ -130,24 +137,24 @@ const Navbar = () => {
           alt="Flag"
           width={30}
           height={30}
-          onClick={toggleFlag}
+          onClick={toggleFlag} // Toggle flag on click
         />
         <a href="/application" className="apply">
           Apply Now
         </a>
       </div>
 
-      {/* Hamburger menu button */}
+      {/* Hamburger menu button to open/close the menu */}
       <a
         className="hamburger-menu"
         onClick={toggleMenu}
-        aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-        style={{backgroundColor: "transparent",}}
+        aria-label={isMenuOpen ? "Close menu" : "Open menu"} // Accessibility label for the menu button
+        style={{ backgroundColor: "transparent" }} // Ensures the button has no background
       >
         {isMenuOpen ? (
-          <FiX size={30} color="#fff" />
+          <FiX size={30} color="#fff" /> // Show X icon when the menu is open
         ) : (
-          <FiMenu size={30} color="#fff" />
+          <FiMenu size={30} color="#fff" /> // Show hamburger icon when the menu is closed
         )}
       </a>
     </div>

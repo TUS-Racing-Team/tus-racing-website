@@ -1,3 +1,4 @@
+/* Main button styling */
 .go-up-btn {
   text-decoration: none;
   position: fixed;
@@ -14,14 +15,14 @@
   border-radius: 16px;
   cursor: pointer;
   z-index: 999;
-  opacity: 0; /* Start as invisible */
-  transition: 300ms ease; /* Add specific transition for transform */
+  opacity: 0;
+  transition: 300ms ease;
 
-  /* Gradient-like Box Shadow */
   box-shadow: 4px 4px 12px rgba(42, 120, 255, 0.3),
     -4px -4px 12px rgba(47, 253, 164, 0.3);
 }
 
+/* Hover state styling */
 div .go-up-btn:hover {
   background: linear-gradient(
     45deg,
@@ -30,18 +31,21 @@ div .go-up-btn:hover {
   );
   box-shadow: 4px 4px 12px rgba(42, 120, 255, 0.5),
     -4px -4px 12px rgba(47, 253, 164, 0.5);
-  transform: scale(1.05); /* Add hover scaling */
+  transform: scale(1.05);
 }
 
+/* Active state styling when clicked */
 div .go-up-btn:active {
-  transform: scale(0.9); /* Ensure active scale */
+  transform: scale(0.9);
 }
 
+/* Arrow icon styling */
 .arrow {
   font-size: 18px;
 }
 
+/* Show button when scrolling or under specific condition */
 .go-up-btn.show {
   opacity: 1;
-  transform: translateY(0); /* Slide up */
+  transform: translateY(0);
 }

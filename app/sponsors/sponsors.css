@@ -1,65 +1,78 @@
+/* Container for the sponsor section, with a margin at the top */
 .sponsor-container {
-  margin-top: 90px;
+  margin-top: 90px; /* Adds spacing from the top of the page */
 }
 
+/* Style for the heading displaying 'Our Sponsors' */
 .sponsor-h1 {
-  font-size: 3.5rem;
-  font-weight: 900;
-  margin: 30px 0 10px 0;
-  text-align: center;
+  font-size: 3.5rem; /* Large font size */
+  font-weight: 900; /* Bold weight for prominence */
+  margin: 30px 0 10px 0; /* Top and bottom margins for spacing */
+  text-align: center; /* Centers the heading */
 }
 
+/* Carousel container styling */
 .carousel {
-  margin: 0 auto;
-  padding: 20px 0;
-  width: 100%;
-  overflow: hidden;
-  display: flex;
+  margin: 0 auto; /* Centers the carousel container horizontally */
+  padding: 20px 0; /* Adds vertical padding */
+  width: 100%; /* Full width of the container */
+  overflow: hidden; /* Hides anything that overflows the carousel */
+  display: flex; /* Uses flexbox to display child elements in a row */
 }
 
+/* Carousel item styling */
 .carousel {
   > * {
-    flex: 0 0 100%;
+    flex: 0 0 100%; /* Ensures each child takes full width (100%) of the carousel */
   }
+
+  /* Pauses the scrolling animation when hovered */
   &:hover .group {
     animation-play-state: paused;
   }
 }
 
+/* Group of sponsor logos */
 .group {
-  display: flex;
-  gap: 70px;
-  padding-right: 20px;
-  will-change: transform;
-  animation: scrolling 10s linear infinite;
+  display: flex; /* Uses flexbox for horizontal layout */
+  gap: 70px; /* Adds space between each card */
+  padding-right: 20px; /* Adds padding on the right side */
+  will-change: transform; /* Optimizes performance during the animation */
+  animation: scrolling 10s linear infinite; /* Animates scrolling effect */
 }
 
+/* Adjust the right margin of the last card to maintain spacing */
 .group .card:last-child {
   margin-right: 70px;
 }
 
+/* Keyframe animation for scrolling effect */
 @keyframes scrolling {
   0% {
-    transform: translateX(0);
+    transform: translateX(0); /* Starting position (0px) */
   }
   100% {
-    transform: translateX(-100%);
+    transform: translateX(
+      -100%
+    ); /* Ends after translating to the left by 100% of the group width */
   }
 }
 
+/* Styling for each card that holds a sponsor logo */
 .card {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: auto; /* Set width to auto for each image */
-  height: 100px; /* Fixed height */
-  color: white;
-  border-radius: 24px;
-  box-shadow: rgba(0, 0, 0, 10%) 5px 5px 20px 0;
-  font-size: xx-large;
+  display: flex; /* Uses flexbox to center content inside the card */
+  justify-content: center; /* Centers the content horizontally */
+  align-items: center; /* Centers the content vertically */
+  width: auto; /* Width is auto to fit the content */
+  height: 100px; /* Fixed height for uniform card size */
+  color: white; /* White text color (if text is included) */
+  border-radius: 24px; /* Rounded corners */
+  box-shadow: rgba(0, 0, 0, 10%) 5px 5px 20px 0; /* Soft shadow effect for the cards */
+  font-size: xx-large; /* Larger font for visibility */
 }
 
+/* Styling for the images inside each card */
 .card img {
-  height: 100%; /* Ensure images take the full height */
-  width: auto; /* Keep width auto to preserve the aspect ratio */
+  height: 100%; /* Image height fills the card */
+  width: auto; /* Keeps the image's width proportional to its height (preserves aspect ratio) */
 }

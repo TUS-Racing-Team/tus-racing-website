@@ -1,11 +1,12 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import GoUpButton from "../components/go-up/goUp";
-import AOS from "aos";
+import GoUpButton from "../components/go-up/goUp"; // Importing the GoUpButton component
+import AOS from "aos"; // Importing AOS for animations
 import "aos/dist/aos.css"; // Import AOS styles
-import "./sponsor-form.css"; // Ensure that your CSS remains unchanged
+import "./sponsor-form.css"; // Import the CSS for this form
 
 const SponsorForm = () => {
+  // State hook to store form data
   const [formData, setFormData] = useState({
     companyName: "",
     contactPerson: "",
@@ -14,26 +15,28 @@ const SponsorForm = () => {
     phone: "",
   });
 
+  // Effect hook to initialize AOS animations
   useEffect(() => {
-    // Initialize AOS library
     AOS.init({
-      duration: 700, // Duration for animations
-      easing: "ease-out-back",
-      once: true, // Trigger animations only once
+      duration: 700, // Animation duration in milliseconds
+      easing: "ease-out-back", // Easing function for animation
+      once: true, // Make animations run only once
     });
-  }, []);
+  }, []); // Empty dependency array means it runs once when the component mounts
 
+  // Function to handle input changes
   const handleChange = (e) => {
-    const { name, value } = e.target;
+    const { name, value } = e.target; // Extract name and value from the event target (input element)
     setFormData((prevState) => ({
       ...prevState,
-      [name]: value,
+      [name]: value, // Update the specific form field in the state
     }));
   };
 
+  // Function to handle form submission
   const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log(formData); // You can handle form submission logic here
+    e.preventDefault(); // Prevent the default form submission (page reload)
+    console.log(formData); // Log form data (this is where you would handle submission, e.g., sending to a server)
 
     // Reset the form fields after submission
     setFormData({
@@ -48,22 +51,24 @@ const SponsorForm = () => {
   return (
     <div className="box">
       <div className="container">
+        {/* Title with AOS animation */}
         <div
           className="sponsor-box-h1"
-          data-aos="fade-up"
+          data-aos="fade-up" // Apply fade-up animation to the heading
           data-aos-duration="700"
           data-aos-delay="100"
         >
           <h1 className="sponsor-form-h1">Be one of our sponsors</h1>
         </div>
 
-        {/* Apply AOS to the form container */}
+        {/* Form container with AOS animation */}
         <div
           className="form"
-          data-aos="fade-up" // Apply fade-up animation to the whole form container
+          data-aos="fade-up" // Apply fade-up animation to the form
           data-aos-duration="700"
           data-aos-delay="200"
         >
+          {/* Form heading */}
           <h2
             data-aos="fade-up" // Apply fade-up animation to the heading
             data-aos-duration="700"
@@ -71,6 +76,7 @@ const SponsorForm = () => {
           >
             Sponsorship Form
           </h2>
+          {/* Form description */}
           <p
             data-aos="fade-up" // Apply fade-up animation to the paragraph
             data-aos-delay="200"
@@ -80,8 +86,9 @@ const SponsorForm = () => {
             the form below to get started!
           </p>
 
+          {/* The form itself */}
           <form onSubmit={handleSubmit}>
-            {/* Sponsorship Description */}
+            {/* Sponsorship description field */}
             <div
               className="form-group"
               data-aos="fade-up" // Apply fade-up animation to description field
@@ -94,14 +101,14 @@ const SponsorForm = () => {
               <textarea
                 name="description"
                 placeholder="Please describe your sponsorship plans..."
-                value={formData.description}
+                value={formData.description} // Controlled component (value from state)
                 title="Description"
-                required
-                onChange={handleChange}
+                required // Field is required
+                onChange={handleChange} // Handle change for description field
               />
             </div>
 
-            {/* Company Name */}
+            {/* Company name field */}
             <div
               className="form-group"
               data-aos="fade-up" // Apply fade-up animation to company name field
@@ -116,13 +123,13 @@ const SponsorForm = () => {
                 name="companyName"
                 placeholder="Your Company"
                 title="Company Name"
-                value={formData.companyName}
-                required
-                onChange={handleChange}
+                value={formData.companyName} // Controlled component (value from state)
+                required // Field is required
+                onChange={handleChange} // Handle change for company name field
               />
             </div>
 
-            {/* Contact Person */}
+            {/* Contact person field */}
             <div
               className="form-group"
               data-aos="fade-up" // Apply fade-up animation to contact person field
@@ -137,13 +144,13 @@ const SponsorForm = () => {
                 name="contactPerson"
                 placeholder="John Doe"
                 title="Full Name"
-                value={formData.contactPerson}
-                required
-                onChange={handleChange}
+                value={formData.contactPerson} // Controlled component (value from state)
+                required // Field is required
+                onChange={handleChange} // Handle change for contact person field
               />
             </div>
 
-            {/* Email */}
+            {/* Email field */}
             <div
               className="form-group"
               data-aos="fade-up" // Apply fade-up animation to email field
@@ -158,13 +165,13 @@ const SponsorForm = () => {
                 name="email"
                 placeholder="example@example.com"
                 title="E-mail"
-                value={formData.email}
-                required
-                onChange={handleChange}
+                value={formData.email} // Controlled component (value from state)
+                required // Field is required
+                onChange={handleChange} // Handle change for email field
               />
             </div>
 
-            {/* Phone Number */}
+            {/* Phone number field */}
             <div
               className="form-group"
               data-aos="fade-up" // Apply fade-up animation to phone number field
@@ -178,15 +185,15 @@ const SponsorForm = () => {
                 type="tel"
                 name="phone"
                 placeholder="+359 888888888"
-                value={formData.phone}
+                value={formData.phone} // Controlled component (value from state)
                 title="Phone number must be in the format: +359 888888888 or 0888888888"
-                onChange={handleChange}
-                pattern="^(?:\+359\s?[89][0-9]{8}|0[87][0-9]{8})$"
-                required
+                onChange={handleChange} // Handle change for phone number field
+                pattern="^(?:\+359\s?[89][0-9]{8}|0[87][0-9]{8})$" // Pattern for phone validation
+                required // Field is required
               />
             </div>
 
-            {/* Submit Button */}
+            {/* Submit button with AOS animation */}
             <button
               type="submit"
               className="submit-btn"
@@ -199,6 +206,7 @@ const SponsorForm = () => {
           </form>
         </div>
       </div>
+      {/* Scroll to top button */}
       <GoUpButton />
     </div>
   );

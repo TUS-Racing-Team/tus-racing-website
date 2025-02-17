@@ -1,51 +1,88 @@
 "use client";
 import React, { useEffect } from "react";
-import GoUpButton from "../components/go-up/goUp";
-import AOS from "aos";
-import "./gallery.css";
-import "aos/dist/aos.css"; // Import AOS styles
+import GoUpButton from "../components/go-up/goUp"; // Importing GoUpButton component to scroll up
+import AOS from "aos"; // AOS library for scroll animations
+import "./gallery.css"; // Importing gallery styles
+import "aos/dist/aos.css"; // Importing AOS styles for animations
 
 const Gallery = () => {
+  // Array of images with their respective descriptions
   const images = [
-    "https://picsum.photos/400/300?random=1",
-    "https://picsum.photos/400/300?random=2",
-    "https://picsum.photos/400/300?random=3",
-    "https://picsum.photos/400/300?random=4",
-    "https://picsum.photos/400/300?random=5",
-    "https://picsum.photos/400/300?random=6",
-    "https://picsum.photos/400/300?random=7",
-    "https://picsum.photos/400/300?random=8",
-    "https://picsum.photos/400/300?random=9",
+    {
+      src: "https://picsum.photos/400/300?random=1", // Image URL
+      description: "Image 1 Description", // Image description
+    },
+    {
+      src: "https://picsum.photos/400/300?random=2", // Image URL
+      description: "Image 2 Description", // Image description
+    },
+    {
+      src: "https://picsum.photos/400/300?random=3", // Image URL
+      description: "Image 3 Description", // Image description
+    },
+    {
+      src: "https://picsum.photos/400/300?random=4", // Image URL
+      description: "Image 4 Description", // Image description
+    },
+    {
+      src: "https://picsum.photos/400/300?random=5", // Image URL
+      description: "Image 5 Description", // Image description
+    },
+    {
+      src: "https://picsum.photos/400/300?random=6", // Image URL
+      description: "Image 6 Description", // Image description
+    },
+    {
+      src: "https://picsum.photos/400/300?random=7", // Image URL
+      description: "Image 7 Description", // Image description
+    },
+    {
+      src: "https://picsum.photos/400/300?random=8", // Image URL
+      description: "Image 8 Description", // Image description
+    },
+    {
+      src: "https://picsum.photos/400/300?random=9", // Image URL
+      description: "Image 9 Description", // Image description
+    },
   ];
 
+  // Initialize AOS (Animate on Scroll) when the component is mounted
   useEffect(() => {
     AOS.init({
-      duration: 1000, // Duration of animation in ms
-      easing: "ease-out-back", // Smooth animation easing
-      once: true,
+      duration: 1000, // Duration of animation in milliseconds
+      easing: "ease-out-back", // Easing function for smooth animation
+      once: true, // Animation should only happen once
     });
   }, []);
 
   return (
     <div className="gallery-container">
+      {/* Title with animation on scroll */}
       <h1 data-aos="fade-up" data-aos-duration="1000" className="gallery-title">
         Gallery
       </h1>
 
       {/* Gallery Grid with animated images */}
       <div className="gallery-grid">
+        {/* Map through images and display each one with animation */}
         {images.map((image, index) => (
           <div
-            className="gallery-item"
-            key={index}
-            data-aos={index % 2 === 0 ? "zoom-in" : "fade-up"}
-            data-aos-delay={200 + index * 100} // Adding delay for each item
+            className="gallery-item" // Gallery item wrapper
+            key={index} // Unique key for each item
+            data-aos={index % 2 === 0 ? "zoom-in" : "fade-up"} // Alternate animation types based on index
+            data-aos-delay={200 + index * 100} // Adding delay to each item animation to stagger them
           >
-            <img src={image} alt={`Gallery image ${index + 1}`} />
+            <img src={image.src} alt={`Gallery image ${index + 1}`} />{" "}
+            {/* Display the image */}
+            <div className="description">
+              <p>{image.description}</p>{" "}
+              {/* Display the description of the image */}
+            </div>
           </div>
         ))}
       </div>
 
+      {/* GoUpButton for scrolling back to the top of the page */}
       <GoUpButton />
     </div>
   );

@@ -1,7 +1,9 @@
+/* Set the main background theme color for the body */
 body {
   background: var(--main-theme);
 }
 
+/* The outermost container box, setting the background image and ensuring it's fully covering the area */
 .box {
   width: 100%;
   height: 100%;
@@ -11,6 +13,7 @@ body {
   background-repeat: no-repeat;
 }
 
+/* Container that adds a semi-transparent dark background and a blur effect to the form */
 .container {
   width: 100%;
   height: 100%;
@@ -19,6 +22,7 @@ body {
   backdrop-filter: blur(8px);
 }
 
+/* Style the form, applying maximum width, padding, and background color with subtle box shadow */
 .form {
   max-width: 600px;
   margin: 50px auto;
@@ -27,36 +31,42 @@ body {
   background-color: rgba(0, 0, 0, 0.405);
   box-shadow: 0 0 15px rgba(85, 85, 85, 0.5);
   color: white;
-  transition: 1s ease !important;
+  transition: 1s ease !important; /* Smooth transition for hover effects */
 }
 
+/* Form hover effect - Increase the shadow and darken the background when hovered */
 .form:hover {
   box-shadow: 0 0 30px rgba(7, 7, 7, 0.8);
   background-color: rgba(0, 0, 0, 0.5);
 }
 
+/* Style for the form's header text */
 .form h2 {
   font-size: 24px;
   color: #ffffff;
   margin: 10px 0;
 }
 
+/* Style for form's paragraph text */
 .form p {
   font-size: 14px;
   color: #b0b0b0;
   margin: 10px 0;
 }
 
+/* General form group styling to create spacing between form elements */
 .form-group {
   margin-bottom: 20px;
 }
 
+/* Label styling for form inputs, making it bold and adding space */
 .form-group label {
   display: block;
   font-weight: 600;
   margin-bottom: 10px;
 }
 
+/* Styling for all form fields (text, email, textarea, number, url) */
 .form-group input[type="text"],
 .form-group input[type="email"],
 .form-group textarea,
@@ -75,6 +85,7 @@ body {
   letter-spacing: 1.5px;
 }
 
+/* Placeholder styling - lighter color and italicized for form fields */
 .form-group input[type="text"]::placeholder,
 .form-group input[type="email"]::placeholder,
 .form-group textarea::placeholder,
@@ -87,6 +98,7 @@ body {
   color: #6c6c6c;
 }
 
+/* Focus state for form fields - Highlight border and add shadow on focus */
 .form-group input[type="text"]:focus,
 .form-group input[type="email"]:focus,
 .form-group textarea:focus,
@@ -97,6 +109,7 @@ body {
   outline: none;
 }
 
+/* Special styling for input fields inside the 5th form group (e.g., Year of Study) */
 .form-group:nth-child(5) input {
   margin: auto auto;
   width: 100%;
@@ -106,43 +119,52 @@ body {
   text-indent: 8px;
 }
 
+/* Styling for text areas - making them larger and non-resizable */
 .form-group textarea {
   height: 100px;
   resize: none;
 }
 
+/* Styling for radio buttons group */
 .form-group .radio-group {
   display: flex;
   gap: 20px;
 }
 
+/* Styling for radio button labels */
 .form-group .radio-group label {
   font-weight: normal;
 }
 
+/* Space out radio buttons */
 .form-group .radio-group input {
   margin-right: 5px;
 }
 
+/* Small text under form fields (e.g., helper text) */
 .form-group .small-text {
   font-size: 12px;
   color: #999;
 }
 
+/* Styling for required field marker (e.g., red star) */
 .form-group .required {
   color: red;
 }
 
+/* Styling for half-width form fields (for first name/last name pair) */
 .form-group .half-width {
   display: inline-block;
   width: 48%;
   margin-left: 10px;
 }
 
+/* Adjust margin for the first half-width input */
 .form-group .half-width:first-child {
   margin-right: 4%;
 }
 
+/* Submit button style - Full width, blue background, white text, rounded edges */
 .submit-btn {
   display: block;
   width: 100%;
@@ -156,12 +178,14 @@ body {
   transition: 0.3s !important;
 }
 
+/* Hover effect for the submit button - Slight color change and shadow */
 .form form .submit-btn:hover {
   background-color: #0056b3;
   box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
   transform: scale(1.03);
 }
 
+/* Active state for the submit button - Color change and slight shrink effect */
 .form form .submit-btn:active {
   background-color: #004494;
   transform: scale(0.95);

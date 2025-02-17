@@ -1,173 +1,4 @@
-/*!******************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[10].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[10].use[3]!./app/components/footer/footer.css ***!
-  \******************************************************************************************************************************************************************************************************************************************************************************/
-.footer {
-  background-color: #191919;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.footer .content {
-  width: 100%;
-  padding: 30px 10px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  gap: 20px;
-}
-
-.footer .content .footer-logo {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  gap: 50px;
-  width: auto;
-}
-
-.footer .content .footer-logo > img {
-  width: 200px;
-}
-
-.footer .content .links {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-}
-
-.footer .content .links div {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 5px;
-  font-size: 18px;
-}
-
-.footer .content .links div a {
-  text-decoration: none;
-  color: #969696;
-  transition: 0.1ms;
-}
-
-.footer .content .links div a:hover {
-  color: #606060;
-}
-
-.footer .content .social-media {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-}
-
-.footer .content .social-media .social-media-links {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  font-size: 18px;
-}
-
-.footer .content .social-media .social-media-links a > * {
-  width: 30px;
-  height: auto;
-  transition: var(--transition);
-}
-
-.footer .content .social-media .social-media-links a .instagram:hover {
-  color: #fd1d1d;
-}
-
-.footer .content .social-media .social-media-links a .facebook:hover {
-  color: #1877f2;
-}
-
-.footer .content .social-media .social-media-links a .discord:hover {
-  color: #7289da;
-}
-
-.footer .content .social-media .social-media-links a .gmail:hover {
-  color: #3e65cf;
-}
-
-.email-tooltip-container {
-  position: relative;
-  display: inline-block;
-}
-
-.email-tooltip {
-  visibility: hidden;
-  font-size: 14px;
-  width: 200px;
-  background-color: rgba(0, 0, 0, 0.75);
-  color: #fff;
-  text-align: center;
-  border-radius: 5px;
-  padding: 8px;
-  position: absolute;
-  z-index: 1;
-  bottom: -85%;
-  left: 50%;
-  transform: translateX(-50%);
-  opacity: 0;
-  pointer-events: none;
-  transition: 0.3s ease;
-  cursor: pointer;
-}
-
-.email-tooltip-container:hover .email-tooltip {
-  visibility: visible;
-  opacity: 1;
-  pointer-events: auto;
-}
-
-.footer .content .social-media .social-media-links a {
-  text-decoration: none;
-  color: #969696;
-  transition: 0.1ms;
-}
-
-.footer .contact {
-  padding: 5px;
-  width: 100%;
-}
-
-.footer .contact iframe {
-  width: 100%;
-  border-radius: 20px;
-  box-shadow: 0 0 15px #8d8d8d;
-}
-
-.footer .privacy-policy {
-  font-size: 12px;
-  padding: 10px;
-}
-
-@media (max-width: 760px) {
-  .footer .content {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .footer .content .footer-logo {
-    width: 100%;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-  }
-}
-
-/*!**************************************************************************************************************************************************************************************************************************************************************************!*\
-    !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[10].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[10].use[3]!./app/components/home/home.css ***!
-    \**************************************************************************************************************************************************************************************************************************************************************************/
+/* Landing page background and positioning */
 .landingPage {
   background: url("/images/car-photos/car-italy.jpg");
   background-size: cover;
@@ -177,6 +8,7 @@
   height: 100vh; /* Ensure it's full screen */
 }
 
+/* Main container for call-to-action */
 .main-ca {
   position: absolute;
   top: 25%;
@@ -190,6 +22,7 @@
   gap: 10px;
 }
 
+/* Style for anchor links inside main-ca */
 .main-ca a {
   text-decoration: none;
   color: white;
@@ -202,12 +35,14 @@
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
 }
 
+/* Hover effect for links inside main-ca */
 .main-ca a:hover {
   background-color: var(--button-hover-color);
   transform: translateY(-5px); /* Smooth hover effect */
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
 }
 
+/* Call-to-action info box styling */
 .ca-info {
   background-color: rgba(0, 0, 0, 0.55);
   padding: 30px;
@@ -218,11 +53,13 @@
   text-align: center;
 }
 
+/* Title styling inside ca-info */
 .ca-info h1 {
   color: white;
   margin: 15px 0;
 }
 
+/* Home join us section */
 .home-join-us {
   background-color: var(--main-theme);
   display: flex;
@@ -232,6 +69,7 @@
   padding: 50px 20px;
 }
 
+/* Formula student information styling */
 .formula-student-info {
   color: white;
   display: flex;
@@ -240,21 +78,25 @@
   width: 60%;
 }
 
+/* Heading inside formula-student-info */
 .formula-student-info h5 {
   color: #4c9fe3;
   padding-top: 50px;
 }
 
+/* Formula student title */
 .formula-student-info h1 {
   padding-top: 30px;
 }
 
+/* Separator line for formula-student-info */
 .sl {
   border: 2px solid var(--underline-color);
   width: 15%;
   margin-top: 20px;
 }
 
+/* Paragraph styling inside formula-student-info */
 .formula-student-info p {
   padding-top: 30px;
   color: #d3d3d3;
@@ -262,6 +104,7 @@
   font-size: 1rem;
 }
 
+/* Anchor styling inside formula-student-info */
 .formula-student-info a {
   border-radius: 25px;
   background-color: var(--button-color);
@@ -273,11 +116,13 @@
   font-size: 1rem;
 }
 
+/* Hover effect for links inside formula-student-info */
 .formula-student-info a:hover {
   background-color: var(--button-hover-color);
   transform: translateY(-5px);
 }
 
+/* Looking section styles */
 .looking {
   color: white;
   display: flex;
@@ -285,11 +130,13 @@
   align-items: center;
 }
 
+/* Heading inside looking section */
 .looking h1 {
   margin-top: 50px;
   font-size: 1.6rem;
 }
 
+/* Teams display styling in looking section */
 .looking-teams {
   display: flex;
   flex-wrap: wrap;
@@ -299,12 +146,14 @@
   width: 100%;
 }
 
+/* Team list styling */
 .team ul {
   list-style-type: none;
   padding-left: 10px;
   width: 140px;
 }
 
+/* Anchor links inside looking section */
 .looking a {
   border-radius: 25px;
   background-color: var(--button-color);
@@ -316,11 +165,13 @@
   margin-bottom: 50px;
 }
 
+/* Hover effect for links inside looking section */
 .looking a:hover {
   background-color: var(--button-hover-color);
   transform: translateY(-5px);
 }
 
+/* Background section with an image */
 .sub-section {
   background: url("/images/car-photos/car-photo-b.jpg");
   background-size: cover;
@@ -329,6 +180,7 @@
   position: relative;
 }
 
+/* Apply now section */
 .apply-now {
   padding-top: 50px;
   padding-bottom: 50px;
@@ -341,11 +193,13 @@
   justify-content: space-evenly;
 }
 
+/* Text styling inside apply-now */
 .apply-now p {
   color: #d3d3d3;
   font-size: 1rem;
 }
 
+/* Team image inside apply-now */
 .img-team {
   border-radius: 25px;
   max-width: 100%;
@@ -353,6 +207,7 @@
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
+/* Apply now button */
 .apply-now a {
   border-radius: 25px;
   background-color: var(--button-color);
@@ -363,16 +218,20 @@
   transition: all 0.3s ease-in-out;
 }
 
+/* Hover effect for apply now button */
 .apply-now a:hover {
   background-color: var(--button-hover-color);
   transform: translateY(-5px);
 }
 
+/* Media Query for screen width <= 600px */
 @media only screen and (max-width: 600px) {
+  /* Landing page background change */
   .landingPage {
     background: url("/images/car-photos/car-italy.jpg");
   }
 
+  /* Main container adjustment for mobile */
   .main-ca {
     position: absolute;
     top: 30%;
@@ -382,60 +241,67 @@
     text-align: center;
   }
 
+  /* Link adjustments inside main-ca */
   .main-ca a {
     padding: 12px 20px;
     font-size: 1rem;
   }
 
+  /* Call-to-action info box styling */
   .ca-info {
     background-color: rgba(0, 0, 0, 0.65);
     padding: 30px;
     border-radius: 15px;
   }
 
+  /* Home join us padding */
   .home-join-us {
     padding: 20px 10px;
   }
 
+  /* Formula student info box adjustments */
   .formula-student-info {
     width: 100%;
     padding: 10px;
   }
 
+  /* Looking teams adjustments */
   .looking-teams {
     flex-direction: column;
     gap: 10px;
     width: 100%;
   }
 
+  /* Apply now section flex adjustments */
   .apply-now {
     flex-direction: column;
     padding-top: 20px;
   }
 
+  /* Apply info text adjustments */
   .apply-info {
     padding-top: 30px;
     text-align: center;
     width: 100%;
   }
 
-  .apply-info p {
-    font-size: 1rem;
-  }
-
+  /* Apply now heading adjustment */
   .apply-now h1 {
     font-size: 1.5rem;
   }
 
+  /* Apply now button size adjustment */
   .apply-now a {
     font-size: 1rem;
     padding: 10px 20px;
   }
 
+  /* Sub-section height adjustment */
   .sub-section {
     height: 400px;
   }
 
+  /* Team image adjustments for smaller screens */
   .img-team {
     width: 100%;
     height: auto;
@@ -444,9 +310,7 @@
   }
 }
 
-/*!******************************************************************************************************************************************************************************************************************************************************************************!*\
-    !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[10].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[10].use[3]!./app/components/navbar/navbar.css ***!
-    \******************************************************************************************************************************************************************************************************************************************************************************/
+/* Navbar styling */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -460,11 +324,13 @@
   z-index: 1000;
 }
 
+/* Logo styling */
 .logo {
   height: 35px;
   width: auto;
 }
 
+/* Menu container styling */
 .menu {
   display: flex;
   justify-content: center;
@@ -475,10 +341,12 @@
   transition: transform 0.3s ease;
 }
 
+/* Menu item styling */
 .menu li {
   margin: 0 15px;
 }
 
+/* Link styling inside menu */
 .menu li a {
   color: #fff;
   text-decoration: none;
@@ -487,10 +355,12 @@
   transition: 0.3s;
 }
 
+/* Hover effect for menu items */
 .menu li a:hover {
   color: #c1c1c1;
 }
 
+/* Underline effect on hover */
 .menu li a:hover::after {
   content: "";
   position: absolute;
@@ -503,6 +373,7 @@
   border-radius: 5px;
 }
 
+/* Initial state of underline for menu items */
 .menu li a::after {
   content: "";
   position: absolute;
@@ -515,6 +386,7 @@
   border-radius: 5px;
 }
 
+/* Navigation buttons styling */
 .nav-buttons {
   display: flex;
   flex-direction: row;
@@ -523,10 +395,12 @@
   gap: 5px;
 }
 
+/* Image hover effect inside nav-buttons */
 .nav-buttons img:hover {
   cursor: pointer;
 }
 
+/* Apply button styling */
 .apply {
   background-color: var(--button-color);
   color: white;
@@ -540,16 +414,19 @@
   transition: 300ms;
 }
 
+/* Hover effect for apply button */
 .apply:hover {
   background-color: var(--button-hover-color);
   transform: scale(1.02);
 }
 
+/* Active state for apply button */
 .apply:active {
   background-color: var(--button-hover-color);
   transform: scale(0.95);
 }
 
+/* Hamburger menu styles */
 .hamburger-menu {
   display: none;
   flex-direction: column;
@@ -557,6 +434,7 @@
   gap: 5px;
 }
 
+/* Hamburger bars styling */
 .hamburger-menu .bar {
   width: 30px;
   height: 4px;
@@ -564,7 +442,7 @@
   border-radius: 5px;
 }
 
-/* Add fade animation */
+/* Fade-in animation for menu */
 @keyframes fadeIn {
   from {
     opacity: 0; /* Start invisible */
@@ -576,6 +454,7 @@
 
 /* Media Queries for screen width <= 1040px */
 @media (max-width: 1159px) {
+  /* Menu styling for small screens */
   .menu {
     display: none; /* Hide menu by default */
     position: absolute;
@@ -592,6 +471,7 @@
     transition: opacity 0.3s ease, top 0.3s ease; /* Smooth transition for opacity and position */
   }
 
+  /* Open menu styling */
   .menu.open {
     display: flex; /* Show menu when open */
     opacity: 1; /* Ensure menu is visible */
@@ -601,31 +481,38 @@
     animation: fadeIn 0.3s ease forwards; /* Apply fade-in animation */
   }
 
+  /* Menu item width adjustment */
   .menu.open a {
     width: 100%;
     text-align: center;
   }
 
+  /* Hamburger menu visibility */
   .hamburger-menu {
     display: flex; /* Show hamburger icon on mobile */
   }
 
+  /* Hide nav buttons on small screens */
   .nav-buttons {
-    display: none; /* Hide nav buttons on small screens */
+    display: none;
   }
 
+  /* Styling for opened menu */
   .open {
     background: #242424;
   }
 }
 
+/* Media Queries for screen width > 1160px */
 @media (min-width: 1160px) {
+  /* Hide hamburger icon on large screens */
   .hamburger-menu {
-    display: none; /* Hide hamburger icon on large screens */
+    display: none;
   }
 
+  /* Menu styles for large screens */
   .menu {
-    display: flex; /* Show menu as a horizontal list */
+    display: flex;
     position: static;
     background-color: transparent;
     flex-direction: row;
@@ -633,28 +520,31 @@
     padding: 0;
   }
 
+  /* Show nav buttons on large screens */
   .nav-buttons {
-    display: flex; /* Show nav buttons on large screens */
+    display: flex;
   }
 }
 
 /* Media Queries for screen width <= 500px */
 @media (max-width: 500px) {
+  /* Open menu styles for smaller screens */
   .menu.open {
     padding: 0px;
-    width: 100%; /* Full screen width */
-    height: 100vh; /* Full screen height */
+    width: 100%;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     left: 0px;
-    top: 70px; /* Position below navbar */
-    opacity: 1; /* Ensure menu is visible */
+    top: 70px;
+    opacity: 1;
     gap: 20px;
-    animation: fadeIn 0.3s ease forwards; /* Apply fade-in animation */
+    animation: fadeIn 0.3s ease forwards;
   }
 
+  /* Menu item styling inside open menu */
   .menu.open ul li,
   .menu.open a {
     font-size: 18px;
@@ -662,7 +552,9 @@
   }
 }
 
+/* Media Queries for screen width <= 360px */
 @media (max-width: 360px) {
+  /* Logo size adjustment for very small screens */
   .logo {
     height: 30px;
   }

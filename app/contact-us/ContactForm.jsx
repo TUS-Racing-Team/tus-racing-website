@@ -1,38 +1,42 @@
-"use client";
-import React, { useState, useEffect } from "react";
-import GoUpButton from "../components/go-up/goUp";
-import AOS from "aos";
-import "aos/dist/aos.css"; // Import AOS styles
-import "./contact-form.css";
+"use client"; // Ensures the component runs client-side in Next.js
+import React, { useState, useEffect } from "react"; // Import React and necessary hooks
+import GoUpButton from "../components/go-up/goUp"; // Import GoUpButton component for scrolling back up
+import AOS from "aos"; // Import AOS (Animate On Scroll) library for scroll animations
+import "aos/dist/aos.css"; // Import AOS styles for animations
+import "./contact-form.css"; // Import custom CSS for styling the contact form
 
 const ContactForm = () => {
+  // State to store the form data
   const [formData, setFormData] = useState({
-    feedbackType: "",
-    firstName: "",
-    lastName: "",
-    email: "",
-    description: "",
+    feedbackType: "", // Stores the feedback type (comments, suggestions, or questions)
+    firstName: "", // Stores the first name
+    lastName: "", // Stores the last name
+    email: "", // Stores the email address
+    description: "", // Stores the feedback description
   });
 
+  // useEffect hook to initialize AOS with custom options
   useEffect(() => {
     AOS.init({
-      duration: 700, // Set duration to 700ms for faster animation
-      easing: "ease-out-back",
-      once: true,
+      duration: 700, // Set duration to 700ms for animations
+      easing: "ease-out-back", // Set the easing function for animations
+      once: true, // Animation triggers only once during scroll
     });
-  }, []);
+  }, []); // Empty dependency array to run only once when the component mounts
 
+  // Function to handle input changes for form fields
   const handleChange = (e) => {
-    const { name, value } = e.target;
+    const { name, value } = e.target; // Destructure name and value from event target
     setFormData((prevState) => ({
-      ...prevState,
-      [name]: value,
+      ...prevState, // Copy the previous state
+      [name]: value, // Update the specific field
     }));
   };
 
+  // Function to handle form submission
   const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log(formData); // You can handle form submission logic here
+    e.preventDefault(); // Prevent default form submission behavior
+    console.log(formData); // Log the form data (for now, you can replace it with form submission logic)
 
     // Reset the form fields after submission
     setFormData({
@@ -47,7 +51,7 @@ const ContactForm = () => {
   return (
     <div className="box">
       <div className="container">
-        {/* Animate the entire form container */}
+        {/* Header for the form with fade-down animation */}
         <div
           className="box-h1"
           data-aos="fade-down"
@@ -57,20 +61,25 @@ const ContactForm = () => {
           <h1 className="contact-h1">Contact Us</h1>
         </div>
 
+        {/* Form container with fade-up animation */}
         <div
           className="form"
-          data-aos="fade-up" // Animating the form itself
-          data-aos-duration="800" // Slightly slower animation for the form container
-          data-aos-delay="200" // Delay the form animation to start after the heading
+          data-aos="fade-up"
+          data-aos-duration="800"
+          data-aos-delay="200"
         >
           <h2 data-aos="zoom-in" data-aos-delay="250" data-aos-duration="700">
             Feedback Form
           </h2>
+          {/* Description paragraph with fade-up animation */}
           <p data-aos="fade-up" data-aos-delay="300" data-aos-duration="700">
             We would love to hear your thoughts, suggestions, concerns, or
             problems with anything so we can improve!
           </p>
+
+          {/* Form element with onSubmit handler */}
           <form onSubmit={handleSubmit}>
+            {/* Feedback Type Radio Buttons with fade-up animation */}
             <div
               className="form-group"
               data-aos="fade-up"
@@ -89,7 +98,7 @@ const ContactForm = () => {
                     title="Feedback Options"
                     required
                     checked={formData.feedbackType === "comments"}
-                    onChange={handleChange}
+                    onChange={handleChange} // Handle change for feedback type
                   />
                   Comments
                 </label>
@@ -101,7 +110,7 @@ const ContactForm = () => {
                     title="Feedback Options"
                     required
                     checked={formData.feedbackType === "suggestions"}
-                    onChange={handleChange}
+                    onChange={handleChange} // Handle change for feedback type
                   />
                   Suggestions
                 </label>
@@ -113,14 +122,14 @@ const ContactForm = () => {
                     title="Feedback Options"
                     required
                     checked={formData.feedbackType === "questions"}
-                    onChange={handleChange}
+                    onChange={handleChange} // Handle change for feedback type
                   />
                   Questions
                 </label>
               </div>
             </div>
 
-            {/* Feedback Description */}
+            {/* Feedback Description textarea with fade-up animation */}
             <div
               className="form-group"
               data-aos="fade-up"
@@ -136,11 +145,11 @@ const ContactForm = () => {
                 title="Description"
                 value={formData.description}
                 required
-                onChange={handleChange}
+                onChange={handleChange} // Handle change for feedback description
               />
             </div>
 
-            {/* Name */}
+            {/* Name fields (First and Last Name) with fade-up animation */}
             <div
               className="form-group"
               data-aos="fade-up"
@@ -150,6 +159,7 @@ const ContactForm = () => {
               <label>
                 Name <span className="required">*</span>
               </label>
+              {/* First Name input with half-width class */}
               <div className="half-width">
                 <input
                   type="text"
@@ -158,10 +168,11 @@ const ContactForm = () => {
                   title="First Name"
                   value={formData.firstName}
                   required
-                  onChange={handleChange}
+                  onChange={handleChange} // Handle change for first name
                 />
                 <small className="small-text">First Name</small>
               </div>
+              {/* Last Name input with half-width class */}
               <div className="half-width">
                 <input
                   type="text"
@@ -170,13 +181,13 @@ const ContactForm = () => {
                   title="Last Name"
                   value={formData.lastName}
                   required
-                  onChange={handleChange}
+                  onChange={handleChange} // Handle change for last name
                 />
                 <small className="small-text">Last Name</small>
               </div>
             </div>
 
-            {/* Email */}
+            {/* Email input field with fade-up animation */}
             <div
               className="form-group"
               data-aos="fade-up"
@@ -193,10 +204,11 @@ const ContactForm = () => {
                 title="E-mail"
                 value={formData.email}
                 required
-                onChange={handleChange}
+                onChange={handleChange} // Handle change for email input
               />
             </div>
 
+            {/* Submit button with zoom-in animation */}
             <button
               type="submit"
               className="submit-btn"
@@ -209,6 +221,8 @@ const ContactForm = () => {
           </form>
         </div>
       </div>
+
+      {/* GoUpButton component to scroll back to the top */}
       <GoUpButton />
     </div>
   );

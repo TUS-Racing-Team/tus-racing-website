@@ -1,85 +1,98 @@
 "use client";
-import { useState, useEffect } from "react";
-import Image from "next/image";
-import GoUpButton from "../components/go-up/goUp";
-import AOS from "aos";
-import "./home.css";
-import "aos/dist/aos.css";
+import { useState, useEffect } from "react"; // Import React hooks
+import Image from "next/image"; // Import Next.js Image component
+import GoUpButton from "../components/go-up/goUp"; // Import a custom "Go Up" button component
+import AOS from "aos"; // Import AOS library for scroll animations
+import "./home.css"; // Import custom styles
+import "aos/dist/aos.css"; // Import AOS CSS for animations
 
 const HomePage = () => {
-  const [mobileVersion, setVersion] = useState(false);
-  const [openTeam, setTeam] = useState("None");
+  const [mobileVersion, setVersion] = useState(false); // State to track if the screen is mobile size
+  const [openTeam, setTeam] = useState("None"); // State to track which team section is open
 
+  // Function to check window size and set mobileVersion state accordingly
   const checkRes = () => {
     if (window.innerWidth <= 425) {
-      setVersion(true);
+      setVersion(true); // Set mobileVersion to true for small screen sizes
     } else {
-      setVersion(false);
+      setVersion(false); // Otherwise, set mobileVersion to false
     }
   };
 
+  // Function to toggle the display of a team section when clicked
   const openTeamInfo = (team) => {
     if (openTeam == team) {
-      setTeam("None");
+      setTeam("None"); // Close the section if it's already open
     } else {
-      setTeam(team);
+      setTeam(team); // Open the clicked team section
     }
   };
 
+  // useEffect hook to initialize AOS and handle window resize
   useEffect(() => {
-    checkRes();
+    checkRes(); // Check the window size when the component is mounted
     AOS.init({
-      duration: 450, // Duration of animation in ms
-      easing: "ease-out", // Animation easing
-      once: false,
-      mirror: true,
+      duration: 450, // Set animation duration
+      easing: "ease-out", // Set animation easing function
+      once: false, // Disable animation running only once
+      mirror: true, // Enable animations to run on scroll back into view
     });
-    // Add event listener for window resize
+
+    // Add an event listener to track window resize and update mobileVersion
     window.addEventListener("resize", checkRes);
 
-    // Clean up event listener on component unmount
+    // Cleanup function to remove the event listener when the component unmounts
     return () => {
       window.removeEventListener("resize", checkRes);
     };
-  }, [mobileVersion]);
+  }, [mobileVersion]); // Re-run effect if mobileVersion changes
 
   return (
     <div>
+      {/* Landing Page Section */}
       <div
         className="landingPage"
         style={{
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backgroundAttachment: "fixed",
-          height: "100vh",
-          width: "100%",
-          top: "82px",
+          backgroundSize: "cover", // Make the background image cover the entire area
+          backgroundPosition: "center", // Center the background image
+          backgroundAttachment: "fixed", // Keep background fixed while scrolling
+          height: "100vh", // Full viewport height
+          width: "100%", // Full viewport width
+          top: "82px", // Offset top position
         }}
       >
         <div className="main-ca">
           <div className="ca-info" data-aos="fade-up">
+            {" "}
+            {/* Apply AOS fade-up animation */}
             <Image
-              src="/images/logo-tus-white.png"
-              alt="Description"
-              width={293}
-              height={70}
-              className="img-logo"
-              data-aos="fade-down"
+              src="/images/logo-tus-white.png" // Logo image
+              alt="Description" // Alt text for accessibility
+              width={293} // Set image width
+              height={70} // Set image height
+              className="img-logo" // Class for styling
+              data-aos="fade-down" // Apply AOS fade-down animation
             />
             <h1 data-aos="fade-up" data-aos-delay="400">
+              {" "}
+              {/* Header with animation */}
               Explore Our Engineering!
             </h1>
             <a href="#" data-aos="fade-up" data-aos-delay="700">
+              {" "}
+              {/* Call-to-action link */}
               See Our Work
             </a>
           </div>
         </div>
       </div>
 
-      {/* Text and Images with AOS animation */}
+      {/* Section with text and AOS animations */}
       <div className="home-join-us">
         <div className="formula-student-info">
           <h5 data-aos="fade-up" data-aos-delay="200">
+            {" "}
+            {/* Heading with AOS animation */}
             WELCOME TO TUS RACING TEAM
           </h5>
           <h1 data-aos="fade-up" data-aos-delay="300">
@@ -87,27 +100,34 @@ const HomePage = () => {
           </h1>
           <div className="sl" data-aos="fade-up" data-aos-delay="300"></div>
           <p data-aos="fade-up" data-aos-delay="400">
+            {/* Placeholder text */}
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rem ut
             commodi delectus aspernatur, doloribus quam veritatis repellendus.
-            Similique sed, non eligendi reiciendis necessitatibus, et animi,
-            blanditiis at debitis pariatur temporibus.
           </p>
-          <a href="/formula-student" className="more-about" data-aos="fade-up" data-aos-delay="550">
+          <a
+            href="/formula-student"
+            className="more-about"
+            data-aos="fade-up"
+            data-aos-delay="550"
+          >
             More about formula student
           </a>
         </div>
 
+        {/* Team sections */}
         <div className="looking" data-aos="fade-up" data-aos-delay="300">
           <h1 data-aos="fade-up" data-aos-delay="350">
             We are searching for new talent in the following areas:
           </h1>
           <div className="sl" data-aos="fade-up" data-aos-delay="400"></div>
 
+          {/* Team list */}
           <div
             className={`looking-teams ${mobileVersion ? "teams-res" : ""}`}
             data-aos="fade-down"
             data-aos-delay="450"
           >
+            {/* Mechanical Team Section */}
             <div
               className={`team-desc ${mobileVersion ? "team-res" : ""}`}
               data-aos="fade-right"
@@ -129,6 +149,8 @@ const HomePage = () => {
                 </ul>
               )}
             </div>
+
+            {/* Electrical Team Section */}
             <div
               className={`team-desc ${mobileVersion ? "team-res" : ""}`}
               data-aos="fade-down"
@@ -150,6 +172,8 @@ const HomePage = () => {
                 </ul>
               )}
             </div>
+
+            {/* Media Team Section */}
             <div
               className={`team-desc ${mobileVersion ? "team-res" : ""}`}
               data-aos="fade-up"
@@ -160,7 +184,7 @@ const HomePage = () => {
                   openTeamInfo("Media");
                 }}
               >
-                {mobileVersion ? "Media >" : "Media"}
+                {!mobileVersion || openTeam == "Media" ? "Media >" : "Media"}
               </h3>
               {(!mobileVersion || openTeam == "Media") && (
                 <ul>
@@ -171,6 +195,8 @@ const HomePage = () => {
                 </ul>
               )}
             </div>
+
+            {/* Business Team Section */}
             <div
               className={`team-desc ${mobileVersion ? "team-res" : ""}`}
               data-aos="fade-left"
@@ -193,6 +219,8 @@ const HomePage = () => {
               )}
             </div>
           </div>
+
+          {/* Call to application page */}
           <a
             href="/application"
             data-aos="zoom-in"
@@ -204,6 +232,7 @@ const HomePage = () => {
         </div>
       </div>
 
+      {/* Sub-section with background image */}
       <div
         className="sub-section"
         style={{
@@ -227,6 +256,7 @@ const HomePage = () => {
           <div className="sl" data-aos="fade-down" data-aos-delay="500"></div>
           <br />
           <p data-aos="fade-left" data-aos-delay="700">
+            {/* Description text */}
             Do you fancy motorsport and tinkering? <br />
             Do you have team spirit and want to get to know your fellow
             students? <br />
@@ -235,12 +265,17 @@ const HomePage = () => {
             <br />
             Simply apply here!
           </p>
-          <a href="/application" className="apply-team" data-aos="fade-up" data-aos-delay="500">
+          <a
+            href="/application"
+            className="apply-team"
+            data-aos="fade-up"
+            data-aos-delay="500"
+          >
             GO TO THE APPLICATION
           </a>
         </div>
 
-        {/* Image with animation */}
+        {/* Team image with animation */}
         <Image
           src="/images/team-photos/team-photo.jpg"
           alt="Description"
@@ -251,6 +286,8 @@ const HomePage = () => {
           data-aos-delay="900"
         />
       </div>
+
+      {/* "Go to Top" button */}
       <GoUpButton />
     </div>
   );

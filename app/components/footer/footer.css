@@ -1,3 +1,4 @@
+/* Main footer container */
 .footer {
   background-color: #191919;
   color: white;
@@ -7,6 +8,7 @@
   justify-content: center;
 }
 
+/* Content wrapper inside the footer */
 .footer .content {
   width: 100%;
   padding: 30px 10px;
@@ -17,6 +19,7 @@
   gap: 20px;
 }
 
+/* Footer logo section */
 .footer .content .footer-logo {
   display: flex;
   flex-direction: row;
@@ -26,10 +29,12 @@
   width: auto;
 }
 
+/* Styling for logo images */
 .footer .content .footer-logo > img {
   width: 200px;
 }
 
+/* Quick links section */
 .footer .content .links {
   display: flex;
   flex-direction: column;
@@ -38,6 +43,7 @@
   gap: 10px;
 }
 
+/* Container for each set of links */
 .footer .content .links div {
   display: flex;
   flex-direction: column;
@@ -47,16 +53,19 @@
   font-size: 18px;
 }
 
+/* Styling for individual link anchor tags */
 .footer .content .links div a {
   text-decoration: none;
   color: #969696;
   transition: 0.1ms;
 }
 
+/* Hover effect for links */
 .footer .content .links div a:hover {
   color: #606060;
 }
 
+/* Social media section styling */
 .footer .content .social-media {
   display: flex;
   flex-direction: column;
@@ -64,6 +73,7 @@
   gap: 10px;
 }
 
+/* Container for social media links */
 .footer .content .social-media .social-media-links {
   display: flex;
   flex-direction: row;
@@ -73,37 +83,44 @@
   font-size: 18px;
 }
 
+/* Styling for each social media icon */
 .footer .content .social-media .social-media-links a > * {
   width: 30px;
   height: auto;
   transition: var(--transition);
 }
 
+/* Hover color effect for Instagram icon */
 .footer .content .social-media .social-media-links a .instagram:hover {
   color: #fd1d1d;
 }
 
+/* Hover color effect for Facebook icon */
 .footer .content .social-media .social-media-links a .facebook:hover {
   color: #1877f2;
 }
 
+/* Hover color effect for Discord icon */
 .footer .content .social-media .social-media-links a .discord:hover {
   color: #7289da;
 }
 
+/* Hover color effect for Gmail icon */
 .footer .content .social-media .social-media-links a .gmail:hover {
   color: #3e65cf;
 }
 
+/* Email tooltip container */
 .email-tooltip-container {
   position: relative;
   display: inline-block;
 }
 
+/* Tooltip styles when hovering over the email container */
 .email-tooltip {
-  visibility: hidden; 
+  visibility: hidden;
   font-size: 14px;
-  width: 200px; 
+  width: 200px;
   background-color: rgba(0, 0, 0, 0.75);
   color: #fff;
   text-align: center;
@@ -111,50 +128,58 @@
   padding: 8px;
   position: absolute;
   z-index: 1;
-  bottom: -85%; 
+  bottom: -85%;
   left: 50%;
   transform: translateX(-50%);
   opacity: 0;
-  pointer-events: none; 
+  pointer-events: none;
   transition: 0.3s ease;
   cursor: pointer;
 }
 
+/* Tooltip becomes visible when hovering over the email container */
 .email-tooltip-container:hover .email-tooltip {
   visibility: visible;
   opacity: 1;
-  pointer-events: auto; 
+  pointer-events: auto;
 }
 
+/* Social media link styling */
 .footer .content .social-media .social-media-links a {
   text-decoration: none;
   color: #969696;
   transition: 0.1ms;
 }
 
+/* Footer contact section */
 .footer .contact {
   padding: 5px;
   width: 100%;
 }
 
+/* Styling for the Google Maps iframe */
 .footer .contact iframe {
   width: 100%;
   border-radius: 20px;
   box-shadow: 0 0 15px #8d8d8d;
 }
 
+/* Privacy policy section */
 .footer .privacy-policy {
   font-size: 12px;
   padding: 10px;
 }
 
+/* Media query for smaller screen sizes */
 @media (max-width: 760px) {
+  /* Stack content vertically on smaller screens */
   .footer .content {
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
 
+  /* Adjust footer logo layout for smaller screens */
   .footer .content .footer-logo {
     width: 100%;
     justify-content: space-evenly;

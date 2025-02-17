@@ -1,145 +1,151 @@
+/* Global Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Basic Styling for HTML and Body */
 html,
 body {
   height: 100vh;
   width: 100vw;
-  font-family: "Roboto", sans-serif;
+  font-family: var(--header), sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
   color: white;
+  overflow: hidden; /* Prevent scrollbars */
 }
 
+/* Background and Visuals */
 .not-found-container {
+  width: 100%;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  background-image: url("../public/images/digital-bg.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
+  background-image: url("../public/images/digital-bg.jpg"); /* F1 Race Track Image */
   background-size: cover;
-  padding: 20px;
+  background-position: center;
   position: relative;
+  animation: zoomIn 10s ease-in-out infinite; /* Zoom-in effect for the background */
 }
 
+/* Content Box */
 .content {
-  width: 100%;
-  height: 100%;
-  padding: 10px;
+  position: relative;
+  padding: 30px;
   backdrop-filter: blur(10px);
-  background: rgba(210, 210, 210, 0.1);
-  border-radius: 20px;
-  box-shadow: 0 4px 20px rgba(210, 210, 210, 0.2);
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  justify-content: center;
-  align-items: center;
+  background: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+  border-radius: 15px;
+  box-shadow: 0 4px 25px rgba(2, 33, 112, 0.6); /* Light blue glowing shadow */
+  text-align: center;
+  animation: slideIn 1s ease-out; /* Slide-in animation for content */
 }
 
-@keyframes leFadeIn {
+/* Animation for Zoom-In Background */
+@keyframes zoomIn {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Animation for Slide-In Content */
+@keyframes slideIn {
   from {
     opacity: 0;
+    transform: translateY(20px);
   }
   to {
     opacity: 1;
+    transform: translateY(0);
   }
 }
 
-/* Define the effect3d keyframe animation with darker shadows */
-@keyframes effect3d {
-  to {
-    text-shadow: 0 1px 0 #999, /* Darker shades for shadows */ 0 2px 0 #888,
-      0 3px 0 #777, 0 4px 0 #666, 0 5px 0 #555, 0 6px 1px rgba(0, 0, 0, 0.3),
-      /* Darker shadow with increased opacity */ 0 0 5px rgba(0, 0, 0, 0.3),
-      0 1px 3px rgba(0, 0, 0, 0.5),
-      /* Darker shadow with stronger opacity */ 0 3px 5px rgba(0, 0, 0, 0.4),
-      0 5px 10px rgba(0, 0, 0, 0.45), 0 10px 10px rgba(0, 0, 0, 0.35),
-      0 20px 20px rgba(0, 0, 0, 0.3); /* Darker, deeper shadows */
-  }
-}
-
-@keyframes pepe {
-  from,
-  33%,
-  66%,
-  to {
-    transform: rotate(4deg);
-  }
-  16%,
-  50%,
-  83% {
-    transform: rotate(-4deg);
-  }
-}
-
+/* Heading Styles for F1 Theme */
 .content h1 {
-  font-size: 120px;
-  animation: effect3d 1s ease-in-out forwards, pepe 3s ease infinite;
+  font-size: 140px;
+  font-weight: 900;
+  color: #003bb2;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  animation: pulse 1.5s ease-in-out infinite; /* Pulse effect on 404 */
 }
 
-@keyframes danceMiddle {
-  16% {
-    transform: skew(-14deg);
+/* Pulsing effect for the heading */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    text-shadow: 0 0 20px #3cc5e3,
+      0 0 30px #3cc5e3;
   }
-  33% {
-    transform: skew(12deg);
+  50% {
+    transform: scale(1.1);
+    text-shadow: 0 0 25px #3cc5e3,
+      0 0 35px #3cc5e3;
   }
-  49% {
-    transform: skew(-8deg);
-  }
-  66% {
-    transform: skew(6deg);
-  }
-  83% {
-    transform: skew(-4deg);
+  100% {
+    transform: scale(1);
+    text-shadow: 0 0 20px #3cc5e3,
+      0 0 30px #3cc5e3;
   }
 }
 
+/* Paragraph Text Styling */
 .content p {
-  animation: danceMiddle 5s infinite;
+  font-size: 18px;
+  line-height: 1.5;
+  color: #f1f1f1;
+  font-weight: 400;
+  margin-top: 20px;
+  animation: fadeInText 2s ease-out forwards; /* Fade-in effect for text */
 }
 
-.content p,
-.content a {
-  font-size: 20px;
+/* Fade-in effect for paragraph */
+@keyframes fadeInText {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
+/* Button Style for "Return to Home" */
 .content .return-home {
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-  padding: 10px 20px 10px 20px;
-  margin-top: 50px;
+  display: inline-block;
+  margin-top: 40px;
+  padding: 15px 40px;
+  font-size: 18px;
+  font-weight: bold;
   color: white;
   text-decoration: none;
-  cursor: pointer;
-  border-radius: 20px;
-  background: linear-gradient(45deg, rgb(33, 130, 196), rgb(21, 103, 235));
-  box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
-  transition: 300ms;
-}
-
-.content .return-home .arrow {
-  font-size: 20px;
-  margin-left: 10px;
-  font-weight: 900;
-  transition: 500ms;
+  background: linear-gradient(
+    45deg,
+    var(--button-color),
+    #00b0e6
+  ); /* Blue Gradient */
+  border-radius: var(--button-radius);
+  box-shadow: 0 5px 15px rgba(0, 191, 255, 0.6); /* Light blue glowing shadow */
+  transition: var(--button-transition);
 }
 
 .content .return-home:hover {
-  background: linear-gradient(45deg, rgb(29, 103, 152), rgb(11, 77, 184));
-  box-shadow: 0 0 15px rgba(130, 130, 130, 0.6);
+  background: linear-gradient(
+    45deg,
+    #00b0e6,
+    var(--button-color)
+  ); /* Reverse Gradient */
+  box-shadow: 0 10px 20px rgba(0, 191, 255, 0.8);
   transform: scale(1.05);
 }
 
@@ -147,16 +153,24 @@ body {
   transform: scale(0.95);
 }
 
-.content .return-home:hover .arrow {
-  margin-left: 20px;
+/* Styling for Arrow Icon */
+.content .return-home .arrow {
+  font-size: 22px;
+  margin-left: 12px;
+  font-weight: 900;
+  transition: var(--button-transition);
 }
 
+/* Responsive Design */
 @media screen and (max-width: 700px) {
   .content h1 {
-    font-size: 80px;
+    font-size: 100px;
   }
-  .content p,
-  .content a {
+  .content p {
+    font-size: 16px;
+  }
+  .content .return-home {
+    padding: 12px 20px;
     font-size: 16px;
   }
 }
@@ -167,9 +181,12 @@ body {
   }
   .content {
     border-radius: 0;
-    padding: 15px;
+    padding: 20px;
   }
   .content h1 {
-    font-size: 70px;
+    font-size: 80px;
+  }
+  .content p {
+    font-size: 14px;
   }
 }

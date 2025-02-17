@@ -1,34 +1,39 @@
+/* Import Google Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lunasima:wght@400;700&display=swap");
 
+/* Define root custom variables for easier theme management */
 :root {
-  --main-theme: #1d1d1d;
-  --button-color: #166fd5;
-  --button-hover-color: #1f4386;
-  --underline-color: #1fcbee;
-  --button-radius: 12px;
-  --button-transition: 200ms;
-  --transition: 300ms;
-  --header: "Raleway";
-  --text: "Lunasima";
+  --main-theme: #1d1d1d; /* Main theme color (dark shade) */
+  --button-color: #166fd5; /* Default button color (blue) */
+  --button-hover-color: #1f4386; /* Button hover color (darker blue) */
+  --underline-color: #1fcbee; /* Underline color (light blue) */
+  --button-radius: 12px; /* Rounded button corners */
+  --button-transition: 200ms; /* Button transition speed */
+  --transition: 300ms; /* General transition speed */
+  --header: "Raleway"; /* Font for headings */
+  --text: "Lunasima"; /* Font for body text */
 }
 
+/* Set font family and font-weight for all heading tags */
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  font-family: var(--header) !important;
-  font-weight: 500;
+  font-family: var(--header) !important; /* Apply Raleway font */
+  font-weight: 500; /* Default heading weight */
 }
 
+/* Specific font weight for h1, h2, h3 */
 h1,
 h2,
 h3 {
-  font-weight: 900;
+  font-weight: 900; /* Heavier weight for primary headings */
 }
 
+/* Set font family for all text elements */
 a,
 p,
 div,
@@ -53,54 +58,52 @@ pre,
 mark,
 del,
 ins {
-  font-family: var(--text) !important;
+  font-family: var(--text) !important; /* Apply Lunasima font */
 }
 
+/* Customize the appearance of the scrollbar */
 ::-webkit-scrollbar {
-  width: 12px;
-  height: 12px;
+  width: 12px; /* Set scrollbar width */
+  height: 12px; /* Set scrollbar height */
 }
 
 ::-webkit-scrollbar-track {
-  background-color: #252525;
+  background-color: #252525; /* Set background color for the scrollbar track */
 }
 
 ::-webkit-scrollbar-thumb {
-  border-radius: 10px;
-  background-color: #555;
+  border-radius: 10px; /* Rounded corners for scrollbar thumb */
+  background-color: #555; /* Set scrollbar thumb color */
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background-color: #4a4545;
+  background-color: #4a4545; /* Change thumb color on hover */
 }
 
-/* @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-} */
-
+/* Smooth scrolling behavior for better UX */
 html {
   scroll-behavior: smooth;
 }
 
+/* General styles for HTML and body elements */
 html,
 body {
-  max-width: 100vw;
-  overflow-x: hidden;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  max-width: 100vw; /* Prevent horizontal overflow */
+  overflow-x: hidden; /* Disable horizontal scrolling */
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; /* Default system font */
 }
 
+/* General styles for body text */
 body {
-  color: black;
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  color: black; /* Text color */
+  font-family: Arial, Helvetica, sans-serif; /* Fallback font family */
+  -webkit-font-smoothing: antialiased; /* Improve text rendering on WebKit browsers */
+  -moz-osx-font-smoothing: grayscale; /* Improve text rendering on Firefox */
 }
 
+/* Reset padding and margin for all elements */
 * {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+  box-sizing: border-box; /* Include padding and border in element's total width and height */
+  padding: 0; /* Remove default padding */
+  margin: 0; /* Remove default margin */
 }

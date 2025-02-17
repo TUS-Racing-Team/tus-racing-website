@@ -19,7 +19,7 @@ const ApplicationForm = () => {
     resume: null,
   });
 
-  // Initialize AOS
+  // Initialize AOS (animation on scroll)
   useEffect(() => {
     AOS.init({
       duration: 700, // Duration for animations
@@ -28,6 +28,7 @@ const ApplicationForm = () => {
     });
   }, []);
 
+  // Function to send data to Discord webhook
   const sendDataToDiscord = async () => {
     const response = await fetch("/api/sendToDiscord", {
       method: "POST",
@@ -43,6 +44,7 @@ const ApplicationForm = () => {
     console.log(result);
   };
 
+  // Handle form input changes
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prevState) => ({
@@ -51,6 +53,7 @@ const ApplicationForm = () => {
     }));
   };
 
+  // Handle file input change (for resume)
   const handleFileChange = (e) => {
     const { name, files } = e.target;
     setFormData((prevState) => ({
@@ -59,6 +62,7 @@ const ApplicationForm = () => {
     }));
   };
 
+  // Handle form submission
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(formData);
@@ -86,6 +90,7 @@ const ApplicationForm = () => {
           data-aos-duration="700"
           data-aos-delay="100"
         >
+          {/* Form Title */}
           <h2
             data-aos="zoom-in" // Apply zoom-in animation to the title
             data-aos-delay="150"
@@ -93,6 +98,8 @@ const ApplicationForm = () => {
           >
             Formula Student Application
           </h2>
+
+          {/* Form Introduction Paragraph */}
           <p
             data-aos="fade-up" // Apply fade-up animation to the paragraph
             data-aos-delay="200"
@@ -102,8 +109,9 @@ const ApplicationForm = () => {
             team! Please fill out the application form below.
           </p>
 
+          {/* Form Start */}
           <form onSubmit={handleSubmit}>
-            {/* Name */}
+            {/* Name Fields (First and Last Name) */}
             <div
               className="form-group"
               data-aos="fade-up" // Apply fade-up animation to name field
@@ -139,7 +147,7 @@ const ApplicationForm = () => {
               </div>
             </div>
 
-            {/* Email */}
+            {/* Email Field */}
             <div
               className="form-group"
               data-aos="fade-up" // Apply fade-up animation to email field
@@ -160,7 +168,7 @@ const ApplicationForm = () => {
               />
             </div>
 
-            {/* University & Course */}
+            {/* University Field */}
             <div
               className="form-group"
               data-aos="fade-up" // Apply fade-up animation to university field
@@ -181,6 +189,7 @@ const ApplicationForm = () => {
               />
             </div>
 
+            {/* Course Field */}
             <div
               className="form-group"
               data-aos="fade-up" // Apply fade-up animation to course field
@@ -201,7 +210,7 @@ const ApplicationForm = () => {
               />
             </div>
 
-            {/* Year of Study */}
+            {/* Year of Study Field */}
             <div
               className="form-group"
               data-aos="fade-up" // Apply fade-up animation to year of study field
@@ -224,7 +233,7 @@ const ApplicationForm = () => {
               />
             </div>
 
-            {/* Skills and Experience */}
+            {/* Skills and Experience Field */}
             <div
               className="form-group"
               data-aos="fade-up" // Apply fade-up animation to skills field
@@ -245,7 +254,7 @@ const ApplicationForm = () => {
               />
             </div>
 
-            {/* Motivation */}
+            {/* Motivation Field */}
             <div
               className="form-group"
               data-aos="fade-up" // Apply fade-up animation to motivation field
@@ -266,7 +275,7 @@ const ApplicationForm = () => {
               />
             </div>
 
-            {/* Portfolio or GitHub Link */}
+            {/* Portfolio or GitHub Link Field (Optional) */}
             <div
               className="form-group"
               data-aos="fade-up" // Apply fade-up animation to portfolio link field
@@ -284,6 +293,7 @@ const ApplicationForm = () => {
               />
             </div>
 
+            {/* Submit Button */}
             <button
               type="submit"
               className="submit-btn"
@@ -296,6 +306,8 @@ const ApplicationForm = () => {
           </form>
         </div>
       </div>
+
+      {/* Go Up Button Component */}
       <GoUpButton />
     </div>
   );

@@ -1,6 +1,7 @@
 body {
   background: var(--main-theme);
   color: white;
+  overflow-x: hidden !important;
 }
 
 .formula-student-container {
