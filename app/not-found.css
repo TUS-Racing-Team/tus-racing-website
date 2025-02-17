@@ -25,7 +25,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url("../public/images/digital-bg.jpg"); /* F1 Race Track Image */
+  background-image: url("../public/images/not-found-bg-f1.jpg"); /* F1 Race Track Image */
   background-size: cover;
   background-position: center;
   position: relative;
@@ -34,6 +34,10 @@ body {
 
 /* Content Box */
 .content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   position: relative;
   padding: 30px;
   backdrop-filter: blur(10px);
@@ -73,34 +77,35 @@ body {
 .content h1 {
   font-size: 140px;
   font-weight: 900;
-  color: #003bb2;
+  color: #0030a9;
   text-transform: uppercase;
   letter-spacing: 5px;
   animation: pulse 1.5s ease-in-out infinite; /* Pulse effect on 404 */
 }
 
-/* Pulsing effect for the heading */
+/* Pulsing effect for the heading with color transition */
 @keyframes pulse {
   0% {
     transform: scale(1);
-    text-shadow: 0 0 20px #3cc5e3,
-      0 0 30px #3cc5e3;
+    color: #0030a9; /* Default color */
+    text-shadow: 0 0 20px #3cc5e3, 0 0 30px #3cc5e3;
   }
   50% {
-    transform: scale(1.1);
-    text-shadow: 0 0 25px #3cc5e3,
-      0 0 35px #3cc5e3;
+    transform: scale(1.05);
+    color: #205bee; /* Light blue color */
+    text-shadow: 0 0 25px #3cc5e3, 0 0 35px #3cc5e3;
   }
   100% {
     transform: scale(1);
-    text-shadow: 0 0 20px #3cc5e3,
-      0 0 30px #3cc5e3;
+    color: #0030a9; /* Default color */
+    text-shadow: 0 0 20px #3cc5e3, 0 0 30px #3cc5e3;
   }
 }
 
 /* Paragraph Text Styling */
 .content p {
-  font-size: 18px;
+  font-size: 20px;
+  font-weight: 800;
   line-height: 1.5;
   color: #f1f1f1;
   font-weight: 400;
@@ -122,30 +127,25 @@ body {
 
 /* Button Style for "Return to Home" */
 .content .return-home {
-  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
   margin-top: 40px;
   padding: 15px 40px;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: bold;
   color: white;
   text-decoration: none;
-  background: linear-gradient(
-    45deg,
-    var(--button-color),
-    #00b0e6
-  ); /* Blue Gradient */
-  border-radius: var(--button-radius);
+  background: linear-gradient(45deg, #004de7, #0695e7);
+  border-radius: 100px;
   box-shadow: 0 5px 15px rgba(0, 191, 255, 0.6); /* Light blue glowing shadow */
-  transition: var(--button-transition);
+  transition: 0.5s ease;
 }
 
 .content .return-home:hover {
-  background: linear-gradient(
-    45deg,
-    #00b0e6,
-    var(--button-color)
-  ); /* Reverse Gradient */
-  box-shadow: 0 10px 20px rgba(0, 191, 255, 0.8);
+  background: linear-gradient(45deg, #0240bb, #007ec7);
+  box-shadow: 0 10px 20px rgba(8, 138, 208, 0.9);
   transform: scale(1.05);
 }
 
@@ -188,5 +188,9 @@ body {
   }
   .content p {
     font-size: 14px;
+  }
+  .content .return-home {
+    font-size: 14px;
+    width: 95%;
   }
 }
