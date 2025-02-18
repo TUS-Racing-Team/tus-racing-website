@@ -57,11 +57,9 @@ const AboutUs = () => {
                 <h2>Our Race Cars</h2>
                 {/* Description for Our Race Cars */}
                 <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos
-                  possimus aliquid perspiciatis corrupti repellendus,
-                  repudiandae quaerat temporibus velit. Atque aliquam magnam
-                  cumque beatae nihil? Omnis commodi vitae quod repudiandae
-                  voluptatem?
+                  Our race cars are the result of cutting-edge engineering and
+                  meticulous design. Each car is built to perform at the highest
+                  level, combining speed, agility, and precision on the track.
                 </p>
               </div>
             </div>
@@ -78,11 +76,10 @@ const AboutUs = () => {
                 <h2>Our Team</h2>
                 {/* Description for Our Team */}
                 <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos
-                  possimus aliquid perspiciatis corrupti repellendus,
-                  repudiandae quaerat temporibus velit. Atque aliquam magnam
-                  cumque beatae nihil? Omnis commodi vitae quod repudiandae
-                  voluptatem?
+                  Our team is made up of passionate individuals dedicated to
+                  excellence in engineering and motorsport. Together, we combine
+                  diverse skills to build high-performance racecars and push the
+                  boundaries of innovation.
                 </p>
               </div>
             </div>
@@ -107,11 +104,10 @@ const AboutUs = () => {
                 <h2>Our History</h2>
                 {/* Description for Our History */}
                 <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos
-                  possimus aliquid perspiciatis corrupti repellendus,
-                  repudiandae quaerat temporibus velit. Atque aliquam magnam
-                  cumque beatae nihil? Omnis commodi vitae quod repudiandae
-                  voluptatem?
+                  Our team began with a shared passion for motorsport and
+                  innovation. Over the years, we’ve grown into a respected force
+                  in Formula Student, continuously advancing our engineering
+                  capabilities.
                 </p>
               </div>
             </div>
@@ -130,7 +126,11 @@ const AboutUs = () => {
                   />
                 </div>
                 <h2>Your Application</h2>
-                {/* No description for Your Application (this is intentionally left empty) */}
+                <p>
+                  Apply now to join our Formula Student team and showcase your
+                  engineering skills. Be part of a dynamic project that combines
+                  innovation, teamwork, and racing.
+                </p>
               </div>
             </div>
           </a>

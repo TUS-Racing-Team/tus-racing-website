@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import AOS from "aos";
+import GoUpButton from "../../components/go-up/goUp";
 import "aos/dist/aos.css"; // Import AOS styles
 import "./our-cars.css";
 
@@ -89,6 +90,7 @@ const OurRaceCars = () => {
           />
         </div>
       </div>
+      <GoUpButton />
     </div>
   );
 }

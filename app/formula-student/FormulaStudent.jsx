@@ -8,7 +8,6 @@ import AOS from "aos";
 import "aos/dist/aos.css"; // Import AOS styles for animations
 
 const FormulaStudent = () => {
-
   useEffect(() => {
     AOS.init({
       duration: 500, // Duration of animation in milliseconds
@@ -20,9 +19,11 @@ const FormulaStudent = () => {
   return (
     <div className="formula-student-container">
       {/* Header */}
-      <header className="formula-header" >
-        <h1 data-aos="fade-down">Welcome to Formula Student</h1>
-        <p data-aos="fade-down">
+      <header className="formula-header">
+        <h1 data-aos="fade-down" data-aos-delay="200">
+          Welcome to Formula Student
+        </h1>
+        <p data-aos="fade-up" data-aos-delay="400">
           Formula Student is an international engineering design competition
           that inspires the engineers of tomorrow to push the limits of
           technology and innovation.
@@ -30,79 +31,125 @@ const FormulaStudent = () => {
       </header>
 
       {/* About Formula Student */}
-      <main className="formula-content">
-        <section className="about-section">
-          <div className="info" data-aos="fade-left">
-            <h2>What is Formula Student?</h2>
-            <p>
+      <div className="formula-content">
+        <section
+          className="about-section"
+          data-aos="zoom-in-up"
+          data-aos-delay="500"
+        >
+          <div className="info">
+            <h2 data-aos="zoom-in" data-aos-delay="700">
+              What is Formula Student?
+            </h2>
+            <p data-aos="fade-up" data-aos-delay="800">
               Formula Student is the world’s largest engineering competition,
               challenging students to design, build, test, and race their own
               single-seat formula-style car. Teams from universities around the
               globe compete not only on the track but also in business and
               engineering design presentations.
             </p>
-            <p>
+            <p data-aos="fade-up" data-aos-delay="900">
               The competition emphasizes engineering excellence, teamwork, and
               innovation, offering students a platform to apply their academic
               knowledge to real-world engineering challenges. Each car is judged
-              on its design, performance, cost analysis, and overall presentation.
+              on its design, performance, cost analysis, and overall
+              presentation.
             </p>
           </div>
-          <img src="https://www.epsa-team.com/images/FS/expofs-min-resize.jpg" alt="" data-aos="fade-right" />
+          <img
+            src="https://www.epsa-team.com/images/FS/expofs-min-resize.jpg"
+            alt=""
+            data-aos="zoom-in-left"
+            data-aos-delay="800"
+          />
         </section>
 
         {/* History Section */}
-        <section className="history-section" data-aos="fade-down">
-          <img src="https://www.formulabharat.com/wp-content/uploads/2021/05/11-May-Website.jpg" alt="" data-aos="fade-left" />
-          <div className="info" data-aos="fade-right">
-            <h2>History of Formula Student</h2>
-            <p>
+        <section
+          className="history-section"
+          data-aos="zoom-in-up"
+          data-aos-delay="1000"
+        >
+          <img
+            src="https://www.formulabharat.com/wp-content/uploads/2021/05/11-May-Website.jpg"
+            alt=""
+            data-aos="zoom-in-right"
+            data-aos-delay="1300"
+          />
+          <div className="info">
+            <h2 data-aos="zoom-in" data-aos-delay="1200">
+              History of Formula Student
+            </h2>
+            <p data-aos="fade-up" data-aos-delay="1300">
               Formula Student was founded in 1981 by the Society of Automotive
-              Engineers (SAE) in the United States as Formula SAE. Its mission was
-              to create a learning experience where students could apply their
-              engineering skills in a competitive and creative environment.
+              Engineers (SAE) in the United States as Formula SAE. Its mission
+              was to create a learning experience where students could apply
+              their engineering skills in a competitive and creative
+              environment.
             </p>
-            <p>
+            <p data-aos="fade-up" data-aos-delay="1400">
               The competition expanded to Europe in 1998 with the launch of
               Formula Student UK, organized by the Institution of Mechanical
               Engineers (IMechE). Today, Formula Student competitions are held
               worldwide, with events in Germany, Italy, Japan, and Australia, to
               name a few.
             </p>
-            <p>
-              Over the years, the competition has grown significantly, attracting
-              thousands of participants annually. It has become a prestigious
-              event where the best and brightest future engineers showcase their
-              talents.
+            <p data-aos="fade-up" data-aos-delay="1500">
+              Over the years, the competition has grown significantly,
+              attracting thousands of participants annually. It has become a
+              prestigious event where the best and brightest future engineers
+              showcase their talents.
             </p>
           </div>
         </section>
 
         {/* Why It Matters */}
-        <section className="importance-section" data-aos="fade-down">
-          <div className="info" data-aos="fade-left">
-            <h2>Why is Formula Student Important?</h2>
-            <p>
-              Formula Student is more than just a competition; it’s an opportunity
-              for students to gain hands-on experience in engineering, project
-              management, and teamwork. Participants learn to:
+        <section
+          className="section-topic"
+          data-aos="zoom-in-up"
+          data-aos-delay="1600"
+        >
+          <div className="info">
+            <h2 data-aos="zoom-in" data-aos-delay="1800">
+              Why is Formula Student Important?
+            </h2>
+            <p data-aos="fade-up" data-aos-delay="1900">
+              Formula Student is more than just a competition; it’s an
+              opportunity for students to gain hands-on experience in
+              engineering, project management, and teamwork. Participants learn
+              to:
             </p>
-            <ul>
-              <li>Work collaboratively in multidisciplinary teams.</li>
-              <li>Develop innovative solutions to technical challenges.</li>
-              <li>Manage budgets and timelines effectively.</li>
-              <li>Present their ideas professionally to judges and sponsors.</li>
+            <ul data-aos="fade-right" data-aos-delay="2000">
+              <li data-aos="fade-right" data-aos-delay="2100">
+                Work collaboratively in multidisciplinary teams.
+              </li>
+              <li data-aos="fade-right" data-aos-delay="2200">
+                Develop innovative solutions to technical challenges.
+              </li>
+              <li data-aos="fade-right" data-aos-delay="2300">
+                Manage budgets and timelines effectively.
+              </li>
+              <li data-aos="fade-right" data-aos-delay="2400">
+                Present their ideas professionally to judges and sponsors.
+              </li>
             </ul>
-            <p>
+
+            <p data-aos="fade-up" data-aos-delay="2500">
               Many alumni of Formula Student have gone on to work in leading
               automotive companies, motorsport teams, and other cutting-edge
               industries. It’s a stepping stone to a successful career in
               engineering and beyond.
             </p>
           </div>
-          <img src="https://i.ytimg.com/vi/mVl4jsHya2A/maxresdefault.jpg" alt="" data-aos="fade-right"/>
+          <img
+            src="https://i.ytimg.com/vi/mVl4jsHya2A/maxresdefault.jpg"
+            alt=""
+            data-aos="zoom-in-left"
+            data-aos-delay="1900"
+          />
         </section>
-      </main>
+      </div>
+      <GoUpButton />
     </div>
   );
 };

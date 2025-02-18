@@ -4,6 +4,7 @@
 import { useEffect, React } from "react";
 import Image from "next/image";
 import "./our-team.css";
+import GoUpButton from "../../components/go-up/goUp";
 import AOS from "aos";
 import "aos/dist/aos.css"; // Import AOS styles for animations
 
@@ -58,6 +59,7 @@ export default function AboutTeam() {
           </div>
         ))}
       </div>
+      <GoUpButton />
     </div>
   );
 }

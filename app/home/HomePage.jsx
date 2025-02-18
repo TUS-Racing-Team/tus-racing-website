@@ -78,7 +78,7 @@ const HomePage = () => {
               {/* Header with animation */}
               Explore Our Engineering!
             </h1>
-            <a href="#" data-aos="fade-up" data-aos-delay="700">
+            <a href="/about-us/our-race-cars" data-aos="fade-up" data-aos-delay="700">
               {" "}
               {/* Call-to-action link */}
               See Our Work
@@ -184,7 +184,7 @@ const HomePage = () => {
                   openTeamInfo("Media");
                 }}
               >
-                {!mobileVersion || openTeam == "Media" ? "Media >" : "Media"}
+                {mobileVersion ? "Media >" : "Media"}
               </h3>
               {(!mobileVersion || openTeam == "Media") && (
                 <ul>
