@@ -1,0 +1,77 @@
+// app/context/LanguageContext.jsx
+'use client';
+
+import React, { createContext, useState, useContext } from 'react';
+
+const LanguageContext = createContext();
+
+const translations = {
+    "en": {
+        home: {
+            "Eng": "Explore Our Engineering!",
+            "work_btn": "See Our Work",
+            welcome_section: {
+                "title": "WELCOME TO TUS RACING TEAM",
+                "subtitle": "Formula Student in Sofia",
+                "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rem ut commodi delectus aspernatur, doloribus quam veritatis repellendus.",
+                "more_about": "More about formula student"
+            },
+            "team_section": {
+                "title": "We are searching for new talent in the following areas:",
+                "Mechanical": ["Suspension", "Aerodynamics", "Chassis", "Ergonomics"],
+                "Electrical": ["LV-System", "HV-System", "Accumulator", "Drivetrain"],
+                "Media": ["IT", "Programming", "TV", "Journalist"],
+                "Business": ["Marketing", "Accounting", "Sponsoring", "Test"]
+            },
+            "application_section": {
+                "title": "Apply now!",
+                "description": `Do you fancy motorsport and tinkering? <br /> Do you have team spirit and want to get to know your fellow students? <br /> Want to think outside the box and acquire new skills? <br /> <br /> Simply apply here!`,
+                "apply_button": "GO TO THE APPLICATION"
+            }
+        },
+        
+
+        
+    },
+    "bg": {
+        "home": {
+            "Eng": "Разгледайте нашето инженерство!",
+            "work_btn": "Вижте нашата работа",
+            "welcome_section": {
+                "title": "ДОБРЕ ДОШЛИ В TUS RACING TEAM",
+                "subtitle": "Formula Student в София",
+                "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem ut commodi delectus aspernatur, doloribus quam veritatis repellendus.",
+                "more_about": "Повече за Formula Student"
+            },
+            "team_section": {
+                "title": "Търсим нови таланти в следните области:",
+                "Mechanical": ["Окачване", "Аеродинамика", "Шаси", "Ергономика"],
+                "Electrical": ["Нисковолтова система", "Високоволтова система", "Акумулатор", "Задвижване"],
+                "Media": ["ИТ", "Програмиране", "Телевизия", "Журналистика"],
+                "Business": ["Маркетинг", "Счетоводство", "Спонсорство", "Тестове"]
+            },
+            "application_section": {
+                "title": "Кандидатствайте сега!",
+                "description": "Харесвате моторните спортове и обичате да майсторите? <br /> Имате екипен дух и искате да опознаете своите колеги? <br /> Искате да мислите извън рамките и да придобиете нови умения? <br /> <br /> Просто кандидатствайте тук!",
+                "apply_button": "ОТИДЕТЕ КЪМ КАНДИДАТУРАТА"
+            }
+        }
+
+    }
+};
+
+export const LanguageProvider = ({ children }) => {
+  const [language, setLanguage] = useState('en');
+
+  const toggleLanguage = () => {
+    setLanguage((prev) => (prev === 'en' ? 'bg' : 'en'));
+  };
+
+  return (
+    <LanguageContext.Provider value={{ language, toggleLanguage, t: translations[language] }}>
+      {children}
+    </LanguageContext.Provider>
+  );
+};
+
+export const useLanguage = () => useContext(LanguageContext);

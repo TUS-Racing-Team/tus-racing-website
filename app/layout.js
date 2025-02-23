@@ -1,5 +1,6 @@
 // app/layout.js
 import "./globals.css";
+import { LanguageProvider } from './context/LanguageContext';
 
 export default function RootLayout({ children, title }) {
   return (
@@ -8,7 +9,11 @@ export default function RootLayout({ children, title }) {
         <title>{title ?? "TU Sofia Racing Team"}</title>
         <link rel="icon" type="image/x-icon" href="icon.ico" />
       </head>
-      <body>{children}</body>
+      <body>
+        <LanguageProvider>
+          {children}
+        </LanguageProvider>
+        </body>
     </html>
   );
 }

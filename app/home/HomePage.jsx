@@ -5,11 +5,12 @@ import GoUpButton from "../components/go-up/goUp"; // Import a custom "Go Up" bu
 import AOS from "aos"; // Import AOS library for scroll animations
 import "./home.css"; // Import custom styles
 import "aos/dist/aos.css"; // Import AOS CSS for animations
+import { useLanguage } from '../context/LanguageContext';
 
 const HomePage = () => {
   const [mobileVersion, setVersion] = useState(false); // State to track if the screen is mobile size
   const [openTeam, setTeam] = useState("None"); // State to track which team section is open
-
+  const { t } = useLanguage(); // Get translations from context
   // Function to check window size and set mobileVersion state accordingly
   const checkRes = () => {
     if (window.innerWidth <= 425) {
@@ -76,12 +77,13 @@ const HomePage = () => {
             <h1 data-aos="fade-up" data-aos-delay="400">
               {" "}
               {/* Header with animation */}
-              Explore Our Engineering!
+
+              {t.home.Eng}
             </h1>
             <a href="/see-work" data-aos="fade-up" data-aos-delay="700">
               {" "}
               {/* Call-to-action link */}
-              See Our Work
+              {t.home.work_btn}
             </a>
           </div>
         </div>
@@ -93,16 +95,15 @@ const HomePage = () => {
           <h5 data-aos="fade-up" data-aos-delay="200">
             {" "}
             {/* Heading with AOS animation */}
-            WELCOME TO TUS RACING TEAM
+            {t.home.welcome_section.title}
           </h5>
           <h1 data-aos="fade-up" data-aos-delay="300">
-            Formula Student in Sofia
+            {t.home.welcome_section.subtitle}
           </h1>
           <div className="sl" data-aos="fade-up" data-aos-delay="300"></div>
           <p data-aos="fade-up" data-aos-delay="400">
             {/* Placeholder text */}
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rem ut
-            commodi delectus aspernatur, doloribus quam veritatis repellendus.
+            {t.home.welcome_section.description}
           </p>
           <a
             href="/formula-student"
@@ -110,14 +111,15 @@ const HomePage = () => {
             data-aos="fade-up"
             data-aos-delay="550"
           >
-            More about formula student
+          {t.home.welcome_section.more_about}
+
           </a>
         </div>
 
         {/* Team sections */}
         <div className="looking" data-aos="fade-up" data-aos-delay="300">
           <h1 data-aos="fade-up" data-aos-delay="350">
-            We are searching for new talent in the following areas:
+            {t.home.team_section.title}            
           </h1>
           <div className="sl" data-aos="fade-up" data-aos-delay="400"></div>
 
@@ -142,10 +144,9 @@ const HomePage = () => {
               </h3>
               {(!mobileVersion || openTeam == "Mechanical") && (
                 <ul>
-                  <li>Suspension</li>
-                  <li>Aerodynamics</li>
-                  <li>Chassis</li>
-                  <li>Ergonomics</li>
+                  {t.home.team_section.Mechanical.map((item, index) => (
+                    <li key={index}>{item}</li>
+                  ))}
                 </ul>
               )}
             </div>
@@ -165,10 +166,9 @@ const HomePage = () => {
               </h3>
               {(mobileVersion == false || openTeam == "Electrical") && (
                 <ul>
-                  <li>LV-System</li>
-                  <li>HV-System</li>
-                  <li>Accumulator</li>
-                  <li>Drivetrain</li>
+                  {t.home.team_section.Electrical.map((item, index) => (
+                    <li key={index}>{item}</li>
+                  ))}
                 </ul>
               )}
             </div>
@@ -188,10 +188,9 @@ const HomePage = () => {
               </h3>
               {(!mobileVersion || openTeam == "Media") && (
                 <ul>
-                  <li>IT</li>
-                  <li>Programming</li>
-                  <li>TV</li>
-                  <li>Journalist</li>
+                  {t.home.team_section.Media.map((item, index) => (
+                    <li key={index}>{item}</li>
+                  ))}
                 </ul>
               )}
             </div>
@@ -211,10 +210,9 @@ const HomePage = () => {
               </h3>
               {(!mobileVersion || openTeam == "Business") && (
                 <ul>
-                  <li>Marketing</li>
-                  <li>Accounting</li>
-                  <li>Sponsoring</li>
-                  <li>Test</li>
+                  {t.home.team_section.Business.map((item, index) => (
+                    <li key={index}>{item}</li>
+                  ))}
                 </ul>
               )}
             </div>
@@ -227,7 +225,7 @@ const HomePage = () => {
             data-aos-delay="550"
             className="go-to-application"
           >
-            GO TO THE APPLICATION
+            {t.home.application_section.title}
           </a>
         </div>
       </div>
@@ -251,19 +249,14 @@ const HomePage = () => {
           data-aos-delay="200"
         >
           <h1 data-aos="fade-right" data-aos-delay="400">
-            Apply now!
+            {t.home.application_section.title}
+            
           </h1>
           <div className="sl" data-aos="fade-down" data-aos-delay="500"></div>
           <br />
           <p data-aos="fade-left" data-aos-delay="700">
             {/* Description text */}
-            Do you fancy motorsport and tinkering? <br />
-            Do you have team spirit and want to get to know your fellow
-            students? <br />
-            Want to think outside the box and acquire new skills?
-            <br />
-            <br />
-            Simply apply here!
+            {t.home.application_section.description}
           </p>
           <a
             href="/application"
@@ -271,7 +264,7 @@ const HomePage = () => {
             data-aos="fade-up"
             data-aos-delay="500"
           >
-            GO TO THE APPLICATION
+            {t.home.application_section.apply_button}
           </a>
         </div>
 
