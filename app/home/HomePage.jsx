@@ -1,5 +1,5 @@
 "use client";
-import { useState, useEffect } from "react"; // Import React hooks
+import { useState, useEffect, use } from "react"; // Import React hooks
 import Image from "next/image"; // Import Next.js Image component
 import GoUpButton from "../components/go-up/goUp"; // Import a custom "Go Up" button component
 import AOS from "aos"; // Import AOS library for scroll animations

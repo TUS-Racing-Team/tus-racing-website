@@ -1,12 +1,22 @@
 // app/context/LanguageContext.jsx
 'use client';
 
-import React, { createContext, useState, useContext } from 'react';
+import React, { createContext, useState, useContext, useEffect } from 'react';
 
 const LanguageContext = createContext();
 
 const translations = {
     "en": {
+        navbar: {
+            home: "Home",
+            about: "About",
+            f_student: "Formula Student",
+            gallery: "Gallery",
+            contact: "Contact",
+            sponsors: "Sponsors",
+            apply: "Apply Now"
+        },
+
         home: {
             "Eng": "Explore Our Engineering!",
             "work_btn": "See Our Work",
@@ -34,6 +44,16 @@ const translations = {
         
     },
     "bg": {
+        navbar: {
+            home: "Начало",
+            about: "About",
+            f_student: "Formula Student",
+            gallery: "Gallery",
+            contact: "Contact",
+            sponsors: "Sponsors",
+            apply: "Apply Now"
+        },
+
         "home": {
             "Eng": "Разгледайте нашето инженерство!",
             "work_btn": "Вижте нашата работа",
@@ -61,17 +81,39 @@ const translations = {
 };
 
 export const LanguageProvider = ({ children }) => {
-  const [language, setLanguage] = useState('en');
+    const [language, setLanguage] = useState('en');
 
-  const toggleLanguage = () => {
-    setLanguage((prev) => (prev === 'en' ? 'bg' : 'en'));
-  };
 
-  return (
-    <LanguageContext.Provider value={{ language, toggleLanguage, t: translations[language] }}>
-      {children}
-    </LanguageContext.Provider>
-  );
+   // Load language from localStorage on mount
+   useEffect(() => {
+        const storedLang = localStorage.getItem("lang");
+        if (storedLang != "undefined") {
+            setLanguage(storedLang);
+        }
+    }, []);
+
+    // Save language to localStorage when changed
+    const changeLanguage = () => {
+        const storedLang = localStorage.getItem("lang");
+        if (storedLang != "undefined") {
+            let lang 
+            if(storedLang == "en") {
+                lang = "bg"
+            } else {
+                lang = "en"
+            }
+            setLanguage(lang);
+            localStorage.setItem("lang", lang);
+        } else {
+            setLanguage("bg");
+            localStorage.setItem("lang", "bg");
+        }
+    };
+    return (
+        <LanguageContext.Provider value={{ language, changeLanguage, t: translations[language] }}>
+            {children}
+        </LanguageContext.Provider>
+    );
 };
 
 export const useLanguage = () => useContext(LanguageContext);

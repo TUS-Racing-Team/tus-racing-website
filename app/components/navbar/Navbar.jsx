@@ -10,8 +10,21 @@ import { useLanguage } from '../../context/LanguageContext';
 const Navbar = () => {
   const [flag, setFlag] = useState("/images/icons/BG-bg.png"); // Default flag is Bulgaria's flag
   const [isMenuOpen, setIsMenuOpen] = useState(false); // State for managing menu visibility
-  const { t, toggleLanguage } = useLanguage();
+  const { t, changeLanguage } = useLanguage();
 
+
+  useEffect(() => {
+    const storedLang = localStorage.getItem("lang");
+    if (storedLang != "undefined") {
+      let flag;
+      if(storedLang == "bg") {
+        flag = "/images/icons/UK-en.png"
+      }  else {
+        flag = "/images/icons/BG-bg.png"
+      }
+      setFlag(flag)
+    }
+  }, []);
   // Function to toggle the language flag between Bulgaria (BG) and the UK (EN)
   const toggleFlag = () => {
     setFlag((prevFlag) =>
@@ -78,32 +91,32 @@ const Navbar = () => {
       <ul className={`menu ${isMenuOpen ? "open" : ""}`}>
         <li>
           <a href="/" onClick={closeMenuOnLinkClick}>
-            Home
+            {t.navbar.home}
           </a>
         </li>
         <li>
           <a href="/about-us" onClick={closeMenuOnLinkClick}>
-            About
+            {t.navbar.about}
           </a>
         </li>
         <li>
           <a href="/formula-student" onClick={closeMenuOnLinkClick}>
-            Formula Student
+            {t.navbar.f_student}
           </a>
         </li>
         <li>
           <a href="/gallery" onClick={closeMenuOnLinkClick}>
-            Gallery
+            {t.navbar.gallery}
           </a>
         </li>
         <li>
           <a href="/contact-us" onClick={closeMenuOnLinkClick}>
-            Contacts
+            {t.navbar.contact}
           </a>
         </li>
         <li>
           <a href="/sponsors" onClick={closeMenuOnLinkClick}>
-            Sponsors
+            {t.navbar.sponsors}
           </a>
         </li>
 
@@ -115,7 +128,7 @@ const Navbar = () => {
               href="/application"
               onClick={closeMenuOnLinkClick}
             >
-              Apply Now
+              {t.navbar.apply}
             </a>
             <li>
               <Image
@@ -142,11 +155,11 @@ const Navbar = () => {
           height={30}
           onClick={() => {
             toggleFlag()
-            toggleLanguage()
+            changeLanguage()
           }} // Toggle flag on click
         />
         <a href="/application" className="apply">
-          Apply Now
+          {t.navbar.apply}
         </a>
       </div>
 
