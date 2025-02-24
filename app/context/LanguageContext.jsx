@@ -90,28 +90,22 @@ export const LanguageProvider = ({ children }) => {
   // Load language from localStorage on mount
   useEffect(() => {
     const storedLang = localStorage.getItem("lang");
-    if (storedLang != "undefined") {
+    if (storedLang && ["en", "bg"].includes(storedLang)) {
       setLanguage(storedLang);
+    } else {
+      // Set default language if none exists
+      localStorage.setItem("lang", "en");
+      setLanguage("en");
     }
   }, []);
 
   // Save language to localStorage when changed
   const changeLanguage = () => {
-    const storedLang = localStorage.getItem("lang");
-    if (storedLang != "undefined") {
-      let lang;
-      if (storedLang == "en") {
-        lang = "bg";
-      } else {
-        lang = "en";
-      }
-      setLanguage(lang);
-      localStorage.setItem("lang", lang);
-    } else {
-      setLanguage("bg");
-      localStorage.setItem("lang", "bg");
-    }
+    const newLang = language === "en" ? "bg" : "en";
+    setLanguage(newLang);
+    localStorage.setItem("lang", newLang);
   };
+
   return (
     <LanguageContext.Provider
       value={{ language, changeLanguage, t: translations[language] }}
