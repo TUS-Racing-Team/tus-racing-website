@@ -2,6 +2,7 @@
 body {
   background: var(--main-theme); /* Background color set by CSS variable */
   color: white; /* Set text color to white */
+  overflow-x: hidden !important;
 }
 
 /* Box styles - Background image and positioning */
@@ -76,6 +77,7 @@ div.form {
   box-shadow: 0 0 15px rgba(85, 85, 85, 0.5); /* Soft shadow */
   color: white; /* White text color */
   transition: 1s ease !important; /* Smooth transition for hover effect */
+  text-align: left;
 }
 
 /* Hover effect for form container */

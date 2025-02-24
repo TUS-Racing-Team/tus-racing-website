@@ -1,0 +1,5 @@
+body {
+  background: var(--main-theme); /* Uses the main theme for background */
+  color: white; /* White text color for contrast */
+  overflow-x: hidden !important;
+}

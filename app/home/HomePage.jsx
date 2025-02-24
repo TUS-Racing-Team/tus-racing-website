@@ -5,7 +5,7 @@ import GoUpButton from "../components/go-up/goUp"; // Import a custom "Go Up" bu
 import AOS from "aos"; // Import AOS library for scroll animations
 import "./home.css"; // Import custom styles
 import "aos/dist/aos.css"; // Import AOS CSS for animations
-import { useLanguage } from '../context/LanguageContext';
+import { useLanguage } from "../context/LanguageContext";
 
 const HomePage = () => {
   const [mobileVersion, setVersion] = useState(false); // State to track if the screen is mobile size
@@ -77,7 +77,6 @@ const HomePage = () => {
             <h1 data-aos="fade-up" data-aos-delay="400">
               {" "}
               {/* Header with animation */}
-
               {t.home.Eng}
             </h1>
             <a href="/see-work" data-aos="fade-up" data-aos-delay="700">
@@ -111,15 +110,14 @@ const HomePage = () => {
             data-aos="fade-up"
             data-aos-delay="550"
           >
-          {t.home.welcome_section.more_about}
-
+            {t.home.welcome_section.more_about}
           </a>
         </div>
 
         {/* Team sections */}
         <div className="looking" data-aos="fade-up" data-aos-delay="300">
           <h1 data-aos="fade-up" data-aos-delay="350">
-            {t.home.team_section.title}            
+            {t.home.team_section.title}
           </h1>
           <div className="sl" data-aos="fade-up" data-aos-delay="400"></div>
 
@@ -250,14 +248,17 @@ const HomePage = () => {
         >
           <h1 data-aos="fade-right" data-aos-delay="400">
             {t.home.application_section.title}
-            
           </h1>
           <div className="sl" data-aos="fade-down" data-aos-delay="500"></div>
           <br />
-          <p data-aos="fade-left" data-aos-delay="700">
-            {/* Description text */}
-            {t.home.application_section.description}
-          </p>
+          <p
+            data-aos="fade-left"
+            data-aos-delay="700"
+            dangerouslySetInnerHTML={{
+              __html: t.home.application_section.description,
+            }}
+          />
+
           <a
             href="/application"
             className="apply-team"

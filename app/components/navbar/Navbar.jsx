@@ -4,25 +4,23 @@ import React, { useState, useEffect } from "react"; // Importing necessary hooks
 import Image from "next/image"; // Image component for optimized images in Next.js
 import { FiMenu, FiX } from "react-icons/fi"; // Importing menu icons for the hamburger menu
 import "./navbar.css"; // Importing the CSS file for styling the navbar
-import { useLanguage } from '../../context/LanguageContext';
-
+import { useLanguage } from "../../context/LanguageContext";
 
 const Navbar = () => {
   const [flag, setFlag] = useState("/images/icons/BG-bg.png"); // Default flag is Bulgaria's flag
   const [isMenuOpen, setIsMenuOpen] = useState(false); // State for managing menu visibility
   const { t, changeLanguage } = useLanguage();
 
-
   useEffect(() => {
     const storedLang = localStorage.getItem("lang");
     if (storedLang != "undefined") {
       let flag;
-      if(storedLang == "bg") {
-        flag = "/images/icons/UK-en.png"
-      }  else {
-        flag = "/images/icons/BG-bg.png"
+      if (storedLang == "bg") {
+        flag = "/images/icons/UK-en.png";
+      } else {
+        flag = "/images/icons/BG-bg.png";
       }
-      setFlag(flag)
+      setFlag(flag);
     }
   }, []);
   // Function to toggle the language flag between Bulgaria (BG) and the UK (EN)
@@ -154,8 +152,8 @@ const Navbar = () => {
           width={30}
           height={30}
           onClick={() => {
-            toggleFlag()
-            changeLanguage()
+            toggleFlag();
+            changeLanguage();
           }} // Toggle flag on click
         />
         <a href="/application" className="apply">

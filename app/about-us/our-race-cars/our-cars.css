@@ -1,43 +1,139 @@
+body {
+  background: var(--main-theme); /* Uses the main theme for background */
+  color: white; /* White text color for contrast */
+  overflow-x: hidden !important;
+}
+
 .our-cars {
-    margin-top: 90px;
-    background: var(--main-theme);
-    padding-top: 50px;
+  margin-top: 90px;
+  background: var(--main-theme);
+  padding-top: 50px;
 }
 
 .our-cars-info {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    gap: 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .our-cars-info h1 {
-    color: white;
+  color: white;
+  font-size: 3.5rem;
 }
 
+/* List of cars styling */
 .list-cars {
-    padding-top: 50px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 100px;
-    padding-bottom: 100px;
-    color: white;
+  padding-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+  padding: 2rem;
+  padding-bottom: 100px;
+  color: white;
 }
 
+/* Individual car styling */
 .car {
-    display: flex;
-    gap: 200px;
-    align-items: center;
+  display: flex;
+  gap: 200px;
+  align-items: center;
+  flex-wrap: wrap; /* Allow items to wrap for smaller screens */
+  justify-content: center; /* Center the cars horizontally */
 }
 
+/* Styling for each car's details list */
 .car ul {
-    list-style-type: circle;
+  list-style-type: circle;
 }
 
 .car-info {
-    color: white;
-    display: flex;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 400px; /* Limit the width of the info section */
+}
+
+/* Image styling */
+.img-logo {
+  width: 100%;
+  height: auto; /* Maintain aspect ratio */
+  max-width: 800px; /* Ensure image doesn’t exceed a certain width */
+  border-radius: 8px;
+  margin-top: 20px;
+  object-fit: contain;
+  filter: drop-shadow(0 0 20px rgba(14, 97, 179, 0.7));
+  transition: filter 0.3s ease !important;
+}
+
+.img-logo:hover {
+  filter: drop-shadow(0 0 20px rgba(55, 173, 237, 0.7));
+}
+
+/* Responsive behavior for smaller screens */
+@media (max-width: 1200px) {
+  .car {
+    gap: 50px; /* Reduce space between car and its info */
+  }
+}
+
+@media (max-width: 768px) {
+  /* On smaller screens, the cars should stack vertically */
+  .list-cars {
+    gap: 50px;
+  }
+
+  .car {
     flex-direction: column;
     gap: 20px;
+    align-items: center;
+  }
+
+  .car-info {
+    text-align: center;
+    max-width: 100%; /* Ensure car info doesn't get cut off */
+  }
+
+  .img-logo {
+    max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .our-cars-info h1 {
+    margin-top: 35px;
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  /* On extra small screens, reduce padding and margins */
+  .our-cars {
+    margin-top: 40px;
+    padding-top: 30px;
+  }
+
+  .list-cars {
+    padding-top: 30px;
+  }
+
+  .car {
+    gap: 20px; /* Reduce gap between elements */
+  }
+
+  .car-info h2 {
+    font-size: 1.2rem; /* Smaller text for car names */
+  }
+
+  .car-info ul {
+    font-size: 0.9rem; /* Smaller font for car details */
+  }
+
+  .img-logo {
+    max-width: 100%;
+    width: 100%;
+  }
 }

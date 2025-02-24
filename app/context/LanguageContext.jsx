@@ -36,7 +36,7 @@ const translations = {
       },
       application_section: {
         title: "Apply now!",
-        description: `Do you fancy motorsport and tinkering? <br /> Do you have team spirit and want to get to know your fellow students? <br /> Want to think outside the box and acquire new skills? <br /> <br /> Simply apply here!`,
+        description: `Do you fancy motorsport and tinkering?<br/>Do you have team spirit and want to get to know your fellow students? <br /> Want to think outside the box and acquire new skills? <br /> <br /> Simply apply here!`,
         apply_button: "GO TO THE APPLICATION",
       },
     },
@@ -44,12 +44,12 @@ const translations = {
   bg: {
     navbar: {
       home: "Начало",
-      about: "About",
-      f_student: "Formula Student",
-      gallery: "Gallery",
-      contact: "Contact",
-      sponsors: "Sponsors",
-      apply: "Apply Now",
+      about: "За нас",
+      f_student: "Формула Студент",
+      gallery: "Галерия",
+      contact: "Контакт",
+      sponsors: "Спонсори",
+      apply: "Заявление",
     },
 
     home: {
