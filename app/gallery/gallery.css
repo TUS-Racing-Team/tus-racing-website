@@ -11,6 +11,7 @@ body {
   text-align: center;
   padding: 20px;
   width: 100%;
+  min-height: 100vh;
 }
 
 /* Gallery title styling */
