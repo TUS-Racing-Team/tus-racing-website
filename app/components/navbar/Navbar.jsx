@@ -136,6 +136,7 @@ const Navbar = () => {
                 height={30}
                 onClick={() => {
                   toggleFlag(); // Toggle flag on click
+                  changeLanguage();
                   if (window.innerWidth < 1159) setIsMenuOpen(false); // Close menu on small screens
                 }}
               />

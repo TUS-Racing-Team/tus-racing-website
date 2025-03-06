@@ -5,8 +5,11 @@ import GoUpButton from "../components/go-up/goUp";
 import AOS from "aos";
 import "./about-us.css";
 import "aos/dist/aos.css"; // Import AOS styles for animations
+import { useLanguage } from "../context/LanguageContext";
 
+ 
 const AboutUs = () => {
+  const { t } = useLanguage();
   // Initialize AOS animations when the component mounts
   useEffect(() => {
     AOS.init({
@@ -32,8 +35,7 @@ const AboutUs = () => {
 
         {/* Introductory Text with fade-up animation */}
         <p data-aos="fade-up" data-aos-delay="200">
-          Here you can find out everything about us: our cars, our sub-teams and
-          our milestones. Just click through!
+          {t.about.title}
         </p>
 
         {/* Options Section - Contains clickable options for different parts of the About Us page */}
@@ -54,12 +56,10 @@ const AboutUs = () => {
                     loading="lazy"
                   />
                 </div>
-                <h2>Our Race Cars</h2>
+                <h2>{t.about.options.option1.title}</h2>
                 {/* Description for Our Race Cars */}
                 <p>
-                  Our race cars are the result of cutting-edge engineering and
-                  meticulous design. Each car is built to perform at the highest
-                  level, combining speed, agility, and precision on the track.
+                  {t.about.options.option1.desc}
                 </p>
               </div>
             </div>
@@ -73,13 +73,10 @@ const AboutUs = () => {
                   {/* Icon for team option */}
                   <img src="/images/icons/team.png" alt="team" loading="lazy" />
                 </div>
-                <h2>Our Team</h2>
+                <h2>{t.about.options.option2.title}</h2>
                 {/* Description for Our Team */}
                 <p>
-                  Our team is made up of passionate individuals dedicated to
-                  excellence in engineering and motorsport. Together, we combine
-                  diverse skills to build high-performance racecars and push the
-                  boundaries of innovation.
+                  {t.about.options.option2.desc}
                 </p>
               </div>
             </div>
@@ -101,13 +98,10 @@ const AboutUs = () => {
                     loading="lazy"
                   />
                 </div>
-                <h2>Our History</h2>
+                <h2>{t.about.options.option3.title}</h2>
                 {/* Description for Our History */}
                 <p>
-                  Our team began with a shared passion for motorsport and
-                  innovation. Over the years, we’ve grown into a respected force
-                  in Formula Student, continuously advancing our engineering
-                  capabilities.
+                  {t.about.options.option3.desc}
                 </p>
               </div>
             </div>
@@ -125,11 +119,9 @@ const AboutUs = () => {
                     loading="lazy"
                   />
                 </div>
-                <h2>Your Application</h2>
+                <h2>{t.about.options.option4.title}</h2>
                 <p>
-                  Apply now to join our Formula Student team and showcase your
-                  engineering skills. Be part of a dynamic project that combines
-                  innovation, teamwork, and racing.
+                  {t.about.options.option4.desc}
                 </p>
               </div>
             </div>
