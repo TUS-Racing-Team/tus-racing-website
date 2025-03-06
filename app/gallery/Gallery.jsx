@@ -63,8 +63,7 @@ const Gallery = () => {
       </h1>
 
       {/* Gallery Grid with animated images */}
-      <div className="gallery-grid">
-        {/* Map through images and display each one with animation */}
+      {/* <div className="gallery-grid">
         {images.map((image, index) => (
           <div
             key={index} // Unique key for each item
@@ -77,17 +76,24 @@ const Gallery = () => {
               className="gallery-item" // Gallery item wrapper
             >
               <img src={image.src} alt={`Gallery image ${index + 1}`} />
-              {/* Display the image */}
               <div className="description">
                 <p>{image.description}</p>
-                {/* Display the description of the image */}
               </div>
             </div>
           </div>
         ))}
-      </div>
-
-      {/* GoUpButton for scrolling back to the top of the page */}
+      </div> */}
+      <h3
+        style={{
+          height: "60vh",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          textAlign: "center",
+        }}
+      >
+        Images will be added soon...
+      </h3>
       <GoUpButton />
     </div>
   );
