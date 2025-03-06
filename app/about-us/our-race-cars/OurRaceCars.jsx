@@ -5,8 +5,12 @@ import AOS from "aos";
 import GoUpButton from "../../components/go-up/goUp";
 import "aos/dist/aos.css"; // Import AOS styles
 import "./our-cars.css";
+import { useLanguage } from "../../context/LanguageContext";
+
 
 const OurRaceCars = () => {
+  const { t } = useLanguage();
+  
   useEffect(() => {
     AOS.init({
       duration: 700, // Duration of animation in ms
@@ -92,7 +96,7 @@ const OurRaceCars = () => {
             />
           </div>
         </div>
-      </div>
+      </div> 
       <GoUpButton />
     </div>
   );
