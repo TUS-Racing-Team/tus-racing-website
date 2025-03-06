@@ -4,8 +4,12 @@ import GoUpButton from "../components/go-up/goUp";
 import AOS from "aos";
 import "aos/dist/aos.css"; // Import AOS styles
 import "./application-form.css"; // Ensure the original CSS remains unchanged
+import { useLanguage } from "../context/LanguageContext";
+
 
 const ApplicationForm = () => {
+  const { t } = useLanguage();
+
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -96,7 +100,7 @@ const ApplicationForm = () => {
             data-aos-delay="150"
             data-aos-duration="700"
           >
-            Formula Student Application
+            {t.forms.apply.title}
           </h2>
 
           {/* Form Introduction Paragraph */}
@@ -105,8 +109,7 @@ const ApplicationForm = () => {
             data-aos-delay="200"
             data-aos-duration="700"
           >
-            Thank you for your interest in applying to join our Formula Student
-            team! Please fill out the application form below.
+            {t.forms.apply.th}
           </p>
 
           {/* Form Start */}
@@ -119,31 +122,31 @@ const ApplicationForm = () => {
               data-aos-duration="700"
             >
               <label>
-                Name <span className="required">*</span>
+              {t.forms.apply.name} <span className="required">*</span>
               </label>
               <div className="half-width">
                 <input
                   type="text"
                   name="firstName"
                   placeholder="John"
-                  title="First Name"
+                  title={t.forms.apply.f_name}
                   value={formData.firstName}
                   required
                   onChange={handleChange}
                 />
-                <small className="small-text">First Name</small>
+                <small className="small-text">{t.forms.apply.f_name}</small>
               </div>
               <div className="half-width">
                 <input
                   type="text"
                   name="lastName"
                   placeholder="Doe"
-                  title="Last Name"
+                  title={t.forms.apply.l_name}
                   value={formData.lastName}
                   required
                   onChange={handleChange}
                 />
-                <small className="small-text">Last Name</small>
+                <small className="small-text">{t.forms.apply.l_name}</small>
               </div>
             </div>
 
@@ -155,13 +158,13 @@ const ApplicationForm = () => {
               data-aos-duration="700"
             >
               <label>
-                E-mail <span className="required">*</span>
+              {t.forms.apply.email} <span className="required">*</span>
               </label>
               <input
                 type="email"
                 name="email"
                 placeholder="example@example.com"
-                title="E-mail"
+                title={t.forms.apply.email}
                 value={formData.email}
                 required
                 onChange={handleChange}
@@ -176,13 +179,13 @@ const ApplicationForm = () => {
               data-aos-duration="700"
             >
               <label>
-                University <span className="required">*</span>
+              {t.forms.apply.uni} <span className="required">*</span>
               </label>
               <input
                 type="text"
                 name="university"
-                placeholder="University Name"
-                title="University Name"
+                placeholder={t.forms.apply.uni_name}
+                title={t.forms.apply.uni_name}
                 value={formData.university}
                 required
                 onChange={handleChange}
@@ -197,12 +200,12 @@ const ApplicationForm = () => {
               data-aos-duration="700"
             >
               <label>
-                Course of Study <span className="required">*</span>
+              {t.forms.apply.c_s} <span className="required">*</span>
               </label>
               <input
                 type="text"
                 name="course"
-                placeholder="e.g., Mechanical Engineering"
+                placeholder={t.forms.apply.c_s_n}
                 title="Study Course"
                 value={formData.course}
                 required
@@ -218,16 +221,16 @@ const ApplicationForm = () => {
               data-aos-duration="700"
             >
               <label>
-                Year of Study <span className="required">*</span>
+              {t.forms.apply.y_s} <span className="required">*</span>
               </label>
               <input
                 type="number"
                 name="yearOfStudy"
                 min="1"
                 max="4"
-                title="Year Of Study"
+                title={t.forms.apply.y_s}
                 value={formData.yearOfStudy}
-                placeholder="Year of study"
+                placeholder={t.forms.apply.y_s}
                 required
                 onChange={handleChange}
               />
@@ -241,13 +244,13 @@ const ApplicationForm = () => {
               data-aos-duration="700"
             >
               <label>
-                Relevant Skills and Experience{" "}
+              {t.forms.apply.rs}{" "}
                 <span className="required">*</span>
               </label>
               <textarea
                 name="skills"
-                placeholder="Describe your skills, relevant coursework, or any hands-on experience related to Formula Student."
-                title="Personal Skills"
+                placeholder={t.forms.apply.rs_d}
+                title={t.forms.apply.rs_t}
                 value={formData.skills}
                 required
                 onChange={handleChange}
@@ -262,13 +265,13 @@ const ApplicationForm = () => {
               data-aos-duration="700"
             >
               <label>
-                Why do you want to join the Formula Student team?{" "}
+              {t.forms.apply.why}{" "}
                 <span className="required">*</span>
               </label>
               <textarea
                 name="motivation"
-                placeholder="Explain why you are passionate about Formula Student and what you hope to contribute to the team."
-                title="Motivations"
+                placeholder={t.forms.apply.why_p}
+                title={t.forms.apply.why_p}
                 value={formData.motivation}
                 required
                 onChange={handleChange}
@@ -282,12 +285,12 @@ const ApplicationForm = () => {
               data-aos-delay="600"
               data-aos-duration="700"
             >
-              <label>Portfolio or GitHub Link (Optional)</label>
+              <label>{t.forms.apply.git}</label>
               <input
                 type="url"
                 name="portfolioLink"
-                placeholder="e.g., https://github.com/yourusername"
-                title="Portfolio Link"
+                placeholder={t.forms.apply.git_p}
+                title={t.forms.apply.git_t}
                 value={formData.portfolioLink}
                 onChange={handleChange}
               />
@@ -301,7 +304,7 @@ const ApplicationForm = () => {
               data-aos-delay="650"
               data-aos-duration="700"
             >
-              Apply
+              {t.forms.apply.apply}
             </button>
           </form>
         </div>

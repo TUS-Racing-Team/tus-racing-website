@@ -4,8 +4,12 @@ import GoUpButton from "../components/go-up/goUp"; // Import GoUpButton componen
 import AOS from "aos"; // Import AOS (Animate On Scroll) library for scroll animations
 import "aos/dist/aos.css"; // Import AOS styles for animations
 import "./contact-form.css"; // Import custom CSS for styling the contact form
+import { useLanguage } from "../context/LanguageContext";
+
 
 const ContactForm = () => {
+    const { t } = useLanguage();
+  
   // State to store the form data
   const [formData, setFormData] = useState({
     feedbackType: "", // Stores the feedback type (comments, suggestions, or questions)
@@ -58,7 +62,7 @@ const ContactForm = () => {
           data-aos-duration="700"
           data-aos-delay="100"
         >
-          <h1 className="contact-h1">Contact Us</h1>
+          <h1 className="contact-h1">{t.forms.contact.title}</h1>
         </div>
 
         {/* Form container with fade-up animation */}
@@ -69,12 +73,11 @@ const ContactForm = () => {
           data-aos-delay="200"
         >
           <h2 data-aos="zoom-in" data-aos-delay="250" data-aos-duration="700">
-            Feedback Form
+          {t.forms.contact.feed}
           </h2>
           {/* Description paragraph with fade-up animation */}
           <p data-aos="fade-up" data-aos-delay="300" data-aos-duration="700">
-            We would love to hear your thoughts, suggestions, concerns, or
-            problems with anything so we can improve!
+          {t.forms.contact.desc}
           </p>
 
           {/* Form element with onSubmit handler */}
@@ -87,7 +90,7 @@ const ContactForm = () => {
               data-aos-duration="700"
             >
               <label>
-                Feedback Type <span className="required">*</span>
+              {t.forms.contact.ft} <span className="required">*</span>
               </label>
               <div className="radio-group">
                 <label>
@@ -95,36 +98,36 @@ const ContactForm = () => {
                     type="radio"
                     name="feedbackType"
                     value="comments"
-                    title="Feedback Options"
+                    title={t.forms.contact.ftt}
                     required
                     checked={formData.feedbackType === "comments"}
                     onChange={handleChange} // Handle change for feedback type
                   />
-                  Comments
+                  {t.forms.contact.comments}
                 </label>
                 <label>
                   <input
                     type="radio"
                     name="feedbackType"
                     value="suggestions"
-                    title="Feedback Options"
+                    title={t.forms.contact.ftt}
                     required
                     checked={formData.feedbackType === "suggestions"}
                     onChange={handleChange} // Handle change for feedback type
                   />
-                  Suggestions
+                  {t.forms.contact.sugg}
                 </label>
                 <label>
                   <input
                     type="radio"
                     name="feedbackType"
                     value="questions"
-                    title="Feedback Options"
+                    title={t.forms.contact.ftt}
                     required
                     checked={formData.feedbackType === "questions"}
                     onChange={handleChange} // Handle change for feedback type
                   />
-                  Questions
+                  {t.forms.contact.q}
                 </label>
               </div>
             </div>
@@ -137,12 +140,12 @@ const ContactForm = () => {
               data-aos-duration="700"
             >
               <label>
-                Describe Your Feedback: <span className="required">*</span>
+              {t.forms.contact.dyf} <span className="required">*</span>
               </label>
               <textarea
                 name="description"
-                placeholder="Your opinion, suggestions and questions..."
-                title="Description"
+                placeholder={t.forms.contact.dyf_p}
+                title={t.forms.contact.dyf_t}
                 value={formData.description}
                 required
                 onChange={handleChange} // Handle change for feedback description
@@ -157,7 +160,7 @@ const ContactForm = () => {
               data-aos-duration="700"
             >
               <label>
-                Name <span className="required">*</span>
+              {t.forms.contact.name} <span className="required">*</span>
               </label>
               {/* First Name input with half-width class */}
               <div className="half-width">
@@ -165,12 +168,12 @@ const ContactForm = () => {
                   type="text"
                   name="firstName"
                   placeholder="John"
-                  title="First Name"
+                  title={t.forms.contact.f_name}
                   value={formData.firstName}
                   required
                   onChange={handleChange} // Handle change for first name
                 />
-                <small className="small-text">First Name</small>
+                <small className="small-text">{t.forms.contact.f_name}</small>
               </div>
               {/* Last Name input with half-width class */}
               <div className="half-width">
@@ -178,12 +181,12 @@ const ContactForm = () => {
                   type="text"
                   name="lastName"
                   placeholder="Doe"
-                  title="Last Name"
+                  title={t.forms.contact.l_name}
                   value={formData.lastName}
                   required
                   onChange={handleChange} // Handle change for last name
                 />
-                <small className="small-text">Last Name</small>
+                <small className="small-text">{t.forms.contact.l_name}</small>
               </div>
             </div>
 
@@ -195,13 +198,13 @@ const ContactForm = () => {
               data-aos-duration="700"
             >
               <label>
-                E-mail <span className="required">*</span>
+              {t.forms.contact.email} <span className="required">*</span>
               </label>
               <input
                 type="email"
                 name="email"
                 placeholder="example@example.com"
-                title="E-mail"
+                title={t.forms.contact.email}
                 value={formData.email}
                 required
                 onChange={handleChange} // Handle change for email input
@@ -216,7 +219,7 @@ const ContactForm = () => {
               data-aos-delay="600"
               data-aos-duration="700"
             >
-              Submit Feedback
+              {t.forms.contact.sf}
             </button>
           </form>
         </div>
