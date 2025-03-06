@@ -71,7 +71,6 @@
   transform: translateX(-50%); /* Ensure it stays centered */
 }
 
-
 /* Gold Sponsors */
 .sponsor-tier-title.gold {
   animation: colorChangeGold 4s infinite;
