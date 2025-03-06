@@ -4,8 +4,12 @@ import GoUpButton from "../components/go-up/goUp"; // Importing the GoUpButton c
 import AOS from "aos"; // Importing AOS for animations
 import "aos/dist/aos.css"; // Import AOS styles
 import "./sponsor-form.css"; // Import the CSS for this form
+import { useLanguage } from "../context/LanguageContext";
+
 
 const SponsorForm = () => {
+  const { t } = useLanguage();
+  
   // State hook to store form data
   const [formData, setFormData] = useState({
     companyName: "",
@@ -58,7 +62,7 @@ const SponsorForm = () => {
           data-aos-duration="700"
           data-aos-delay="100"
         >
-          <h1 className="sponsor-form-h1">Be one of our sponsors</h1>
+          <h1 className="sponsor-form-h1">{t.forms.sponsor.be}</h1>
         </div>
 
         {/* Form container with AOS animation */}
@@ -74,7 +78,7 @@ const SponsorForm = () => {
             data-aos-duration="700"
             data-aos-delay="150"
           >
-            Sponsorship Form
+            {t.forms.sponsor.sf}
           </h2>
           {/* Form description */}
           <p
@@ -82,8 +86,7 @@ const SponsorForm = () => {
             data-aos-delay="200"
             data-aos-duration="700"
           >
-            Thank you for your interest in sponsoring our event. Please fill out
-            the form below to get started!
+            {t.forms.sponsor.th}
           </p>
 
           {/* The form itself */}
@@ -96,13 +99,13 @@ const SponsorForm = () => {
               data-aos-duration="700"
             >
               <label>
-                Sponsorship Description: <span className="required">*</span>
+              {t.forms.sponsor.des} <span className="required">*</span>
               </label>
               <textarea
                 name="description"
-                placeholder="Please describe your sponsorship plans..."
+                placeholder={t.forms.sponsor.des_p}
                 value={formData.description} // Controlled component (value from state)
-                title="Description"
+                title={t.forms.sponsor.des_t}
                 required // Field is required
                 onChange={handleChange} // Handle change for description field
               />
@@ -116,13 +119,13 @@ const SponsorForm = () => {
               data-aos-duration="700"
             >
               <label>
-                Company Name <span className="required">*</span>
+              {t.forms.sponsor.company_name} <span className="required">*</span>
               </label>
               <input
                 type="text"
                 name="companyName"
-                placeholder="Your Company"
-                title="Company Name"
+                placeholder={t.forms.sponsor.company_p}
+                title={t.forms.sponsor.company_t}
                 value={formData.companyName} // Controlled component (value from state)
                 required // Field is required
                 onChange={handleChange} // Handle change for company name field
@@ -137,13 +140,13 @@ const SponsorForm = () => {
               data-aos-duration="700"
             >
               <label>
-                Contact Person <span className="required">*</span>
+              {t.forms.sponsor.contact} <span className="required">*</span>
               </label>
               <input
                 type="text"
                 name="contactPerson"
                 placeholder="John Doe"
-                title="Full Name"
+                title={t.forms.sponsor.contact_t}
                 value={formData.contactPerson} // Controlled component (value from state)
                 required // Field is required
                 onChange={handleChange} // Handle change for contact person field
@@ -158,13 +161,13 @@ const SponsorForm = () => {
               data-aos-duration="700"
             >
               <label>
-                E-mail <span className="required">*</span>
+              {t.forms.sponsor.email} <span className="required">*</span>
               </label>
               <input
                 type="email"
                 name="email"
                 placeholder="example@example.com"
-                title="E-mail"
+                title={t.forms.sponsor.email}
                 value={formData.email} // Controlled component (value from state)
                 required // Field is required
                 onChange={handleChange} // Handle change for email field
@@ -179,14 +182,14 @@ const SponsorForm = () => {
               data-aos-duration="700"
             >
               <label>
-                Phone Number <span className="required">*</span>
+              {t.forms.sponsor.phone} <span className="required">*</span>
               </label>
               <input
                 type="tel"
                 name="phone"
                 placeholder="+359 888888888"
                 value={formData.phone} // Controlled component (value from state)
-                title="Phone number must be in the format: +359 888888888 or 0888888888"
+                title={t.forms.sponsor.phone_t}
                 onChange={handleChange} // Handle change for phone number field
                 pattern="^(?:\+359\s?[89][0-9]{8}|0[87][0-9]{8})$" // Pattern for phone validation
                 required // Field is required
@@ -201,7 +204,7 @@ const SponsorForm = () => {
               data-aos-delay="500"
               data-aos-duration="700"
             >
-              Submit Sponsorship
+              {t.forms.sponsor.ss}
             </button>
           </form>
         </div>

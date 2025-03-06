@@ -6,6 +6,8 @@ import SponsorForm from "./SponsorForm"; // Import the SponsorForm component
 import GoUpButton from "../components/go-up/goUp"; // Importing GoUpButton component to scroll up
 import AOS from "aos"; // Importing AOS for animations
 import "aos/dist/aos.css"; // Import AOS styles
+import { useLanguage } from "../context/LanguageContext";
+
 
 // Arrays of sponsor images categorized by tiers
 const bronzeSponsors = [
@@ -36,6 +38,8 @@ const silverSponsors = [
 ];
 
 const Sponsors = () => {
+  const { t } = useLanguage();
+  
   // Effect hook to initialize AOS animations
   useEffect(() => {
     AOS.init({
@@ -91,7 +95,7 @@ const Sponsors = () => {
                 <img src={image} alt={`Silver Sponsor ${index + 1}`} />
               </div>
             ))} */}
-            <h3>No sponsors</h3>
+            <h3>{t.sponsors.no}</h3>
           </div>
 
           {/* Bronze Tier Sponsors (Now using old Silver AOS) */}
@@ -114,7 +118,7 @@ const Sponsors = () => {
                 <img src={image} alt={`Bronze Sponsor ${index + 1}`} />
               </div>
             ))} */}
-            <h3>No sponsors</h3>
+            <h3>{t.sponsors.no}</h3>
           </div>
         </div>
       </div>

@@ -58,6 +58,23 @@ const translations = {
         email: "E-mail",
         sf: "Submit Feedback"
       },
+      sponsor: {
+        be: "Be one of our sponsors",
+        sf: "Sponsorship Form",
+        th: "Thank you for your interest in sponsoring our event. Please fill out the form below to get started!", 
+        des: "Sponsorship Description:",
+        des_p: "Please describe your sponsorship plans...",
+        des_t: "Description",
+        company_name: "Company Name",
+        company_p: "Your Company",
+        company_t: "Company Name",
+        contact: "Contact Person",
+        contact_t: "Full Name",
+        email: "E-mail",
+        phone: "Phone Number",
+        phone_t: "Phone number must be in the format: +359 888888888 or 0888888888",
+        ss: "Submit Sponsorship",
+      }
     },
 
     home: {
@@ -177,8 +194,11 @@ const translations = {
             "paragraph3": "It’s a stepping stone to a successful career in engineering and beyond."
           }
         }
+      }
+    },
+    sponsors: {
+      no: "No sponsors"
     }
-  }
     
   },
   bg: {
@@ -233,6 +253,23 @@ const translations = {
         l_name: "Фамилно име",
         email: "E-mail",
         sf: "Изпрати обратна връзка"
+      },
+      "sponsor": {
+        "be": "Станете един от нашите спонсори",
+        "sf": "Форма за спонсорство",
+        "th": "Благодарим ви за интереса към спонсорирането на нашето събитие. Моля, попълнете формуляра по-долу, за да започнем!",
+        "des": "Описание на спонсорството:",
+        "des_p": "Моля, опишете вашите планове за спонсорство...",
+        "des_t": "Описание",
+        "company_name": "Име на компанията",
+        "company_p": "Вашата компания",
+        "company_t": "Име на компанията",
+        "contact": "Лице за контакт",
+        "contact_t": "Пълно име",
+        "email": "Електронна поща",
+        "phone": "Телефонен номер",
+        "phone_t": "Телефонният номер трябва да бъде във формат: +359 888888888 или 0888888888",
+        "ss": "Изпратете заявка за спонсорство"
       }
     },
 
@@ -337,8 +374,12 @@ const translations = {
           }
         }
       }
+    },
+    sponsors: {
+      "no": "Няма спонсори"
     }
   },
+  
 };
 
 export const LanguageProvider = ({ children }) => {
