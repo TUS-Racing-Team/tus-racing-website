@@ -5,9 +5,9 @@ body {
 }
 
 .our-cars {
-  margin-top: 90px;
+  margin-top: 85px;
+  padding-top: 25px;
   background: var(--main-theme);
-  padding-top: 50px;
 }
 
 .our-cars-info {
@@ -24,24 +24,33 @@ body {
 
 /* List of cars styling */
 .list-cars {
-  padding-top: 50px;
+  padding: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 100px;
-  padding: 2rem;
-  padding-bottom: 100px;
+  gap: 50px;
   color: white;
 }
 
 /* Individual car styling */
 .car {
+  width: 100%;
+  min-height: 80vh;
   display: flex;
-  gap: 200px;
   align-items: center;
   flex-wrap: wrap; /* Allow items to wrap for smaller screens */
   justify-content: center; /* Center the cars horizontally */
+  background-color: #252525;
+  box-shadow: 0 0 15px #091a57ca;
+  gap: 200px;
+  border-radius: 16px;
+  padding: 1rem;
+  transition: 0.3s ease !important;
+}
+
+.car:hover{
+  box-shadow: 0 0 20px #31adffc6;
 }
 
 /* Styling for each car's details list */
@@ -117,7 +126,8 @@ body {
   }
 
   .list-cars {
-    padding-top: 30px;
+    padding: 1rem;
+    gap: 10px;
   }
 
   .car {

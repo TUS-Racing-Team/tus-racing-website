@@ -1,0 +1,67 @@
+/* Carousel container styling */
+.carousel {
+  margin: 0 auto; /* Centers the carousel container horizontally */
+  padding: 20px 0; /* Adds vertical padding */
+  width: 100%; /* Full width of the container */
+  overflow: hidden; /* Hides anything that overflows the carousel */
+  display: flex; /* Uses flexbox to display child elements in a row */
+  background: var(--main-theme);
+}
+
+/* Carousel item styling */
+.carousel {
+  > * {
+    flex: 0 0 100%; /* Ensures each child takes full width (100%) of the carousel */
+  }
+
+  /* Pauses the scrolling animation when hovered */
+  &:hover .group {
+    animation-play-state: paused;
+  }
+}
+
+/* Group of sponsor logos */
+.group {
+  display: flex; /* Uses flexbox for horizontal layout */
+  gap: 70px; /* Adds space between each card */
+  padding-right: 20px; /* Adds padding on the right side */
+  will-change: transform; /* Optimizes performance during the animation */
+  height: 10vh;
+  animation: scrolling 10s linear infinite; /* Animates scrolling effect */
+}
+
+/* Adjust the right margin of the last card to maintain spacing */
+.group .card:last-child {
+  margin-right: 70px;
+}
+
+/* Keyframe animation for scrolling effect */
+@keyframes scrolling {
+  0% {
+    transform: translateX(0); /* Starting position (0px) */
+  }
+  100% {
+    transform: translateX(
+      -100%
+    ); /* Ends after translating to the left by 100% of the group width */
+  }
+}
+
+/* Styling for each card that holds a sponsor logo */
+.card {
+  display: flex; /* Uses flexbox to center content inside the card */
+  justify-content: center; /* Centers the content horizontally */
+  align-items: center; /* Centers the content vertically */
+  width: auto; /* Width is auto to fit the content */
+  height: 100px; /* Fixed height for uniform card size */
+  color: white; /* White text color (if text is included) */
+  border-radius: 24px; /* Rounded corners */
+  box-shadow: rgba(0, 0, 0, 10%) 5px 5px 20px 0; /* Soft shadow effect for the cards */
+  font-size: xx-large; /* Larger font for visibility */
+}
+
+/* Styling for the images inside each card */
+.card img {
+  height: 30%; /* Image height fills the card */
+  width: auto; /* Keeps the image's width proportional to its height (preserves aspect ratio) */
+}

@@ -218,3 +218,16 @@ body {
     font-size: 2.5rem;
   }
 }
+
+@media screen and (max-width: 540px) {
+  .form-group {
+    width: 100%;
+  }
+
+  .form-group .half-width {
+    width: 100% !important; /* Ensure full width */
+    display: block; /* Make sure they stack vertically */
+    margin-left: 0; /* Remove the left margin */
+    margin-right: 0; /* Remove the right margin */
+  }
+}

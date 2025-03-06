@@ -103,6 +103,7 @@ div.home-join-us {
 .formula-student-info h5 {
   color: #4c9fe3;
   padding-top: 50px;
+  text-align: center;
 }
 
 /* Styles the main heading in the Formula Student section */
@@ -133,6 +134,7 @@ div.formula-student-info .more-about {
   text-decoration: none;
   margin-top: 30px;
   font-size: 1rem;
+  text-align: center;
 }
 
 /* Adds hover effects to the "More About" button */
@@ -168,6 +170,7 @@ div.formula-student-info .more-about:active {
 .looking .go-to-application {
   margin: 30px 0px;
   transition: 0.3s ease !important;
+  text-align: center;
 }
 
 /* Adds hover effects to the "Go to Application" button */
@@ -351,6 +354,7 @@ div.looking .go-to-application:active {
   background-color: var(--button-color);
   color: white;
   text-decoration: none;
+  text-align: center;
   padding: 12px 25px;
   margin-top: 30px;
   transition: 0.3s 0s ease !important;

@@ -25,7 +25,10 @@ h1 {
 /* Gallery grid styling */
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(400px, 1fr)
+  ); /* Ensure 400px min width for each item */
   gap: 20px;
   transition: 0.3s ease;
 }
@@ -33,24 +36,29 @@ h1 {
 /* Individual gallery item styling */
 .gallery-item {
   position: relative;
-  overflow: hidden;
+  width: 100%;
+  height: 400px; /* Fixed height of 300px */
   border-radius: 15px;
+  overflow: hidden;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
   transition: 0.5s ease !important;
+  display: flex; /* Flexbox to center content */
+  justify-content: center;
+  align-items: center;
 }
 
 /* Image styling within each gallery item */
 .gallery-item img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: cover; /* Ensures the image covers the container without distortion */
   transition: 0.3s ease;
   border-radius: 15px;
 }
 
 /* Hover effect on gallery item */
 .gallery-item:hover {
-  transform: scale(1.05);
+  transform: scale(1.02);
   box-shadow: 0 0px 30px rgba(8, 84, 198, 0.7);
 }
 
@@ -92,5 +100,19 @@ h1 {
 @media screen and (max-width: 600px) {
   h1 {
     font-size: 2.5rem;
+  }
+
+  /* Ensure items are responsive and have proper height/width scaling */
+  .gallery-item {
+    height: 250px; /* Adjust height for smaller screens */
+  }
+}
+
+@media (max-width: 450px) {
+  .gallery-grid {
+    grid-template-columns: 1fr;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 10px;
   }
 }

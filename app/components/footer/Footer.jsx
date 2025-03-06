@@ -3,10 +3,13 @@
 import React from "react";
 import { FaFacebook, FaInstagram, FaDiscord, FaEnvelope } from "react-icons/fa";
 import "./footer.css";
+import SponsorCarousel from "./SponsorCarousel";
 
 const Footer = () => {
   return (
     // Footer container
+    <>
+    <SponsorCarousel/>
     <footer className="footer">
       <div className="content">
         {/* Footer Logo Section */}
@@ -99,6 +102,7 @@ const Footer = () => {
         <p></p>
       </div>
     </footer>
+    </>
   );
 };
 

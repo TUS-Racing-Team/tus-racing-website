@@ -49,7 +49,7 @@ const Gallery = () => {
   // Initialize AOS (Animate on Scroll) when the component is mounted
   useEffect(() => {
     AOS.init({
-      duration: 1000, // Duration of animation in milliseconds
+      duration: 700, // Duration of animation in milliseconds
       easing: "ease-out-back", // Easing function for smooth animation
       once: true, // Animation should only happen once
     });
@@ -58,7 +58,7 @@ const Gallery = () => {
   return (
     <div className="gallery-container">
       {/* Title with animation on scroll */}
-      <h1 data-aos="fade-up" data-aos-duration="1000" className="gallery-title">
+      <h1 data-aos="fade-up" data-aos-duration="800" className="gallery-title">
         Gallery
       </h1>
 
@@ -67,16 +67,21 @@ const Gallery = () => {
         {/* Map through images and display each one with animation */}
         {images.map((image, index) => (
           <div
-            className="gallery-item" // Gallery item wrapper
             key={index} // Unique key for each item
             data-aos={index % 2 === 0 ? "zoom-in" : "fade-up"} // Alternate animation types based on index
-            data-aos-delay={200 + index * 100} // Adding delay to each item animation to stagger them
+            data-aos-duration="1000" // Set animation duration (1.2 seconds)
+            data-aos-delay={200 + index * 100} // Adding staggered delay to each item animation
+            data-aos-easing="ease-out" // Easing effect for smooth transitions
           >
-            <img src={image.src} alt={`Gallery image ${index + 1}`} />{" "}
-            {/* Display the image */}
-            <div className="description">
-              <p>{image.description}</p>{" "}
-              {/* Display the description of the image */}
+            <div
+              className="gallery-item" // Gallery item wrapper
+            >
+              <img src={image.src} alt={`Gallery image ${index + 1}`} />
+              {/* Display the image */}
+              <div className="description">
+                <p>{image.description}</p>
+                {/* Display the description of the image */}
+              </div>
             </div>
           </div>
         ))}

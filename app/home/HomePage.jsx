@@ -158,7 +158,7 @@ const HomePage = () => {
               <h3
                 onClick={() => {
                   openTeamInfo("Electrical");
-                }}
+                }} 
               >
                 {mobileVersion ? "Electrical >" : "Electrical"}
               </h3>

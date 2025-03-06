@@ -9,7 +9,7 @@ import "./our-cars.css";
 const OurRaceCars = () => {
   useEffect(() => {
     AOS.init({
-      duration: 500, // Duration of animation in ms
+      duration: 700, // Duration of animation in ms
       easing: "ease-out", // Animation easing
       once: false, // Run animation once
     });
@@ -22,8 +22,8 @@ const OurRaceCars = () => {
           Our Race Cars
         </h1>
       </div>
-      <div className="list-cars" data-aos-delay="150">
-        <div className="car" data-aos="fade-left">
+      <div className="list-cars">
+        <div className="car" data-aos="fade-in" data-aos-delay="100">
           <div className="car-info" data-aos="fade-left" data-aos-delay="200">
             <h1 data-aos="fade-down" data-aos-delay="250">
               TSR-03
@@ -35,25 +35,18 @@ const OurRaceCars = () => {
               <li>engine type - </li>
             </ul>
           </div>
-          <Image
-            src="/images/car-photos/car-italy-edit.png"
-            alt="Description"
-            width={815}
-            height={414}
-            className="img-logo"
-            data-aos="fade-left"
-            data-aos-delay="350"
-          />
+          {/* Updated Image component with correct data-aos */}
+          <div data-aos="zoom-in" data-aos-delay="300">
+            <Image
+              className="img-logo"
+              src="/images/car-photos/car-italy-edit.png"
+              alt="Description"
+              width={815}
+              height={414}
+            />
+          </div>
         </div>
-        <div className="car" data-aos="fade-right">
-          <Image
-            src="/images/car-photos/car-italy-edit.png"
-            alt="Description"
-            width={815}
-            height={414}
-            className="img-logo"
-            data-aos="fade-right"
-          />
+        <div className="car" data-aos="fade-in" data-aos-delay="100">
           <div className="car-info" data-aos="fade-right" data-aos-delay="400">
             <h1 data-aos="fade-down" data-aos-delay="450">
               TSR-02
@@ -65,8 +58,18 @@ const OurRaceCars = () => {
               <li>engine type - </li>
             </ul>
           </div>
+          {/* Updated Image component with correct data-aos */}
+          <div data-aos="zoom-in" data-aos-delay="500">
+            <Image
+              src="/images/car-photos/car-italy-edit.png"
+              alt="Description"
+              width={815}
+              height={414}
+              className="img-logo"
+            />
+          </div>
         </div>
-        <div className="car" data-aos="fade-left">
+        <div className="car" data-aos="fade-in" data-aos-delay="100">
           <div className="car-info" data-aos="fade-left" data-aos-delay="550">
             <h1 data-aos="fade-down" data-aos-delay="600">
               TSR-01
@@ -78,15 +81,16 @@ const OurRaceCars = () => {
               <li>engine type - </li>
             </ul>
           </div>
-          <Image
-            src="/images/car-photos/car-italy-edit.png"
-            alt="Description"
-            width={815}
-            height={414}
-            className="img-logo"
-            data-aos="fade-left"
-            data-aos-delay="700"
-          />
+          {/* Updated Image component with correct data-aos */}
+          <div data-aos="zoom-in" data-aos-delay="650">
+            <Image
+              src="/images/car-photos/car-italy-edit.png"
+              alt="Description"
+              width={815}
+              height={414}
+              className="img-logo"
+            />
+          </div>
         </div>
       </div>
       <GoUpButton />
