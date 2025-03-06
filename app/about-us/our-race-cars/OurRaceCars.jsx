@@ -1,8 +1,8 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
-import AOS from "aos";
 import GoUpButton from "../../components/go-up/goUp";
+import AOS from "aos";
 import "aos/dist/aos.css"; // Import AOS styles
 import "./our-cars.css";
 import { useLanguage } from "../../context/LanguageContext";

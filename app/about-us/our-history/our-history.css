@@ -3,3 +3,26 @@ body {
   color: white; /* White text color for contrast */
   overflow-x: hidden !important;
 }
+
+.our-history {
+  margin-top: 85px;
+  padding-top: 25px;
+  background: var(--main-theme);
+}
+
+.our-history h1 {
+  color: white;
+  font-size: 3.5rem;
+  text-align: center;
+}
+
+.info-text {
+  text-align: center;
+  width: 50%;
+  margin: auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding: 20px;
+  border-radius: 15px;
+  background-color: #1a1a1a;
+}
