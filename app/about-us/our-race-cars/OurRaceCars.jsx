@@ -26,7 +26,10 @@ const OurRaceCars = () => {
           Our Race Cars
         </h1>
       </div>
-      <div className="list-cars">
+      <div className="info-text">
+        {t.cars.content}
+      </div>
+      {/* <div className="list-cars">
         <div className="car" data-aos="fade-in" data-aos-delay="100">
           <div className="car-info" data-aos="fade-left" data-aos-delay="200">
             <h1 data-aos="fade-down" data-aos-delay="250">
@@ -39,7 +42,6 @@ const OurRaceCars = () => {
               <li>engine type - </li>
             </ul>
           </div>
-          {/* Updated Image component with correct data-aos */}
           <div data-aos="zoom-in" data-aos-delay="300">
             <Image
               className="img-logo"
@@ -62,7 +64,6 @@ const OurRaceCars = () => {
               <li>engine type - </li>
             </ul>
           </div>
-          {/* Updated Image component with correct data-aos */}
           <div data-aos="zoom-in" data-aos-delay="500">
             <Image
               src="/images/car-photos/car-italy-edit.png"
@@ -85,7 +86,6 @@ const OurRaceCars = () => {
               <li>engine type - </li>
             </ul>
           </div>
-          {/* Updated Image component with correct data-aos */}
           <div data-aos="zoom-in" data-aos-delay="650">
             <Image
               src="/images/car-photos/car-italy-edit.png"
@@ -96,7 +96,7 @@ const OurRaceCars = () => {
             />
           </div>
         </div>
-      </div> 
+      </div>  */}
       <GoUpButton />
     </div>
   );
