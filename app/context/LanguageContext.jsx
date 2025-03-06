@@ -198,9 +198,56 @@ const translations = {
     },
     sponsors: {
       no: "No sponsors"
+    },
+    history: {
+      title: "Our History",
+      content: `  In 2015, the first Bulgarian Formula Student team was created at the
+        Technical University of Sofia. A year later, in 2016, the team completed
+        the design and construction of Bolide 1, which successfully debuted at
+        the competition in Italy, completing all rounds of the endurance event.
+        With the accumulated experience and knowledge, the following year, the
+        development of Bolide 2 began - a new model, optimized with almost 30%
+        reduced mass. The successes continued, and in 2019 Bolide 2 performed
+        outstandingly at a regional competition in Croatia, winning Third Place.
+        The team's achievements to date show its dedication and innovation. The
+        students who are part of the Formula Student team do not stop being
+        inspired and working hard, eagerly awaiting the next performances.
+      `
+    },
+
+    "footer": {
+      "quick_links": {
+        "title": "Quick links",
+        "link1": "Home",
+        "link2": "About us",
+        "link3": "Formula student",
+        "link4": "Gallery",
+        "link5": "Contact us",
+        "link6": "Sponsors",
+        "link7": "Apply now"
+      },
+      "social_media": {
+        "title": "Social medias",
+        "email_tooltip": "formulastudentbg@gmail.com",
+        "discord": "Discord",
+        "facebook": "Facebook",
+        "instagram": "Instagram"
+      },
+      "contact": {
+        "map": "Google Map"
+      },
+      "privacy_policy": {
+        "text": "© {year} TU Sofia Racing Team. All rights reserved."
+      }
+    },
+    "work": {
+      "title": "Our Work",
+      "description": "We are currently working hard on our designs and engineering reports. Stay tuned for updates! Once we finalize our work, we will share our progress and insights here.",
+      "subtext": "Follow us for more updates as we continue developing our Formula Student car."
     }
     
   },
+
   bg: {
     navbar: {
       home: "Начало",
@@ -377,7 +424,43 @@ const translations = {
     },
     sponsors: {
       "no": "Няма спонсори"
+    },
+    "history": {
+      "title": "Нашата история",
+      "content": "През 2015 г. бе създаден първият български отбор Formula Student в Техническия университет в София. Година по-късно, през 2016 г., отборът завърши проектирането и изграждането на Bolide 1, който успешно дебютира на състезанието в Италия, завършвайки всички етапи на състезанието за издръжливост. С натрупания опит и знания, през следващата година започна разработката на Bolide 2 - нов модел, оптимизиран с почти 30% намалено тегло. Успехите продължиха, а през 2019 г. Bolide 2 представи изключително представяне на регионално състезание в Хърватия, спечелвайки трето място. Постиженията на отбора до момента показват неговата отдаденост и иновации. Студентите, които са част от екипа Formula Student, не спират да бъдат вдъхновени и да работят усилено, нетърпеливи да очакват следващите си изпълнения."
+    },
+
+    "footer": {
+      "quick_links": {
+        "title": "Бързи линкове",
+        "link1": "Начало",
+        "link2": "За нас",
+        "link3": "Формула Студент",
+        "link4": "Галерия",
+        "link5": "Контакт",
+        "link6": "Спонсори",
+        "link7": "Подай кандидатура"
+      },
+      "social_media": {
+        "title": "Социални медии",
+        "email_tooltip": "formulastudentbg@gmail.com",
+        "discord": "Discord",
+        "facebook": "Facebook",
+        "instagram": "Instagram"
+      },
+      "contact": {
+        "map": "Google Map"
+      },
+      "privacy_policy": {
+        "text": "© {year} TU Sofia Racing Team. Всички права запазени."
+      }
+    },
+    "work": {
+      "title": "Нашата работа",
+      "description": "В момента работим усилено върху нашите дизайни и инженерни доклади. Останете на линия за новини! След като финализираме работата си, ще споделим напредъка и прозорците тук.",
+      "subtext": "Следвайте ни за още актуализации, докато продължаваме да развиваме нашия автомобил за Формула Студент."
     }
+
   },
   
 };

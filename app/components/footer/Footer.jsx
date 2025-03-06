@@ -4,8 +4,12 @@ import React from "react";
 import { FaFacebook, FaInstagram, FaDiscord, FaEnvelope } from "react-icons/fa";
 import "./footer.css";
 import SponsorCarousel from "./SponsorCarousel";
+import { useLanguage } from "../../context/LanguageContext";
+
 
 const Footer = () => {
+  const { t } = useLanguage();
+  
   return (
     // Footer container
     <>
@@ -23,24 +27,24 @@ const Footer = () => {
 
         {/* Quick Links Section */}
         <div className="links">
-          <h2>Quick links</h2>
+          <h2>{t.footer.quick_links.title}</h2>
           <div>
             {/* Navigation links */}
-            <a href="/">Home</a>
-            <a href="/about-us">About us</a>
-            <a href="/formula-student">Formula student</a>
-            <a href="/gallery">Gallery</a>
-            <a href="/contact-us">Contact us</a>
-            <a href="/sponsors">Sponsors</a>
+            <a href="/">{t.footer.quick_links.link1}</a>
+            <a href="/about-us">{t.footer.quick_links.link2}</a>
+            <a href="/formula-student">{t.footer.quick_links.link3}</a>
+            <a href="/gallery">{t.footer.quick_links.link4}</a>
+            <a href="/contact-us">{t.footer.quick_links.link5}</a>
+            <a href="/sponsors">{t.footer.quick_links.link6}</a>
             <a href="/application" id="application">
-              Apply now
+            {t.footer.quick_links.link7}
             </a>
           </div>
         </div>
 
         {/* Social Media Section */}
         <div className="social-media">
-          <h2>Social medias</h2>
+          <h2>{t.footer.social_media.title}</h2>
           <div className="social-media-links">
             {/* Email Link with Tooltip */}
             <div className="email-tooltip-container">

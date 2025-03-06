@@ -4,9 +4,12 @@ import { useEffect } from "react";
 import "./work.css"; // Import custom styles
 import AOS from "aos";
 import "aos/dist/aos.css"; // Import AOS styles for animations
+import { useLanguage } from "../context/LanguageContext";
+
 
 export default function SeeOurWork() {
-
+  const { t } = useLanguage();
+  
   useEffect(() => {
     AOS.init({
       duration: 500, // Duration of animation in milliseconds
@@ -19,13 +22,12 @@ export default function SeeOurWork() {
     <main>
     <div className="container" data-aos="fade-down">
       
-      <h1 className="title">Our Work</h1>
+      <h1 className="title">{t.work.title}</h1>
       <p className="description">
-        We are currently working hard on our designs and engineering reports. Stay tuned for updates! 
-        Once we finalize our work, we will share our progress and insights here.
+      {t.work.description}
       </p>
       <p className="subtext">
-        Follow us for more updates as we continue developing our Formula Student car.
+        {t.work.subtext}
       </p>
     </div>
     </main>
