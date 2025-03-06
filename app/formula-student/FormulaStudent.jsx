@@ -6,8 +6,12 @@ import GoUpButton from "../components/go-up/goUp";
 import "./formula-student.css";
 import AOS from "aos";
 import "aos/dist/aos.css"; // Import AOS styles for animations
+import { useLanguage } from "../context/LanguageContext";
+
 
 const FormulaStudent = () => {
+    const { t } = useLanguage();
+  
   useEffect(() => {
     AOS.init({
       duration: 500, // Duration of animation in milliseconds
@@ -21,12 +25,10 @@ const FormulaStudent = () => {
       {/* Header */}
       <header className="formula-header">
         <h1 data-aos="fade-down" data-aos-delay="200">
-          Welcome to Formula Student
+          {t.formula_student.title}
         </h1>
         <p data-aos="fade-up" data-aos-delay="300">
-          Formula Student is an international engineering design competition
-          that inspires the engineers of tomorrow to push the limits of
-          technology and innovation.
+        {t.formula_student.description}
         </p>
       </header>
 
@@ -39,21 +41,19 @@ const FormulaStudent = () => {
         >
           <div className="info">
             <h2 data-aos="zoom-in" data-aos-delay="500">
-              What is Formula Student?
+            {t.formula_student.sections.what_is.title}
             </h2>
             <p data-aos="fade-up" data-aos-delay="600">
-              Formula Student is the world’s largest engineering competition,
-              challenging students to design, build, test, and race their own
-              single-seat formula-style car. Teams from universities around the
-              globe compete not only on the track but also in business and
-              engineering design presentations.
+              {t.formula_student.sections.what_is.content.paragraph1}
             </p>
             <p data-aos="fade-up" data-aos-delay="600">
-              The competition emphasizes engineering excellence, teamwork, and
-              innovation, offering students a platform to apply their academic
-              knowledge to real-world engineering challenges. Each car is judged
-              on its design, performance, cost analysis, and overall
-              presentation.
+            {t.formula_student.sections.what_is.content.paragraph2}
+            </p>
+            <p data-aos="fade-up" data-aos-delay="600">
+            {t.formula_student.sections.what_is.content.paragraph3}
+            </p>
+            <p data-aos="fade-up" data-aos-delay="600">
+            {t.formula_student.sections.what_is.content.paragraph4}
             </p>
           </div>
           <img
@@ -78,27 +78,16 @@ const FormulaStudent = () => {
           />
           <div className="info">
             <h2 data-aos="zoom-in" data-aos-delay="800">
-              History of Formula Student
+            {t.formula_student.sections.history.title}
             </h2>
             <p data-aos="fade-up" data-aos-delay="850">
-              Formula Student was founded in 1981 by the Society of Automotive
-              Engineers (SAE) in the United States as Formula SAE. Its mission
-              was to create a learning experience where students could apply
-              their engineering skills in a competitive and creative
-              environment.
+            {t.formula_student.sections.history.content.paragraph1}
             </p>
             <p data-aos="fade-up" data-aos-delay="850">
-              The competition expanded to Europe in 1998 with the launch of
-              Formula Student UK, organized by the Institution of Mechanical
-              Engineers (IMechE). Today, Formula Student competitions are held
-              worldwide, with events in Germany, Italy, Japan, and Australia, to
-              name a few.
+            {t.formula_student.sections.history.content.paragraph2}
             </p>
             <p data-aos="fade-up" data-aos-delay="850">
-              Over the years, the competition has grown significantly,
-              attracting thousands of participants annually. It has become a
-              prestigious event where the best and brightest future engineers
-              showcase their talents.
+            {t.formula_student.sections.history.content.paragraph3}
             </p>
           </div>
         </section>
@@ -111,34 +100,31 @@ const FormulaStudent = () => {
         >
           <div className="info">
             <h2 data-aos="zoom-in" data-aos-delay="950">
-              Why is Formula Student Important?
+            {t.formula_student.sections.importance.title}
             </h2>
             <p data-aos="fade-up" data-aos-delay="1000">
-              Formula Student is more than just a competition; it’s an
-              opportunity for students to gain hands-on experience in
-              engineering, project management, and teamwork. Participants learn
-              to:
+            {t.formula_student.sections.importance.content.paragraph1}
             </p>
             <ul data-aos="fade-right" data-aos-delay="1000">
               <li data-aos="fade-right" data-aos-delay="1050">
-                Work collaboratively in multidisciplinary teams.
+              {t.formula_student.sections.importance.content.key_points[0]}
               </li>
               <li data-aos="fade-right" data-aos-delay="1050">
-                Develop innovative solutions to technical challenges.
+              {t.formula_student.sections.importance.content.key_points[1]}
               </li>
               <li data-aos="fade-right" data-aos-delay="1050">
-                Manage budgets and timelines effectively.
+              {t.formula_student.sections.importance.content.key_points[2]}
               </li>
               <li data-aos="fade-right" data-aos-delay="1050">
-                Present their ideas professionally to judges and sponsors.
+              {t.formula_student.sections.importance.content.key_points[3]}
               </li>
             </ul>
 
             <p data-aos="fade-up" data-aos-delay="1100">
-              Many alumni of Formula Student have gone on to work in leading
-              automotive companies, motorsport teams, and other cutting-edge
-              industries. It’s a stepping stone to a successful career in
-              engineering and beyond.
+            {t.formula_student.sections.importance.content.paragraph2}
+            </p>
+            <p data-aos="fade-up" data-aos-delay="1100">
+            {t.formula_student.sections.importance.content.paragraph3}
             </p>
           </div>
           <img

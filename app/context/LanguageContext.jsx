@@ -140,7 +140,46 @@ const translations = {
     },
     cars: {
       content: "Welcome to the race cars section of our Formula Student team! Here, you will find information about all our cars – from our earliest projects to our latest innovations, combining engineering precision and cutting-edge technology. We are currently working on updating our website to provide you with details, photos, and technical specifications of our cars. Soon, you will be able to explore each car in detail and follow the evolution of our team over the years. Stay tuned for more updates! 🚗💨"
+    },
+
+    formula_student: {
+      "title": "Welcome to Formula Student",
+      "description": "Formula Student is an international engineering design competition that inspires the engineers of tomorrow to push the limits of technology and innovation.",
+      "sections": {
+        "what_is": {
+          "title": "What is Formula Student?",
+          "content": {
+            "paragraph1": "Formula Student is the world’s largest engineering competition, challenging students to design, build, test, and race their own single-seat formula-style car.",
+            "paragraph2": "Teams from universities around the globe compete not only on the track but also in business and engineering design presentations.",
+            "paragraph3": "The competition emphasizes engineering excellence, teamwork, and innovation, offering students a platform to apply their academic knowledge to real-world engineering challenges.",
+            "paragraph4": "Each car is judged on its design, performance, cost analysis, and overall presentation."
+          }
+        },
+        "history": {
+          "title": "History of Formula Student",
+          "content": {
+            "paragraph1": "Formula Student was founded in 1981 by the Society of Automotive Engineers (SAE) in the United States as Formula SAE. Its mission was to create a learning experience where students could apply their engineering skills in a competitive and creative environment.",
+            "paragraph2": "The competition expanded to Europe in 1998 with the launch of Formula Student UK, organized by the Institution of Mechanical Engineers (IMechE). Today, Formula Student competitions are held worldwide, with events in Germany, Italy, Japan, and Australia, to name a few.",
+            "paragraph3": "Over the years, the competition has grown significantly, attracting thousands of participants annually. It has become a prestigious event where the best and brightest future engineers showcase their talents."
+          }
+        },
+        "importance": {
+          "title": "Why is Formula Student Important?",
+          "content": {
+            "paragraph1": "Formula Student is more than just a competition; it’s an opportunity for students to gain hands-on experience in engineering, project management, and teamwork. Participants learn to:",
+            "key_points": [
+              "Work collaboratively in multidisciplinary teams.",
+              "Develop innovative solutions to technical challenges.",
+              "Manage budgets and timelines effectively.",
+              "Present their ideas professionally to judges and sponsors."
+            ],
+            "paragraph2": "Many alumni of Formula Student have gone on to work in leading automotive companies, motorsport teams, and other cutting-edge industries.",
+            "paragraph3": "It’s a stepping stone to a successful career in engineering and beyond."
+          }
+        }
     }
+  }
+    
   },
   bg: {
     navbar: {
@@ -260,9 +299,45 @@ const translations = {
     },
     cars: {
       content: "Добре дошли в секцията за състезателните автомобили на нашия Formula Student отбор! Тук ще можете да откриете информация за всички наши болиди – от първите ни проекти до най-новите ни разработки, съчетаващи инженерна прецизност и високи технологии. В момента работим усилено върху обновяването на нашия уебсайт, за да ви предоставим подробности, снимки и технически спецификации на нашите автомобили. Скоро ще имате възможност да разгледате всяка кола в детайли и да проследите развитието на нашия екип през годините. Очаквайте скоро още информация! 🚗💨"
+    },
+
+    formula_student: {
+      "title": "Добре дошли в Formula Student",
+      "description": "Formula Student е международно състезание по инженерство, което вдъхновява инженерите на бъдещето да разширяват границите на технологиите и иновациите.",
+      "sections": {
+        "what_is": {
+          "title": "Какво е Formula Student?",
+          "content": {
+            "paragraph1": "Formula Student е най-голямото инженерно състезание в света, което предизвиква студентите да проектират, изградят, тестват и състезават със собствен едноместен болид.",
+            "paragraph2": "Отбори от университети по целия свят се съревновават не само на пистата, но и в бизнес и инженерни презентации.",
+            "paragraph3": "Състезанието поставя акцент върху инженерното съвършенство, работата в екип и иновациите, като предоставя платформа за прилагане на академични знания в реални инженерни предизвикателства.",
+            "paragraph4": "Всеки болид се оценява според неговия дизайн, производителност, анализ на разходите и цялостна презентация."
+          }
+        },
+        "history": {
+          "title": "История на Formula Student",
+          "content": {
+            "paragraph1": "Formula Student е основано през 1981 г. от Обществото на автомобилните инженери (SAE) в САЩ като Formula SAE. Неговата мисия е да създаде учебна среда, в която студентите да прилагат инженерните си умения в конкурентна и креативна среда.",
+            "paragraph2": "Състезанието се разширява в Европа през 1998 г. с пускането на Formula Student UK, организирано от Института на машинните инженери (IMechE). Днес състезания по Formula Student се провеждат по целия свят, включително в Германия, Италия, Япония и Австралия.",
+            "paragraph3": "През годините състезанието нараства значително, привличайки хиляди участници ежегодно. То се е превърнало в престижно събитие, където най-добрите бъдещи инженери демонстрират своите таланти."
+          }
+        },
+        "importance": {
+          "title": "Защо Formula Student е важен?",
+          "content": {
+            "paragraph1": "Formula Student е повече от просто състезание; това е възможност за студентите да придобият практически опит в инженерството, управлението на проекти и работата в екип. Участниците се научават да:",
+            "key_points": [
+              "Работят съвместно в мултидисциплинарни екипи.",
+              "Разработват иновативни решения на технически предизвикателства.",
+              "Управляват бюджети и срокове ефективно.",
+              "Презентират своите идеи професионално пред съдии и спонсори."
+            ],
+            "paragraph2": "Много от бившите участници във Formula Student продължават кариерата си в водещи автомобилни компании, отбори от моторните спортове и други високотехнологични индустрии.",
+            "paragraph3": "Това е важна стъпка към успешна кариера в инженерството и извън него."
+          }
+        }
+      }
     }
-
-
   },
 };
 
