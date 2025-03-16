@@ -70,7 +70,7 @@ export default function AboutTeam() {
         {t.our_team.text6}
         </p>
       </div>
-      <div className="team-grid" data-aos-delay="700">
+      {/* <div className="team-grid" data-aos-delay="700">
         {teamMembers.map((member, index) => (
           <div key={index} className="team-member" data-aos="zoom-in">
             <img
@@ -101,7 +101,7 @@ export default function AboutTeam() {
             </div>
           </div>
         ))}
-      </div>
+      </div> */}
       <GoUpButton />
     </div>
   );

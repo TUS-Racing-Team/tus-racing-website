@@ -1,561 +1,647 @@
 /* Landing page background and positioning */
+
 .landingPage {
-  background: url("/images/car-photos/car-italy.jpg");
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  position: relative;
-  height: 100vh; /* Ensure it's full screen */
+    background: url("../../../public/images/car-photos/car-italy.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+    height: 100vh;
+    /* Ensure it's full screen */
 }
+
 
 /* Main container for call-to-action */
+
 .main-ca {
-  position: absolute;
-  top: 25%;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  flex-direction: column;
-  width: -moz-fit-content;
-  width: fit-content;
-  align-items: center;
-  gap: 10px;
-}
-
-/* Style for anchor links inside main-ca */
-.main-ca a {
-  text-decoration: none;
-  color: white;
-  background-color: var(--button-color);
-  font-size: 1.2rem;
-  padding: 12px 25px;
-  transition: all 0.3s ease-in-out;
-  border-radius: 25px;
-  margin-top: 20px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
-}
-
-/* Hover effect for links inside main-ca */
-.main-ca a:hover {
-  background-color: var(--button-hover-color);
-  transform: translateY(-5px); /* Smooth hover effect */
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
-}
-
-/* Call-to-action info box styling */
-.ca-info {
-  background-color: rgba(0, 0, 0, 0.55);
-  padding: 30px;
-  display: flex;
-  flex-direction: column;
-  align-items: baseline;
-  border-radius: 15px;
-  text-align: center;
-}
-
-/* Title styling inside ca-info */
-.ca-info h1 {
-  color: white;
-  margin: 15px 0;
-}
-
-/* Home join us section */
-.home-join-us {
-  background-color: var(--main-theme);
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  padding: 50px 20px;
-}
-
-/* Formula student information styling */
-.formula-student-info {
-  color: white;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 60%;
-}
-
-/* Heading inside formula-student-info */
-.formula-student-info h5 {
-  color: #4c9fe3;
-  padding-top: 50px;
-}
-
-/* Formula student title */
-.formula-student-info h1 {
-  padding-top: 30px;
-}
-
-/* Separator line for formula-student-info */
-.sl {
-  border: 2px solid var(--underline-color);
-  width: 15%;
-  margin-top: 20px;
-}
-
-/* Paragraph styling inside formula-student-info */
-.formula-student-info p {
-  padding-top: 30px;
-  color: #d3d3d3;
-  text-align: center;
-  font-size: 1rem;
-}
-
-/* Anchor styling inside formula-student-info */
-.formula-student-info a {
-  border-radius: 25px;
-  background-color: var(--button-color);
-  color: white;
-  text-decoration: none;
-  padding: 12px 20px;
-  margin-top: 30px;
-  transition: all 0.3s ease-in-out;
-  font-size: 1rem;
-}
-
-/* Hover effect for links inside formula-student-info */
-.formula-student-info a:hover {
-  background-color: var(--button-hover-color);
-  transform: translateY(-5px);
-}
-
-/* Looking section styles */
-.looking {
-  color: white;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-/* Heading inside looking section */
-.looking h1 {
-  margin-top: 50px;
-  font-size: 1.6rem;
-}
-
-/* Teams display styling in looking section */
-.looking-teams {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-  padding-top: 30px;
-  width: 100%;
-}
-
-/* Team list styling */
-.team ul {
-  list-style-type: none;
-  padding-left: 10px;
-  width: 140px;
-}
-
-/* Anchor links inside looking section */
-.looking a {
-  border-radius: 25px;
-  background-color: var(--button-color);
-  color: white;
-  text-decoration: none;
-  padding: 12px 25px;
-  margin-top: 30px;
-  transition: all 0.3s ease-in-out;
-  margin-bottom: 50px;
-}
-
-/* Hover effect for links inside looking section */
-.looking a:hover {
-  background-color: var(--button-hover-color);
-  transform: translateY(-5px);
-}
-
-/* Background section with an image */
-.sub-section {
-  background: url("/images/car-photos/car-photo-b.jpg");
-  background-size: cover;
-  background-position: center;
-  height: 500px;
-  position: relative;
-}
-
-/* Apply now section */
-.apply-now {
-  padding-top: 50px;
-  padding-bottom: 50px;
-  background-color: var(--main-theme);
-  color: white;
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  align-items: center;
-  justify-content: space-evenly;
-}
-
-/* Text styling inside apply-now */
-.apply-now p {
-  color: #d3d3d3;
-  font-size: 1rem;
-}
-
-/* Team image inside apply-now */
-.img-team {
-  border-radius: 25px;
-  max-width: 100%;
-  height: auto;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-}
-
-/* Apply now button */
-.apply-now a {
-  border-radius: 25px;
-  background-color: var(--button-color);
-  color: white;
-  text-decoration: none;
-  padding: 12px 25px;
-  margin-top: 30px;
-  transition: all 0.3s ease-in-out;
-}
-
-/* Hover effect for apply now button */
-.apply-now a:hover {
-  background-color: var(--button-hover-color);
-  transform: translateY(-5px);
-}
-
-/* Media Query for screen width <= 600px */
-@media only screen and (max-width: 600px) {
-  /* Landing page background change */
-  .landingPage {
-    background: url("/images/car-photos/car-italy.jpg");
-  }
-
-  /* Main container adjustment for mobile */
-  .main-ca {
     position: absolute;
-    top: 30%;
+    top: 25%;
     left: 50%;
     transform: translateX(-50%);
-    width: 80%;
-    text-align: center;
-  }
-
-  /* Link adjustments inside main-ca */
-  .main-ca a {
-    padding: 12px 20px;
-    font-size: 1rem;
-  }
-
-  /* Call-to-action info box styling */
-  .ca-info {
-    background-color: rgba(0, 0, 0, 0.65);
-    padding: 30px;
-    border-radius: 15px;
-  }
-
-  /* Home join us padding */
-  .home-join-us {
-    padding: 20px 10px;
-  }
-
-  /* Formula student info box adjustments */
-  .formula-student-info {
-    width: 100%;
-    padding: 10px;
-  }
-
-  /* Looking teams adjustments */
-  .looking-teams {
+    display: flex;
     flex-direction: column;
+    width: -moz-fit-content;
+    width: fit-content;
+    align-items: center;
     gap: 10px;
-    width: 100%;
-  }
-
-  /* Apply now section flex adjustments */
-  .apply-now {
-    flex-direction: column;
-    padding-top: 20px;
-  }
-
-  /* Apply info text adjustments */
-  .apply-info {
-    padding-top: 30px;
-    text-align: center;
-    width: 100%;
-  }
-
-  /* Apply now heading adjustment */
-  .apply-now h1 {
-    font-size: 1.5rem;
-  }
-
-  /* Apply now button size adjustment */
-  .apply-now a {
-    font-size: 1rem;
-    padding: 10px 20px;
-  }
-
-  /* Sub-section height adjustment */
-  .sub-section {
-    height: 400px;
-  }
-
-  /* Team image adjustments for smaller screens */
-  .img-team {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.3);
-  }
 }
+
+
+/* Style for anchor links inside main-ca */
+
+.main-ca a {
+    text-decoration: none;
+    color: white;
+    background-color: var(--button-color);
+    font-size: 1.2rem;
+    padding: 12px 25px;
+    transition: all 0.3s ease-in-out;
+    border-radius: 25px;
+    margin-top: 20px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Hover effect for links inside main-ca */
+
+.main-ca a:hover {
+    background-color: var(--button-hover-color);
+    transform: translateY(-5px);
+    /* Smooth hover effect */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+
+/* Call-to-action info box styling */
+
+.ca-info {
+    background-color: rgba(0, 0, 0, 0.55);
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    border-radius: 15px;
+    text-align: center;
+}
+
+
+/* Title styling inside ca-info */
+
+.ca-info h1 {
+    color: white;
+    margin: 15px 0;
+}
+
+
+/* Home join us section */
+
+.home-join-us {
+    background-color: var(--main-theme);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 20px;
+}
+
+
+/* Formula student information styling */
+
+.formula-student-info {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60%;
+}
+
+
+/* Heading inside formula-student-info */
+
+.formula-student-info h5 {
+    color: #4c9fe3;
+    padding-top: 50px;
+}
+
+
+/* Formula student title */
+
+.formula-student-info h1 {
+    padding-top: 30px;
+}
+
+
+/* Separator line for formula-student-info */
+
+.sl {
+    border: 2px solid var(--underline-color);
+    width: 15%;
+    margin-top: 20px;
+}
+
+
+/* Paragraph styling inside formula-student-info */
+
+.formula-student-info p {
+    padding-top: 30px;
+    color: #d3d3d3;
+    text-align: center;
+    font-size: 1rem;
+}
+
+
+/* Anchor styling inside formula-student-info */
+
+.formula-student-info a {
+    border-radius: 25px;
+    background-color: var(--button-color);
+    color: white;
+    text-decoration: none;
+    padding: 12px 20px;
+    margin-top: 30px;
+    transition: all 0.3s ease-in-out;
+    font-size: 1rem;
+}
+
+
+/* Hover effect for links inside formula-student-info */
+
+.formula-student-info a:hover {
+    background-color: var(--button-hover-color);
+    transform: translateY(-5px);
+}
+
+
+/* Looking section styles */
+
+.looking {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* Heading inside looking section */
+
+.looking h1 {
+    margin-top: 50px;
+    font-size: 1.6rem;
+}
+
+
+/* Teams display styling in looking section */
+
+.looking-teams {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding-top: 30px;
+    width: 100%;
+}
+
+
+/* Team list styling */
+
+.team ul {
+    list-style-type: none;
+    padding-left: 10px;
+    width: 140px;
+}
+
+
+/* Anchor links inside looking section */
+
+.looking a {
+    border-radius: 25px;
+    background-color: var(--button-color);
+    color: white;
+    text-decoration: none;
+    padding: 12px 25px;
+    margin-top: 30px;
+    transition: all 0.3s ease-in-out;
+    margin-bottom: 50px;
+}
+
+
+/* Hover effect for links inside looking section */
+
+.looking a:hover {
+    background-color: var(--button-hover-color);
+    transform: translateY(-5px);
+}
+
+
+/* Background section with an image */
+
+.sub-section {
+    background: url("../../../public/images/car-photos/car-photo-b.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+    position: relative;
+}
+
+
+/* Apply now section */
+
+.apply-now {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: var(--main-theme);
+    color: white;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+
+/* Text styling inside apply-now */
+
+.apply-now p {
+    color: #d3d3d3;
+    font-size: 1rem;
+}
+
+
+/* Team image inside apply-now */
+
+.img-team {
+    border-radius: 25px;
+    max-width: 100%;
+    height: auto;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Apply now button */
+
+.apply-now a {
+    border-radius: 25px;
+    background-color: var(--button-color);
+    color: white;
+    text-decoration: none;
+    padding: 12px 25px;
+    margin-top: 30px;
+    transition: all 0.3s ease-in-out;
+}
+
+
+/* Hover effect for apply now button */
+
+.apply-now a:hover {
+    background-color: var(--button-hover-color);
+    transform: translateY(-5px);
+}
+
+
+/* Media Query for screen width <= 600px */
+
+@media only screen and (max-width: 600px) {
+    /* Landing page background change */
+    .landingPage {
+        background: url("../../../public/images/car-photos/car-italy.jpg");
+    }
+    /* Main container adjustment for mobile */
+    .main-ca {
+        position: absolute;
+        top: 30%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80%;
+        text-align: center;
+    }
+    /* Link adjustments inside main-ca */
+    .main-ca a {
+        padding: 12px 20px;
+        font-size: 1rem;
+    }
+    /* Call-to-action info box styling */
+    .ca-info {
+        background-color: rgba(0, 0, 0, 0.65);
+        padding: 30px;
+        border-radius: 15px;
+    }
+    /* Home join us padding */
+    .home-join-us {
+        padding: 20px 10px;
+    }
+    /* Formula student info box adjustments */
+    .formula-student-info {
+        width: 100%;
+        padding: 10px;
+    }
+    /* Looking teams adjustments */
+    .looking-teams {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
+    /* Apply now section flex adjustments */
+    .apply-now {
+        flex-direction: column;
+        padding-top: 20px;
+    }
+    /* Apply info text adjustments */
+    .apply-info {
+        padding-top: 30px;
+        text-align: center;
+        width: 100%;
+    }
+    /* Apply now heading adjustment */
+    .apply-now h1 {
+        font-size: 1.5rem;
+    }
+    /* Apply now button size adjustment */
+    .apply-now a {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+    /* Sub-section height adjustment */
+    .sub-section {
+        height: 400px;
+    }
+    /* Team image adjustments for smaller screens */
+    .img-team {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+        box-shadow: 0 6px 25px rgba(0, 0, 0, 0.3);
+    }
+}
+
 
 /* Navbar styling */
+
 .navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: var(--main-theme);
-  padding: 25px 30px;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  box-shadow: 0 5px 5px #00344abf;
-  z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--main-theme);
+    padding: 25px 30px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    box-shadow: 0 5px 5px #00344abf;
+    z-index: 1000;
 }
+
 
 /* Logo styling */
+
 .logo {
-  height: 35px;
-  width: auto;
+    height: 35px;
+    width: auto;
 }
+
 
 /* Menu container styling */
+
 .menu {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  transition: transform 0.3s ease;
-}
-
-/* Menu item styling */
-.menu li {
-  margin: 0 15px;
-}
-
-/* Link styling inside menu */
-.menu li a {
-  color: #fff;
-  text-decoration: none;
-  font-size: 16px;
-  position: relative;
-  transition: 0.3s;
-}
-
-/* Hover effect for menu items */
-.menu li a:hover {
-  color: #c1c1c1;
-}
-
-/* Underline effect on hover */
-.menu li a:hover::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 4px;
-  background-color: var(--underline-color);
-  bottom: -8px;
-  left: 0;
-  transition: width 0.3s ease;
-  border-radius: 5px;
-}
-
-/* Initial state of underline for menu items */
-.menu li a::after {
-  content: "";
-  position: absolute;
-  width: 0;
-  height: 4px;
-  background-color: var(--underline-color);
-  bottom: -8px;
-  left: 0;
-  transition: width 0.3s ease;
-  border-radius: 5px;
-}
-
-/* Navigation buttons styling */
-.nav-buttons {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 5px;
-}
-
-/* Image hover effect inside nav-buttons */
-.nav-buttons img:hover {
-  cursor: pointer;
-}
-
-/* Apply button styling */
-.apply {
-  background-color: var(--button-color);
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: var(--button-radius);
-  font-size: 15px;
-  font-weight: 700;
-  cursor: pointer;
-  text-decoration: none;
-  transition: 300ms;
-}
-
-/* Hover effect for apply button */
-.apply:hover {
-  background-color: var(--button-hover-color);
-  transform: scale(1.02);
-}
-
-/* Active state for apply button */
-.apply:active {
-  background-color: var(--button-hover-color);
-  transform: scale(0.95);
-}
-
-/* Hamburger menu styles */
-.hamburger-menu {
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
-  gap: 5px;
-}
-
-/* Hamburger bars styling */
-.hamburger-menu .bar {
-  width: 30px;
-  height: 4px;
-  background-color: #fff;
-  border-radius: 5px;
-}
-
-/* Fade-in animation for menu */
-@keyframes fadeIn {
-  from {
-    opacity: 0; /* Start invisible */
-  }
-  to {
-    opacity: 1; /* Fade in */
-  }
-}
-
-/* Media Queries for screen width <= 1040px */
-@media (max-width: 1159px) {
-  /* Menu styling for small screens */
-  .menu {
-    display: none; /* Hide menu by default */
-    position: absolute;
-    top: 70px; /* Position the menu below the navbar */
-    right: 30px;
-    background-color: var(--main-theme);
-    box-shadow: 0 2px 5px rgb(81 81 81 / 86%);
-    flex-direction: column;
-    gap: 15px;
-    padding: 20px;
-    border-radius: 5px;
-    width: 250px;
-    opacity: 0; /* Start with 0 opacity */
-    transition: opacity 0.3s ease, top 0.3s ease; /* Smooth transition for opacity and position */
-  }
-
-  /* Open menu styling */
-  .menu.open {
-    display: flex; /* Show menu when open */
-    opacity: 1; /* Ensure menu is visible */
-    top: 88px; /* Position menu below the navbar */
-    right: 0px;
-    border-radius: 0 0 16px 16px;
-    animation: fadeIn 0.3s ease forwards; /* Apply fade-in animation */
-  }
-
-  /* Menu item width adjustment */
-  .menu.open a {
-    width: 100%;
-    text-align: center;
-  }
-
-  /* Hamburger menu visibility */
-  .hamburger-menu {
-    display: flex; /* Show hamburger icon on mobile */
-  }
-
-  /* Hide nav buttons on small screens */
-  .nav-buttons {
-    display: none;
-  }
-
-  /* Styling for opened menu */
-  .open {
-    background: #242424;
-  }
-}
-
-/* Media Queries for screen width > 1160px */
-@media (min-width: 1160px) {
-  /* Hide hamburger icon on large screens */
-  .hamburger-menu {
-    display: none;
-  }
-
-  /* Menu styles for large screens */
-  .menu {
     display: flex;
-    position: static;
-    background-color: transparent;
-    flex-direction: row;
-    gap: 20px;
-    padding: 0;
-  }
-
-  /* Show nav buttons on large screens */
-  .nav-buttons {
-    display: flex;
-  }
-}
-
-/* Media Queries for screen width <= 500px */
-@media (max-width: 500px) {
-  /* Open menu styles for smaller screens */
-  .menu.open {
-    padding: 0px;
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    left: 0px;
-    top: 70px;
-    opacity: 1;
-    gap: 20px;
-    animation: fadeIn 0.3s ease forwards;
-  }
-
-  /* Menu item styling inside open menu */
-  .menu.open ul li,
-  .menu.open a {
-    font-size: 18px;
-    font-weight: 700;
-  }
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    transition: transform 0.3s ease;
 }
 
+
+/* Menu item styling */
+
+.menu li {
+    margin: 0 15px;
+}
+
+
+/* Link styling inside menu */
+
+.menu li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    position: relative;
+    transition: 0.3s;
+}
+
+
+/* Hover effect for menu items */
+
+.menu li a:hover {
+    color: #c1c1c1;
+}
+
+
+/* Underline effect on hover */
+
+.menu li a:hover::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background-color: var(--underline-color);
+    bottom: -8px;
+    left: 0;
+    transition: width 0.3s ease;
+    border-radius: 5px;
+}
+
+
+/* Initial state of underline for menu items */
+
+.menu li a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 4px;
+    background-color: var(--underline-color);
+    bottom: -8px;
+    left: 0;
+    transition: width 0.3s ease;
+    border-radius: 5px;
+}
+
+
+/* Navigation buttons styling */
+
+.nav-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+
+/* Image hover effect inside nav-buttons */
+
+.nav-buttons img:hover {
+    cursor: pointer;
+}
+
+
+/* Apply button styling */
+
+.apply {
+    background-color: var(--button-color);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: var(--button-radius);
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    text-decoration: none;
+    transition: 300ms;
+}
+
+
+/* Hover effect for apply button */
+
+.apply:hover {
+    background-color: var(--button-hover-color);
+    transform: scale(1.02);
+}
+
+
+/* Active state for apply button */
+
+.apply:active {
+    background-color: var(--button-hover-color);
+    transform: scale(0.95);
+}
+
+
+/* Hamburger menu styles */
+
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+
+/* Hamburger bars styling */
+
+.hamburger-menu .bar {
+    width: 30px;
+    height: 4px;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+
+/* Fade-in animation for menu */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        /* Start invisible */
+    }
+    to {
+        opacity: 1;
+        /* Fade in */
+    }
+}
+
+
+/* Media Queries for screen width <= 1040px */
+
+@media (max-width: 1159px) {
+    /* Menu styling for small screens */
+    .menu {
+        display: none;
+        /* Hide menu by default */
+        position: absolute;
+        top: 70px;
+        /* Position the menu below the navbar */
+        right: 30px;
+        background-color: var(--main-theme);
+        box-shadow: 0 2px 5px rgb(81 81 81 / 86%);
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px;
+        border-radius: 5px;
+        width: 250px;
+        opacity: 0;
+        /* Start with 0 opacity */
+        transition: opacity 0.3s ease, top 0.3s ease;
+        /* Smooth transition for opacity and position */
+    }
+    /* Open menu styling */
+    .menu.open {
+        display: flex;
+        /* Show menu when open */
+        opacity: 1;
+        /* Ensure menu is visible */
+        top: 88px;
+        /* Position menu below the navbar */
+        right: 0px;
+        border-radius: 0 0 16px 16px;
+        animation: fadeIn 0.3s ease forwards;
+        /* Apply fade-in animation */
+    }
+    /* Menu item width adjustment */
+    .menu.open a {
+        width: 100%;
+        text-align: center;
+    }
+    /* Hamburger menu visibility */
+    .hamburger-menu {
+        display: flex;
+        /* Show hamburger icon on mobile */
+    }
+    /* Hide nav buttons on small screens */
+    .nav-buttons {
+        display: none;
+    }
+    /* Styling for opened menu */
+    .open {
+        background: #242424;
+    }
+}
+
+
+/* Media Queries for screen width > 1160px */
+
+@media (min-width: 1160px) {
+    /* Hide hamburger icon on large screens */
+    .hamburger-menu {
+        display: none;
+    }
+    /* Menu styles for large screens */
+    .menu {
+        display: flex;
+        position: static;
+        background-color: transparent;
+        flex-direction: row;
+        gap: 20px;
+        padding: 0;
+    }
+    /* Show nav buttons on large screens */
+    .nav-buttons {
+        display: flex;
+    }
+}
+
+
+/* Media Queries for screen width <= 500px */
+
+@media (max-width: 500px) {
+    /* Open menu styles for smaller screens */
+    .menu.open {
+        padding: 0px;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        left: 0px;
+        top: 70px;
+        opacity: 1;
+        gap: 20px;
+        animation: fadeIn 0.3s ease forwards;
+    }
+    /* Menu item styling inside open menu */
+    .menu.open ul li,
+    .menu.open a {
+        font-size: 18px;
+        font-weight: 700;
+    }
+}
+
+
 /* Media Queries for screen width <= 360px */
+
 @media (max-width: 360px) {
-  /* Logo size adjustment for very small screens */
-  .logo {
-    height: 30px;
-  }
+    /* Logo size adjustment for very small screens */
+    .logo {
+        height: 30px;
+    }
 }

@@ -1,162 +1,262 @@
 /* Body styling */
+
 body {
-  background: var(--main-theme); /* Uses the main theme for background */
-  color: white; /* White text color for contrast */
-  overflow-x: hidden !important;
+    background: var(--main-theme);
+    /* Uses the main theme for background */
+    color: white;
+    /* White text color for contrast */
+    overflow-x: hidden !important;
 }
+
 
 /* Main container for About Us section */
+
 .main-about {
-  padding-top: 110px; /* Space from the top of the page */
-  background-color: var(--main-theme); /* Background color same as theme */
-  display: flex; /* Flexbox layout */
-  flex-direction: column; /* Stack content vertically */
-  align-items: center; /* Center align content */
+    padding-top: 110px;
+    /* Space from the top of the page */
+    background-color: var(--main-theme);
+    /* Background color same as theme */
+    display: flex;
+    /* Flexbox layout */
+    flex-direction: column;
+    /* Stack content vertically */
+    align-items: center;
+    /* Center align content */
 }
+
 
 /* Logo image styling */
+
 .img-logo {
-  min-width: 150px; /* Ensures a minimum size */
-  max-width: 350px; /* Ensures a maximum size */
-  width: 100%; /* Responsive width */
-  height: auto; /* Maintain aspect ratio */
+    min-width: 150px;
+    /* Ensures a minimum size */
+    max-width: 350px;
+    /* Ensures a maximum size */
+    width: 100%;
+    /* Responsive width */
+    height: auto;
+    /* Maintain aspect ratio */
 }
+
 
 /* Paragraph under logo (Introductory text) */
+
 .main-about p {
-  padding: 20px 10px 0px 10px; /* Padding around the text */
-  color: white; /* White text color for contrast */
+    padding: 20px 10px 0px 10px;
+    /* Padding around the text */
+    color: white;
+    /* White text color for contrast */
 }
+
 
 /* Container for all the options (Our Race Cars, Our Team, etc.) */
+
 .options {
-  display: grid; /* Grid layout */
-  width: 100%; /* Full width */
-  padding: 50px 10px 10px 10px; /* Padding around the grid */
-  max-width: 1200px; /* Maximum width for large screens */
-  grid-template-columns: repeat(
-    auto-fit,
-    minmax(250px, 1fr)
-  ); /* Responsive grid, 250px per column */
-  grid-gap: 30px; /* Spacing between grid items */
-  margin-bottom: 50px; /* Space below the options */
+    display: grid;
+    /* Grid layout */
+    width: 100%;
+    /* Full width */
+    padding: 50px 10px 10px 10px;
+    /* Padding around the grid */
+    max-width: 1200px;
+    /* Maximum width for large screens */
+    grid-template-columns: repeat( auto-fit, minmax(250px, 1fr));
+    /* Responsive grid, 250px per column */
+    grid-gap: 30px;
+    /* Spacing between grid items */
+    margin-bottom: 50px;
+    /* Space below the options */
 }
+
 
 /* Removes underlines from links */
+
 .options a {
-  text-decoration: none; /* No underline for links */
+    text-decoration: none;
+    /* No underline for links */
 }
+
 
 /* Styling for each individual option (Our Race Cars, Our Team, etc.) */
+
 .option {
-  position: relative; /* Needed for overlay positioning */
-  height: 450px; /* Set height for each option */
-  border-radius: 10px; /* Rounded corners */
-  background-color: rgba(0, 0, 0, 0.66); /* Transparent background color */
-  box-shadow: 0 0 15px rgb(59, 59, 59); /* Shadow around the option */
-  overflow: hidden; /* Prevent overflow of content */
-  background-size: cover; /* Cover background image */
-  background-position: center; /* Center the background image */
-  background-repeat: no-repeat; /* Prevent repeating background */
-  transition: var(--transition); /* Transition effect for hover */
+    position: relative;
+    /* Needed for overlay positioning */
+    height: 450px;
+    /* Set height for each option */
+    border-radius: 10px;
+    /* Rounded corners */
+    background-color: rgba(0, 0, 0, 0.66);
+    /* Transparent background color */
+    box-shadow: 0 0 15px rgb(59, 59, 59);
+    /* Shadow around the option */
+    overflow: hidden;
+    /* Prevent overflow of content */
+    background-size: cover;
+    /* Cover background image */
+    background-position: center;
+    /* Center the background image */
+    background-repeat: no-repeat;
+    /* Prevent repeating background */
+    transition: var(--transition);
+    /* Transition effect for hover */
 }
+
 
 /* Overlay effect for the option */
+
 .option::before {
-  content: ""; /* Creates an empty overlay */
-  position: absolute; /* Positioning it on top of the image */
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent overlay */
-  z-index: 1; /* Ensures it's above the background */
-  border-radius: 10px; /* Rounded corners */
-  transition: background-color ease-in 0.2s; /* Smooth background color change */
-  backdrop-filter: blur(2px); /* Blurring the background */
+    content: "";
+    /* Creates an empty overlay */
+    position: absolute;
+    /* Positioning it on top of the image */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    /* Semi-transparent overlay */
+    z-index: 1;
+    /* Ensures it's above the background */
+    border-radius: 10px;
+    /* Rounded corners */
+    transition: background-color ease-in 0.2s;
+    /* Smooth background color change */
+    backdrop-filter: blur(2px);
+    /* Blurring the background */
 }
+
 
 /* Hover effect for the overlay (darker background) */
+
 .option:hover::before {
-  background-color: rgba(0, 0, 0, 0.7); /* Darker overlay on hover */
+    background-color: rgba(0, 0, 0, 0.7);
+    /* Darker overlay on hover */
 }
+
 
 /* Hover effect for the entire option box (elevates and adds shadow) */
+
 .option:hover {
-  transform: translateY(-10px) scale(1.05); /* Slight raise and scaling */
-  box-shadow: 0px 0px 15px rgba(37, 163, 217, 0.6); /* Glow effect on hover */
+    transform: translateY(-10px) scale(1.05);
+    /* Slight raise and scaling */
+    box-shadow: 0px 0px 15px rgba(37, 163, 217, 0.6);
+    /* Glow effect on hover */
 }
+
 
 /* Ensures text stays above the overlay */
+
 .option h2,
 .option p {
-  color: white; /* White text color */
-  z-index: 2; /* Ensures text stays on top of overlay */
+    color: white;
+    /* White text color */
+    z-index: 2;
+    /* Ensures text stays on top of overlay */
 }
+
 
 /* Small font size for paragraph text inside the option */
+
 .option-info p {
-  font-size: 14px; /* Smaller font for descriptions */
-  overflow-x: auto; /* Allow horizontal scroll for long text */
-  line-height: 20px; /* Line height for better readability */
+    font-size: 14px;
+    /* Smaller font for descriptions */
+    overflow-x: auto;
+    /* Allow horizontal scroll for long text */
+    line-height: 20px;
+    /* Line height for better readability */
 }
+
 
 /* Layout for content inside each option (Title, Description) */
+
 .option-info {
-  padding-top: 50px; /* Space from top */
-  display: flex; /* Flexbox layout */
-  margin: auto; /* Centers the content */
-  flex-direction: column; /* Stack content vertically */
-  align-items: flex-start; /* Align left */
-  justify-content: center; /* Center content vertically */
-  width: 80%; /* Takes 80% of the width */
-  z-index: 2; /* Keeps text above the overlay */
+    padding-top: 50px;
+    /* Space from top */
+    display: flex;
+    /* Flexbox layout */
+    margin: auto;
+    /* Centers the content */
+    flex-direction: column;
+    /* Stack content vertically */
+    align-items: flex-start;
+    /* Align left */
+    justify-content: center;
+    /* Center content vertically */
+    width: 80%;
+    /* Takes 80% of the width */
+    z-index: 2;
+    /* Keeps text above the overlay */
 }
+
 
 /* Layout for the icon inside each option */
+
 .option-title {
-  display: flex; /* Flexbox layout */
-  flex-direction: column; /* Stack items vertically */
-  gap: 20px; /* Spacing between icon and text */
-  z-index: 2; /* Ensure icons are above the overlay */
+    display: flex;
+    /* Flexbox layout */
+    flex-direction: column;
+    /* Stack items vertically */
+    gap: 20px;
+    /* Spacing between icon and text */
+    z-index: 2;
+    /* Ensure icons are above the overlay */
 }
+
 
 /* Styling for the icon image inside each option */
-.option-title > img {
-  width: 64px; /* Fixed size for icons */
-  height: 64px;
-  object-fit: contain; /* Maintain aspect ratio */
-  z-index: 10; /* Ensures the icon stays above other content */
-  margin-bottom: 20px; /* Space below the icon */
+
+.option-title>img {
+    width: 64px;
+    /* Fixed size for icons */
+    height: 64px;
+    object-fit: contain;
+    /* Maintain aspect ratio */
+    z-index: 10;
+    /* Ensures the icon stays above other content */
+    margin-bottom: 20px;
+    /* Space below the icon */
 }
 
+
 /* Specific background images for each option (connected to JSX content) */
+
 .options a:nth-child(1) .option {
-  background-image: url("/images/about-us/car-on-track.jpg"); /* Background for 'Our Race Cars' */
+    background-image: url("../../public/images/about-us/car-on-track.jpg");
+    /* Background for 'Our Race Cars' */
 }
 
 .options a:nth-child(2) .option {
-  background-image: url("/images/about-us/car-team.jpg"); /* Background for 'Our Team' */
+    background-image: url("../../public/images/about-us/car-team.jpg");
+    /* Background for 'Our Team' */
 }
 
 .options a:nth-child(3) .option {
-  background-image: url("/images/about-us/car-testing.jpg"); /* Background for 'Our History' */
+    background-image: url("../../public/images/about-us/car-testing.jpg");
+    /* Background for 'Our History' */
 }
 
 .options a:nth-child(4) .option {
-  background-image: url("/images/about-us/join-team.jpg"); /* Background for 'Your Application' */
+    background-image: url("../../public/images/about-us/join-team.jpg");
+    /* Background for 'Your Application' */
 }
+
 
 /* Mobile optimization - Text alignment for smaller screens */
+
 @media (max-width: 850px) {
-  .main-about p {
-    text-align: center; /* Center the text on smaller screens */
-  }
+    .main-about p {
+        text-align: center;
+        /* Center the text on smaller screens */
+    }
 }
 
+
 /* Hover effect adjustment for smaller screens */
+
 @media (max-width: 1135px) {
-  .option:hover {
-    transform: scale(1.03); /* Less scaling on smaller screens */
-  }
+    .option:hover {
+        transform: scale(1.03);
+        /* Less scaling on smaller screens */
+    }
 }

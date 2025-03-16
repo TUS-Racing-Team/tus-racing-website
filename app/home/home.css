@@ -1,441 +1,544 @@
 body {
-  overflow-x: hidden !important;
+    overflow-x: hidden !important;
 }
+
 
 /* Centers all h1 elements on the page */
+
 h1 {
-  text-align: center !important;
+    text-align: center !important;
 }
+
 
 /* Styles the landing page section with a full-screen background image */
+
 .landingPage {
-  background: url("/images/car-photos/car-italy.jpg");
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  position: relative;
-  height: 100vh; /* Ensures it takes up the full viewport height */
-  margin-bottom: 60px;
+    background: url("../../public/images/car-photos/car-italy.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+    height: 100vh;
+    /* Ensures it takes up the full viewport height */
+    margin-bottom: 60px;
 }
+
 
 /* Positions the main call-to-action (CTA) button in the center of the landing page */
+
 .main-ca {
-  position: absolute;
-  top: 25%;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  flex-direction: column;
-  width: fit-content;
-  align-items: center;
-  gap: 10px;
-  transition: 0.5s;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    align-items: center;
+    gap: 10px;
+    transition: 0.5s;
 }
+
 
 /* Styles the CTA link within the main call-to-action section */
+
 .main-ca a {
-  text-decoration: none;
-  color: white;
-  background-color: var(--button-color);
-  font-size: 1.2rem;
-  padding: 12px 25px;
-  border-radius: 25px;
-  margin-top: 20px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease !important;
+    text-decoration: none;
+    color: white;
+    background-color: var(--button-color);
+    font-size: 1.2rem;
+    padding: 12px 25px;
+    border-radius: 25px;
+    margin-top: 20px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease !important;
 }
+
 
 /* Adds hover effects to the CTA link */
+
 .main-ca a:hover {
-  background-color: #0056b3;
-  box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
-  transform: scale(1.03) !important;
+    background-color: #0056b3;
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+    transform: scale(1.03) !important;
 }
+
 
 /* Adds active effects to the CTA link */
+
 .main-ca a:active {
-  background-color: #004494;
-  transform: scale(0.95) !important;
+    background-color: #004494;
+    transform: scale(0.95) !important;
 }
+
 
 /* Styles the info card displayed on the landing page */
+
 .ca-info {
-  background-color: rgba(0, 0, 0, 0.55);
-  padding: 30px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center !important;
-  align-items: center !important;
-  border-radius: 15px;
-  text-align: center;
+    background-color: rgba(0, 0, 0, 0.55);
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center !important;
+    align-items: center !important;
+    border-radius: 15px;
+    text-align: center;
 }
+
 
 /* Styles the heading inside the info card */
+
 .ca-info h1 {
-  color: white;
+    color: white;
 }
+
 
 /* Styles the "Join Us" section with a themed background */
+
 .home-join-us {
-  width: 100%;
-  background-color: var(--main-theme);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+    width: 100%;
+    background-color: var(--main-theme);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
+
 
 /* Adds padding to the "Join Us" section */
+
 div.home-join-us {
-  padding: 50px 20px 0px 20px;
+    padding: 50px 20px 0px 20px;
 }
+
 
 /* Styles the Formula Student information section */
+
 .formula-student-info {
-  color: white;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 60%;
-}
-
-/* Styles the subheading in the Formula Student section */
-.formula-student-info h5 {
-  color: #4c9fe3;
-  padding-top: 50px;
-  text-align: center;
-}
-
-/* Styles the main heading in the Formula Student section */
-.formula-student-info h1 {
-  padding-top: 30px;
-}
-
-/* Styles the underline below the heading in the Formula Student section */
-.sl {
-  border: 2px solid var(--underline-color);
-  width: 15% !important;
-  margin-top: 20px;
-}
-
-/* Styles the paragraph text in the Formula Student section */
-.formula-student-info p {
-  padding-top: 30px;
-  color: #d3d3d3;
-  text-align: center;
-  font-size: 1rem;
-}
-
-/* Styles the "More About" button in the Formula Student section */
-div.formula-student-info .more-about {
-  border-radius: 25px;
-  background-color: var(--button-color);
-  color: white;
-  text-decoration: none;
-  margin-top: 30px;
-  font-size: 1rem;
-  text-align: center;
-}
-
-/* Adds hover effects to the "More About" button */
-div.formula-student-info .more-about:hover {
-  background-color: #0056b3;
-  box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
-  transform: scale(1.03);
-}
-
-/* Adds active effects to the "More About" button */
-div.formula-student-info .more-about:active {
-  background-color: #004494;
-  transform: scale(0.95);
-}
-
-/* Styles the section containing team descriptions */
-.looking {
-  width: 100%;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-/* Styles the heading for the team descriptions section */
-.looking h1 {
-  margin-top: 50px;
-  font-size: 1.6rem;
-}
-
-/* Styles the "Go to Application" button in the team descriptions section */
-.looking .go-to-application {
-  margin: 30px 0px;
-  transition: 0.3s ease !important;
-  text-align: center;
-}
-
-/* Adds hover effects to the "Go to Application" button */
-div.looking .go-to-application:hover {
-  background-color: #0056b3;
-  box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
-  transform: scale(1.03);
-}
-
-/* Adds active effects to the "Go to Application" button */
-div.looking .go-to-application:active {
-  background-color: #004494;
-  transform: scale(0.95);
-}
-
-/* Container for team description cards */
-.looking-teams {
-  width: 100% !important;
-  display: flex;
-  flex-wrap: wrap; /* Allow items to wrap to the next line */
-  gap: 16px; /* Space between items */
-  justify-content: space-evenly; /* Centers items horizontally */
-}
-
-.looking-teams > * {
-  flex: 1 1 calc(25% - 16px); /* Each item takes up 25% of the container width, accounting for the gap */
-  max-width: calc(
-    25% - 16px
-  ); /* Ensures no item exceeds 25% of the container's width */
-}
-
-/* Styles individual team description cards */
-.team-desc {
-  display: flex;
-  flex-direction: column; /* Stacks the items vertically */
-  gap: 12px; /* Space between title and content */
-  padding: 15px;
-  border: 1px solid #ddd;
-  border-radius: 16px;
-  background: #202020;
-  transition: transform 0.3s ease, background-color 0.3s ease,
-    box-shadow 0.3s ease;
-  overflow: hidden; /* Hides overflow from scaling */
-  max-width: 450px !important;
-  min-width: 200px !important;
-  justify-content: center; /* Centers content vertically */
-  align-items: center; /* Centers content horizontally */
-}
-
-/* Adds hover effects to team description cards */
-.team-desc:hover {
-  background-color: #2e2e2e;
-  transform: scale(1.02);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-/* Styles the title inside each team description card */
-.team-desc h3 {
-  text-align: center;
-  cursor: pointer;
-  transition: color 0.3s ease;
-}
-
-/* Styles the list inside each team description card */
-.team-desc ul {
-  list-style-type: none; /* Removes bullet points */
-  padding-left: 0; /* Removes left padding */
-  margin-top: 10px; /* Separates list from title */
-}
-
-/* Styles individual list items inside team description cards */
-.team-desc li {
-  padding: 4px 0;
-  cursor: pointer;
-  text-align: center;
-}
-
-/* Responsive design for screens less than 768px wide */
-@media (max-width: 768px) {
-  /* Adjusts the layout of team description cards */
-  .looking-teams {
+    color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
-  }
-  .team-desc {
-    width: 100%;
-    padding: 12px;
-  }
-  .team-desc h3 {
-    font-size: 1.2rem;
-    width: 100%;
-    height: 30%;
-  }
-  .team-desc li {
-    font-size: 0.9rem;
-  }
+    width: 60%;
 }
+
+
+/* Styles the subheading in the Formula Student section */
+
+.formula-student-info h5 {
+    color: #4c9fe3;
+    padding-top: 50px;
+    text-align: center;
+}
+
+
+/* Styles the main heading in the Formula Student section */
+
+.formula-student-info h1 {
+    padding-top: 30px;
+}
+
+
+/* Styles the underline below the heading in the Formula Student section */
+
+.sl {
+    border: 2px solid var(--underline-color);
+    width: 15% !important;
+    margin-top: 20px;
+}
+
+
+/* Styles the paragraph text in the Formula Student section */
+
+.formula-student-info p {
+    padding-top: 30px;
+    color: #d3d3d3;
+    text-align: center;
+    font-size: 1rem;
+}
+
+
+/* Styles the "More About" button in the Formula Student section */
+
+div.formula-student-info .more-about {
+    border-radius: 25px;
+    background-color: var(--button-color);
+    color: white;
+    text-decoration: none;
+    margin-top: 30px;
+    font-size: 1rem;
+    text-align: center;
+}
+
+
+/* Adds hover effects to the "More About" button */
+
+div.formula-student-info .more-about:hover {
+    background-color: #0056b3;
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+    transform: scale(1.03);
+}
+
+
+/* Adds active effects to the "More About" button */
+
+div.formula-student-info .more-about:active {
+    background-color: #004494;
+    transform: scale(0.95);
+}
+
+
+/* Styles the section containing team descriptions */
+
+.looking {
+    width: 100%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Styles the heading for the team descriptions section */
+
+.looking h1 {
+    margin-top: 50px;
+    font-size: 1.6rem;
+}
+
+
+/* Styles the "Go to Application" button in the team descriptions section */
+
+.looking .go-to-application {
+    margin: 30px 0px;
+    transition: 0.3s ease !important;
+    text-align: center;
+}
+
+
+/* Adds hover effects to the "Go to Application" button */
+
+div.looking .go-to-application:hover {
+    background-color: #0056b3;
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+    transform: scale(1.03);
+}
+
+
+/* Adds active effects to the "Go to Application" button */
+
+div.looking .go-to-application:active {
+    background-color: #004494;
+    transform: scale(0.95);
+}
+
+
+/* Container for team description cards */
+
+.looking-teams {
+    width: 100% !important;
+    display: flex;
+    flex-wrap: wrap;
+    /* Allow items to wrap to the next line */
+    gap: 16px;
+    /* Space between items */
+    justify-content: space-evenly;
+    /* Centers items horizontally */
+}
+
+.looking-teams>* {
+    flex: 1 1 calc(25% - 16px);
+    /* Each item takes up 25% of the container width, accounting for the gap */
+    max-width: calc( 25% - 16px);
+    /* Ensures no item exceeds 25% of the container's width */
+}
+
+
+/* Styles individual team description cards */
+
+.team-desc {
+    display: flex;
+    flex-direction: column;
+    /* Stacks the items vertically */
+    gap: 12px;
+    /* Space between title and content */
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 16px;
+    background: #202020;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    /* Hides overflow from scaling */
+    max-width: 450px !important;
+    min-width: 200px !important;
+    justify-content: center;
+    /* Centers content vertically */
+    align-items: center;
+    /* Centers content horizontally */
+}
+
+
+/* Adds hover effects to team description cards */
+
+.team-desc:hover {
+    background-color: #2e2e2e;
+    transform: scale(1.02);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Styles the title inside each team description card */
+
+.team-desc h3 {
+    text-align: center;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+
+/* Styles the list inside each team description card */
+
+.team-desc ul {
+    list-style-type: none;
+    /* Removes bullet points */
+    padding-left: 0;
+    /* Removes left padding */
+    margin-top: 10px;
+    /* Separates list from title */
+}
+
+
+/* Styles individual list items inside team description cards */
+
+.team-desc li {
+    padding: 4px 0;
+    cursor: pointer;
+    text-align: center;
+}
+
+
+/* Responsive design for screens less than 768px wide */
+
+@media (max-width: 768px) {
+    /* Adjusts the layout of team description cards */
+    .looking-teams {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .team-desc {
+        width: 100%;
+        padding: 12px;
+    }
+    .team-desc h3 {
+        font-size: 1.2rem;
+        width: 100%;
+        height: 30%;
+    }
+    .team-desc li {
+        font-size: 0.9rem;
+    }
+}
+
 
 /* Responsive design for screens less than 425px wide */
+
 @media (max-width: 425px) {
-  .team-desc {
-    padding: 10px;
-  }
-  .team-desc h3 {
-    font-size: 1.1rem;
-  }
-  .team-desc li {
-    font-size: 0.85rem;
-  }
+    .team-desc {
+        padding: 10px;
+    }
+    .team-desc h3 {
+        font-size: 1.1rem;
+    }
+    .team-desc li {
+        font-size: 0.85rem;
+    }
 }
+
 
 /* Styles the sub-section with a background image */
+
 .sub-section {
-  background: url("/images/car-photos/car-photo-b.jpg");
-  background-size: cover;
-  background-position: center;
-  height: 500px;
-  position: relative;
+    background: url("../../public/images/car-photos/car-photo-b.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+    position: relative;
 }
+
 
 /* Styles the team organization section */
+
 .team-organization {
-  padding: 50px 10px;
-  background-color: var(--main-theme);
-  color: white;
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  height: auto;
-  align-items: center;
-  justify-content: space-between;
-  gap: 10px;
-}
-
-/* Styles the team information section */
-.team-information {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  width: 50%;
-}
-
-/* Ensures all child elements of the team information section take full width */
-.team-information > * {
-  width: 100%;
-}
-
-/* Aligns text and links in the team information section */
-.team-information h1,
-.team-information a {
-  text-align: center;
-}
-
-/* Styles the paragraph text in the team organization section */
-.team-organization p {
-  color: #d3d3d3;
-  font-size: 1rem;
-  text-align: center;
-}
-
-/* Styles the team image in the team organization section */
-.img-team {
-  border-radius: 25px;
-  width: 50%; /* Fills half the container */
-  max-width: 650px !important; /* Maximum width */
-  min-width: 350px !important; /* Minimum width */
-  height: auto; /* Maintains aspect ratio */
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-  object-fit: cover; /* Ensures image fits dimensions */
-  display: block; /* Removes unwanted inline-block spacing */
-}
-
-/* Styles the "Apply Now" button in the team organization section */
-.team-organization .apply-team {
-  max-width: 400px;
-  min-width: 80px;
-  border-radius: 25px;
-  background-color: var(--button-color);
-  color: white;
-  text-decoration: none;
-  text-align: center;
-  padding: 12px 25px;
-  margin-top: 30px;
-  transition: 0.3s 0s ease !important;
-}
-
-/* Adds hover effects to the "Apply Now" button */
-.team-organization .apply-team:hover {
-  background-color: var(--button-hover-color);
-  transform: scale(1.05) !important;
-}
-
-/* Adds active effects to the "Apply Now" button */
-.team-organization .apply-team:active {
-  background-color: var(--button-hover-color);
-  transform: scale(0.95) !important;
-}
-
-/* Responsive design for screens less than 700px wide */
-@media (max-width: 700px) {
-  /* Adjusts the layout of the team organization section */
-  .team-organization {
-    flex-direction: column;
-    padding-top: 20px;
-  }
-  .team-information {
-    padding-top: 30px;
-    text-align: center;
-    width: 100%;
-  }
-  .team-information p {
-    font-size: 1rem;
-  }
-  .team-organization h1 {
-    font-size: 1.5rem;
-  }
-  .team-organization a {
-    font-size: 1rem;
-    padding: 10px 20px;
-  }
-  .img-team {
+    padding: 50px 10px;
+    background-color: var(--main-theme);
+    color: white;
+    display: flex;
+    flex-direction: row;
     width: 100%;
     height: auto;
-    border-radius: 10px;
-    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.3);
-  }
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
 }
 
-/* Responsive design for screens less than 600px wide */
-@media screen and (max-width: 600px) {
-  /* Adjusts the background image for the landing page */
-  .landingPage {
-    background: url("/images/car-photos/car-italy.jpg");
-  }
-  /* Adjusts the layout of the main call-to-action section */
-  .main-ca {
-    top: 0% !important;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100% !important;
+
+/* Styles the team information section */
+
+.team-information {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     height: 100%;
+    width: 50%;
+}
+
+
+/* Ensures all child elements of the team information section take full width */
+
+.team-information>* {
+    width: 100%;
+}
+
+
+/* Aligns text and links in the team information section */
+
+.team-information h1,
+.team-information a {
     text-align: center;
-  }
-  .main-ca a {
-    padding: 12px 20px;
+}
+
+
+/* Styles the paragraph text in the team organization section */
+
+.team-organization p {
+    color: #d3d3d3;
     font-size: 1rem;
-  }
-  .ca-info {
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 30px;
-    border-radius: 0px !important;
-    width: 100%;
-    height: 100%;
-  }
-  .home-join-us {
-    padding: 20px 10px;
-  }
-  .formula-student-info {
-    width: 100%;
-    padding: 10px;
-  }
-  .sub-section {
-    height: 400px;
-  }
+    text-align: center;
+}
+
+
+/* Styles the team image in the team organization section */
+
+.img-team {
+    border-radius: 25px;
+    width: 50%;
+    /* Fills half the container */
+    max-width: 650px !important;
+    /* Maximum width */
+    min-width: 350px !important;
+    /* Minimum width */
+    height: auto;
+    /* Maintains aspect ratio */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    object-fit: cover;
+    /* Ensures image fits dimensions */
+    display: block;
+    /* Removes unwanted inline-block spacing */
+}
+
+
+/* Styles the "Apply Now" button in the team organization section */
+
+.team-organization .apply-team {
+    max-width: 400px;
+    min-width: 80px;
+    border-radius: 25px;
+    background-color: var(--button-color);
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    padding: 12px 25px;
+    margin-top: 30px;
+    transition: 0.3s 0s ease !important;
+}
+
+
+/* Adds hover effects to the "Apply Now" button */
+
+.team-organization .apply-team:hover {
+    background-color: var(--button-hover-color);
+    transform: scale(1.05) !important;
+}
+
+
+/* Adds active effects to the "Apply Now" button */
+
+.team-organization .apply-team:active {
+    background-color: var(--button-hover-color);
+    transform: scale(0.95) !important;
+}
+
+
+/* Responsive design for screens less than 700px wide */
+
+@media (max-width: 700px) {
+    /* Adjusts the layout of the team organization section */
+    .team-organization {
+        flex-direction: column;
+        padding-top: 20px;
+    }
+    .team-information {
+        padding-top: 30px;
+        text-align: center;
+        width: 100%;
+    }
+    .team-information p {
+        font-size: 1rem;
+    }
+    .team-organization h1 {
+        font-size: 1.5rem;
+    }
+    .team-organization a {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+    .img-team {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+        box-shadow: 0 6px 25px rgba(0, 0, 0, 0.3);
+    }
+}
+
+
+/* Responsive design for screens less than 600px wide */
+
+@media screen and (max-width: 600px) {
+    /* Adjusts the background image for the landing page */
+    .landingPage {
+        background: url("../../public/images/car-photos/car-italy.jpg");
+    }
+    /* Adjusts the layout of the main call-to-action section */
+    .main-ca {
+        top: 0% !important;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100% !important;
+        height: 100%;
+        text-align: center;
+    }
+    .main-ca a {
+        padding: 12px 20px;
+        font-size: 1rem;
+    }
+    .ca-info {
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 30px;
+        border-radius: 0px !important;
+        width: 100%;
+        height: 100%;
+    }
+    .home-join-us {
+        padding: 20px 10px;
+    }
+    .formula-student-info {
+        width: 100%;
+        padding: 10px;
+    }
+    .sub-section {
+        height: 400px;
+    }
 }
